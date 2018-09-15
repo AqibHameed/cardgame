@@ -16,7 +16,7 @@
   <% end %>
 
   <div class="form-group">
-  <%= f.label :password, , "New password" ,class: 'col-lg-2 control-label' %>
+  <%= f.label :password,  "New password" ,class: 'col-lg-2 control-label' %>
   <i>(leave blank if you don't want to change it)</i><br />
   <div class="col-lg-4">
     <%= f.password_field :password, autocomplete: "new-password", size: 25, class: "form-control" %> <% if @minimum_password_length %>
