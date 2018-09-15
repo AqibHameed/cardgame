@@ -13,18 +13,16 @@
       <div class="form-group">
     <%= f.label :password, class: 'col-lg-2 control-label' %>
     <div class="col-lg-4">
-      <%= f.email_field :password, autocomplete: "current-password", size: 25, class: "form-control" %>
+      <%= f.password_field :password, autocomplete: "current-password", size: 25, class: "form-control" %>
     </div>
   </div>
 
 
   <% if devise_mapping.rememberable? -%>
-  <div class="form-group">
-    <%= f.label :remember_me, class: 'col-lg-2 control-label' %>
-    <div class="col-lg-4">
-      <%= f.email_field :remember_me, class: "form-control" %>
+    <div class="form-group">
+      <%= f.check_box :remember_me, class: 'position' %>
+      <%= f.label :remember_me, class: 'col-lg-2 control-label' %>
     </div>
-  </div>
   <% end -%>
 
   <div class="form-group">
