@@ -14,4 +14,17 @@
 //= require turbolinks
 //= require jquery
 //= require bootstrap-sprockets
+//= require html5shiv.js
+//= require jquery.mousewheel.min.js
+//= require jquery.simplr.smoothscroll.min.js
+//= require jquery-1.8.3.min.js
+//= reuire museutils.js
+//=require jquery.watch.js
+//=require webpro.js
+//=require musewpslideshow.js
+//=require jquery.museoverlay.js
+//=require touchswipe.js
+//=require jquery.musemenu.js
+//=require jquery.scrolleffects.js
+//=require musewpdisclosure.js
 //= require_tree .

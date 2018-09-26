@@ -1,1 +1,326 @@
-HOME
+<!DOCTYPE html>
+<html class="html" lang="en-US">
+<head>
+
+<!--  <script type="text/javascript">-->
+<!--      if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required":["jquery-1.8.3.min.js", "museutils.js", "jquery.watch.js", "webpro.js", "musewpslideshow.js", "jquery.museoverlay.js", "touchswipe.js", "jquery.musemenu.js", "jquery.scrolleffects.js", "musewpdisclosure.js", "index.css"], "outOfDate":[]};-->
+<!--  </script>-->
+
+<!--  <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>-->
+<!--  <meta name="generator" content="2015.0.0.309"/>-->
+  <%= image_tag('home-favicon.ico')%>
+<!--  <link rel="shortcut icon" href="images/home-favicon.ico?4079206430"/>-->
+  <title>Home</title>
+  <!-- CSS -->
+<!--  <link rel="stylesheet" type="text/css" href="css/site_global.css?455109822"/>-->
+<!--  <link rel="stylesheet" type="text/css" href="css/master_a-master.css?64628886"/>-->
+<!--  <link rel="stylesheet" type="text/css" href="css/index.css.erb?297062350" id="pagesheet"/>-->
+  <!-- Other scripts -->
+  <script type="text/javascript">
+      document.documentElement.className += ' js';
+  </script>
+  <!-- JS includes -->
+  <!--[if lt IE 9]>
+  <!--<script src="scripts/html5shiv.js?4241844378" type="text/javascript"></script>-->
+  <![endif]-->
+  <!--custom head HTML-->
+  <script>
+      ;
+      (function ($) {
+          var o = $('html');
+          if (o.hasClass('desktop')) {
+              include('jquery.mousewheel.min.js');
+              include('jquery.simplr.smoothscroll.min.js');
+
+              $(document).ready(function () {
+                  $.srSmoothscroll({
+                      step: 150,
+                      speed: 800
+                  });
+              });
+          }
+      })(jQuery);
+  </script>
+
+  <style>
+    a, div, p, h1, h2, h3, h4, h5, .Button, img, .submit-btn {
+      -moz-transition: 0.6s;
+      -o-transition: 0.6s;
+      -webkit-transition: 0.6s;
+      transition: 0.6s;
+    }
+    @font-face {
+      font-family: myfont;
+      src: url("<%= asset_path('CANDARAZ.woff')%>");
+    }
+  </style>
+
+  <!--HTML Widget code-->
+
+  <!--[if gte IE 8] -->
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+  <!-- <![endif]-->
+  <!--[if IE 7]>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome-ie7.min.css" rel="stylesheet">
+  <![endif]-->
+  <style>
+    .icon-block:before, .icon-block {
+      display: block;
+    }
+  </style>
+
+</head>
+<body >
+<div class="clearfix" id="page" style='min-height:500px;'><!-- column -->
+  <div class="position_content" id="page_position_content">
+    <div class="browser_width colelem" id="u543-bw">
+      <div id="u543"><!-- simple frame --></div>
+    </div>
+    <div class="SlideShowWidget clearfix colelem" id="slideshowu419"><!-- none box -->
+      <div class="popup_anchor" id="u435popup">
+        <div class="SlideShowContentPanel clearfix" id="u435"><!-- stack box -->
+          <div class="SSSlide clip_frame grpelem" id="u489"><!-- image -->
+            <%= image_tag 'slide_01.jpg', width: "1600", height: "700", id: "u489_img"%>
+<!--            <img class="ImageInclude" id="u489_img" data-src="images/slide_01.jpg" src="images/blank.gif" alt="" data-width="900" data-height="250"/>-->
+          </div>
+          <div class="SSSlide invi clip_frame grpelem" id="u504"><!-- image -->
+            <%= image_tag('slide_02.jpg', width: "900", height: "250")%>
+<!--            <img class="ImageInclude" id="u504_img" data-src="images/slide_02.jpg" src="images/blank.gif" alt="" data-width="900" data-height="250"/>-->
+          </div>
+          <div class="SSSlide invi clip_frame grpelem" id="u519"><!-- image -->
+            <%= image_tag 'slide_03.jpg', width: "900", height: "250", id: "u519_img"%>
+            <!--            <img class="ImageInclude" id="u519_img" data-src="images/slide_03.jpg" src="images/blank.gif" alt="" data-width="900" data-height="250"/>-->
+          </div>
+        </div>
+      </div>
+      <div class="popup_anchor" id="u422popup">
+        <div class="SSSlideLinks clearfix" id="u422"><!-- horizontal-rows box -->
+          <div class="SSSlideLink rounded-corners grpelem" id="u492"><!-- image --></div>
+          <div class="SSSlideLink rounded-corners grpelem" id="u507"><!-- image --></div>
+          <div class="SSSlideLink rounded-corners grpelem" id="u522"><!-- image --></div>
+        </div>
+      </div>
+      <div class="popup_anchor" id="u430popup">
+        <div class="SlideShowCaptionPanel clearfix" id="u430"><!-- stack box -->
+          <div class="SSSlideCaption clearfix grpelem" id="u495-6"><!-- content -->
+            <p><span style="color: #BF14F7;font-family: 'myfont';">It is a game of luck!!!!</span></p>
+            <p><span style="color: #BF14F7;font-family: 'myfont';">NO SKILL REQUIRED</span></p>
+          </div>
+          <div class="SSSlideCaption invi clearfix grpelem" id="u510-4"><!-- content -->
+            <p><span style="color: #BF14F7;font-family: 'myfont';">Play online face to face</span></p>
+            <p><span style="color: #BF14F7;font-family: 'myfont';">against fellow members.</span></p>
+          </div>
+          <div class="SSSlideCaption invi clearfix grpelem" id="u525-6"><!-- content -->
+            <p><span style="color: #BF14F7;font-family: 'myfont';">Join in the fun!</span></p>
+            <p><span style="color: #BF14F7;font-family: 'myfont';">Play in our competitions!!</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="rgba-background colelem" id="u534"><!-- simple frame --></div>
+    <div class="rgba-background colelem" id="u535"><!-- simple frame --></div>
+    <div class="clearfix colelem" id="pu739"><!-- group -->
+      <div class="browser_width grpelem" id="u739-bw">
+        <div id="u739"><!-- column -->
+          <div class="clearfix" id="u739_align_to_page">
+            <div class="clearfix colelem" id="u754-4"><!-- content -->
+              <p style="font-family: 'myfont';">Welcome to Strip Pals!</p>
+              <p><span style="color: #F01215;font-family: 'myfont';">- A Strip Poker site for AMATEURS -</span></p>
+            </div>
+            <div class="clearfix colelem" id="pu756"><!-- group -->
+              <div class="grpelem" id="u756"><!-- simple frame --></div>
+              <div class="grpelem" id="u757"><!-- simple frame --></div>
+              <div class="grpelem" id="u758"><!-- simple frame --></div>
+            </div>
+            <div class="clearfix colelem" id="pu759-4"><!-- group -->
+              <div class="clearfix grpelem" id="u759-4"><!-- content -->
+                <p style="font-family: 'myfont';">Strip Me Naked App</p>
+              </div>
+              <div class="clearfix grpelem" id="u760-4"><!-- content -->
+                <p style="font-family: 'myfont';">App Instructions</p>
+              </div>
+              <div class="clearfix grpelem" id="u761-4"><!-- content -->
+                <p style="font-family: 'myfont';">SITE TERMS &amp; CONDITIONS</p>
+              </div>
+            </div>
+            <div class="clearfix colelem" id="pu762-4"><!-- group -->
+              <div class="clearfix grpelem" id="u762-4"><!-- content -->
+                <p style="color: #0D0D0D;font-family: 'Eras Demi ITC';">Watch how to play the app video here. The video tells of the origin of this 200 year old game. It is s free app catering for all platforms. </p>
+              </div>
+              <div class="clearfix grpelem" id="u763-4"><!-- content -->
+                <p style="color: #0D0D0D;font-family: 'Eras Demi ITC';">Learn how to play the game here. It requires no skill and you only need luck and the fall of the cards to win. </p>
+              </div>
+              <div class="clearfix grpelem" id="u764-4"><!-- content -->
+                <p style="color: #0D0D0D;font-family: 'Eras Demi ITC';">Every player that enters this site MUST read and ACKNOWLEDGE the terms and conditions. Any breach of these conditions will result in disiplinary action.</p>
+              </div>
+            </div>
+            <div class="clearfix colelem" id="pbuttonu349"><!-- group -->
+              <a class="nonblock nontext Button clearfix grpelem" id="buttonu349" href="https://www.youtube.com/watch?v=fNYY8PjDllw"><!-- container box --><div class="clearfix grpelem" id="u350-4"><!-- content -->
+                <p style="font-family: 'CASTTELLAR';">View video here</p>
+              </div></a>
+              <a class="nonblock nontext Button clearfix grpelem" id="buttonu783" href="images/Game Rules.pdf"><!-- container box --><div class="clearfix grpelem" id="u784-4"><!-- content -->
+                <p style="font-family: 'CASTTELLAR';">How to play</p></div></a>
+              <a class="nonblock nontext Button clearfix grpelem" id="buttonu785" href="images/Terms.pdf"><!-- container box --><div class="clearfix grpelem" id="u786-4"><!-- content -->
+                <p style="font-family: 'CASTTELLAR';">TERMS</p></div></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix grpelem" id="u755-4"><!-- content -->
+        <p>&nbsp;</p>
+      </div>
+    </div>
+    <div class="clearfix colelem" id="pu834-3"><!-- group -->
+      <div class="browser_width grpelem" id="u834-3-bw">
+        <div class="clearfix" id="u834-3"><!-- content -->
+          <p>&nbsp;</p>
+        </div>
+      </div>
+      <div class="PamphletWidget clearfix grpelem" id="pamphletu788"><!-- none box -->
+        <div class="popup_anchor" id="u791popup">
+          <div class="ContainerGroup clearfix tab-content " id="u791"><!-- stack box -->
+            <div class="Container clearfix grpelem active tab-pane active" id="u792"><!-- group -->
+              <div class="grpelem active" id="u794"><!-- simple frame --></div>
+              <div class="clearfix grpelem" id="pu795-4"><!-- column -->
+                <div class="heading3 clearfix colelem" id="u795-4"><!-- content -->
+                  <h3 style="font-family: 'myfont';">ADULT ONLY ENTERTAINMENT</h3>
+                </div>
+                <div class="heading3 clearfix colelem" id="u796-4"><!-- content -->
+                  <h3 style="font-family: 'Eras Demi ITC';">This site is for adult entertainment and persons under the age of 18 must not enter. The game does involve nudity which may also be unsuitable to same adults. If nudity offends please advice your playing partners and arrange another mode of betting. </h3>
+                  <h3>&nbsp;</h3>
+                  <h3 style="font-family: 'Eras Demi ITC';">One suggestion the Games Master has is to play for commodities, this is how it was played some 200 years ago. If you wish to learn of other modes to play please contact us.</h3>
+                </div>
+                <div class="link clearfix colelem" id="u793-5"><!-- content -->
+                  <p>&nbsp;</p>
+                  <p><a href="mailto:GamesDirector@strippals.com">Games Master:</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="Container invi clearfix grpelem tab-pane" id="u802"><!-- group -->
+              <div class="grpelem active" id="u804"><!-- simple frame --></div>
+              <div class="clearfix grpelem" id="pu805-4"><!-- column -->
+                <div class="heading3 clearfix colelem" id="u805-4"><!-- content -->
+                  <h3 style="font-family: 'myfont';">USER PAY SITE</h3>
+                </div>
+                <div class="heading3 clearfix colelem" id="u803-4"><!-- content -->
+                  <h3 style="font-family: 'Eras Demi ITC';">To be fair to all players this is a user pay site - that is the more you use the site the less it will cost you. While every endeavour is made to accommodate players of all interests it is reccommended that players stay within their budget and do not over spend. </h3>
+                  <h3>&nbsp;</h3>
+                  <h3>For as little as 2c a minute with the total game cost about 20c, players can be assured of getting value for money.</h3>
+                </div>
+                <div class="link clearfix colelem" id="u806-5"><!-- content -->
+                  <p><a href="Games Master.html" target="_blank">Enter here</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="Container invi clearfix grpelem tab-pane" id="u797"><!-- group -->
+              <div class="grpelem" id="u801"><!-- simple frame --></div>
+              <div class="clearfix grpelem" id="pu800-4"><!-- column -->
+                <div class="heading3 clearfix colelem" id="u799-4"><!-- content -->
+                  <h3 style="font-family: 'Eras Demi ITC';">To accommodate different cultures and languages two chat rooms have been created -</h3>
+                  <p>&nbsp; </p>
+                  <h3><span style="color: #F01215" style="font-family: 'myfont';">Chat Room 1 is for English speaking Players.</span></h3>
+                  <h3>&nbsp;</h3>
+                  <h3><span style="color: #2440C0"  style="font-family: 'myfont'"> Times, serif;">Chat Room 2 is for Non English Speaking Players</span>. </h3>
+                  <p>&nbsp;</p>
+                  <h3>Once registered players can search for other players online to play with, personal respect is monitored during this section to ensure players have fun with their search.</h3>
+                </div>
+                <div class="link clearfix colelem" id="u798-5"><!-- content -->
+                  <p>&nbsp;</p>
+                  <p>&nbsp;</p>
+                  <p>Chat rooms &gt;&gt;&gt;</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ThumbGroup clearfix grpelem nav nav-tabs" id="u809"><!-- none box -->
+          <div class="popup_anchor">
+            <div class="Thumb popup_element clearfix" id="u810"><!-- group -->
+              <div class="clearfix grpelem" id="u811-4"><!-- content -->
+<!--                <p  style="font-family: 'Zebrazil';">site overview</p>-->
+                <a  href="#u792" data-toggle="tab" style="font-family: 'Zebrazil';">Overview</a>
+              </div>
+            </div>
+          </div>
+          <div class="popup_anchor">
+            <div class="Thumb popup_element clearfix" id="u812"><!-- group -->
+              <div class="clearfix grpelem" id="u813-4"><!-- content -->
+<!--                <p style="font-family: 'Zebrazil';">Cost</p>-->
+                <a  href="#u802" data-toggle="tab" style="font-family: 'Zebrazil';">Cost</a>
+              </div>
+            </div>
+          </div>
+          <div class="popup_anchor">
+            <div class="Thumb popup_element clearfix" id="u814"><!-- group -->
+              <div class="clearfix grpelem" id="u815-4"><!-- content -->
+<!--                <p  style="font-family: 'Zebrazil';">finding players</p>-->
+                <a  href="#u797" data-toggle="tab" style="font-family: 'Zebrazil';">finding players</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="nonblock nontext rgba-background clearfix grpelem" id="u826" href="chat/login.php"><!-- group --><div class="grpelem" id="u828"><!-- custom html --><i class="icon-thumbs-up-alt icon-block" style="line-height:105px;"></i></div><div class="clearfix grpelem" id="u832-6"><!-- content -->
+        <p>Chat</p>
+        <p>Room 1</p></div></a>
+      <a class="nonblock nontext rgba-background clearfix grpelem" id="u827" href="chat-non-english/login.php"><!-- group --><div class="grpelem" id="u830"><!-- custom html --><i class="icon-flag icon-block" style="line-height:105px;"></i></div><div class="clearfix grpelem" id="u833-6"><!-- content -->
+        <p>Chat</p>
+        <p>Room 2</p></div></a>
+    </div>
+    <div class="verticalspacer"></div>
+    <div class="browser_width colelem" id="u592-bw">
+      <div id="u592"><!-- column -->
+        <div class="clearfix" id="u592_align_to_page">
+          <div class="clearfix colelem" id="u593-6"><!-- content -->
+            <p style="font-family: 'Magra';"><a href="index.html">HOME</a> | <a href="contacts.html" target="_blank">CONTACTS</a> | <a href="entry.html" target="_blank">GAME ENTRY</a> | <a href="Games Master.html" target="_blank">GAMES MASTER</a> |</p>
+            <p>&nbsp;</p>
+            <p style="font-family: 'Magra';"><span>Strip Pals © 2016 </span><a class="nonblock" href="privacy-policy.html">Privacy policy</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<!-- JS includes -->
+<script type="text/javascript">
+    if (document.location.protocol != 'https:') document.write('\x3Cscript src="http://musecdn.businesscatalyst.com/scripts/4.0/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
+</script>
+<script type="text/javascript">
+    window.jQuery || document.write('\x3Cscript src="http://musecdn.businesscatalyst.com/scripts/4.0/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
+</script>
+<!--<script src="scripts/museutils.js?183364071" type="text/javascript"></script>-->
+<!--<script src="scripts/jquery.watch.js?71412426" type="text/javascript"></script>-->
+<!--<script src="scripts/webpro.js?3803554875" type="text/javascript"></script>-->
+<!--<script src="scripts/musewpslideshow.js?242596657" type="text/javascript"></script>-->
+<!--<script src="scripts/jquery.museoverlay.js?493285861" type="text/javascript"></script>-->
+<!--<script src="scripts/touchswipe.js?4038331989" type="text/javascript"></script>-->
+<!--<script src="scripts/jquery.musemenu.js?3957776250" type="text/javascript"></script>-->
+<!--<script src="scripts/jquery.scrolleffects.js?3860644955" type="text/javascript"></script>-->
+<!--<script src="scripts/musewpdisclosure.js?3993616448" type="text/javascript"></script>-->
+ Other scripts
+<!--<script type="text/javascript">-->
+<!--    $(document).ready(function() { try {-->
+<!--        (function(){var a={},b=function(a){if(a.match(/^rgb/))return a=a.replace(/\s+/g,"").match(/([\d\,]+)/gi)[0].split(","),(parseInt(a[0])<<16)+(parseInt(a[1])<<8)+parseInt(a[2]);if(a.match(/^\#/))return parseInt(a.substr(1),16);return 0};(function(){$('link[type="text/css"]').each(function(){var b=($(this).attr("href")||"").match(/\/?css\/([\w\-]+\.css)\?(\d+)/);b&&b[1]&&b[2]&&(a[b[1]]=b[2])})})();(function(){$("body").append('<div class="version" style="display:none; width:1px; height:1px;"></div>');-->
+<!--            for(var c=$(".version"),d=0;d<Muse.assets.required.length;){var f=Muse.assets.required[d],g=f.match(/([\w\-\.]+)\.(\w+)$/),k=g&&g[1]?g[1]:null,g=g&&g[2]?g[2]:null;switch(g.toLowerCase()){case "css":k=k.replace(/\W/gi,"_").replace(/^([^a-z])/gi,"_$1");c.addClass(k);var g=b(c.css("color")),h=b(c.css("background-color"));g!=0||h!=0?(Muse.assets.required.splice(d,1),"undefined"!=typeof a[f]&&(g!=a[f]>>>24||h!=(a[f]&16777215))&&Muse.assets.outOfDate.push(f)):d++;c.removeClass(k);break;case "js":k.match(/^jquery-[\d\.]+/gi)&&-->
+<!--            typeof $!="undefined"?Muse.assets.required.splice(d,1):d++;break;default:throw Error("Unsupported file type: "+g);}}c.remove();if(Muse.assets.outOfDate.length||Muse.assets.required.length)c="Some files on the server may be missing or incorrect. Clear browser cache and try again. If the problem persists please contact website author.",(d=location&&location.search&&location.search.match&&location.search.match(/muse_debug/gi))&&Muse.assets.outOfDate.length&&(c+="\nOut of date: "+Muse.assets.outOfDate.join(",")),d&&Muse.assets.required.length&&(c+="\nMissing: "+Muse.assets.required.join(",")),alert(c)})()})();-->
+<!--        /* body */-->
+<!--        Muse.Utils.transformMarkupToFixBrowserProblemsPreInit();/* body */-->
+<!--        Muse.Utils.prepHyperlinks(true);/* body */-->
+<!--        Muse.Utils.resizeHeight()/* resize height */-->
+<!--        Muse.Utils.initWidget('#slideshowu419', function(elem) { $(elem).data('widget', new WebPro.Widget.ContentSlideShow(elem, {heroFitting:'fillFrameProportionally',autoPlay:true,displayInterval:6000,slideLinkStopsSlideShow:false,transitionStyle:'fading',lightboxEnabled_runtime:false,shuffle:false,transitionDuration:500,enableSwipe:true,elastic:'fullWidth',resumeAutoplay:true,resumeAutoplayInterval:3000,playOnce:false,autoActivate_runtime:false})); });/* #slideshowu419 */-->
+<!--        Muse.Utils.initWidget('.MenuBar', function(elem) { return $(elem).museMenu(); });/* unifiedNavBar */-->
+<!--        Muse.Utils.initWidget('#pamphletu788', function(elem) { new WebPro.Widget.ContentSlideShow(elem, {contentLayout_runtime:'stack',event:'click',deactivationEvent:'none',autoPlay:false,displayInterval:3000,transitionStyle:'fading',transitionDuration:500,hideAllContentsFirst:false,shuffle:false,enableSwipe:true,resumeAutoplay:true,resumeAutoplayInterval:3000,playOnce:false,autoActivate_runtime:false}); });/* #pamphletu788 */-->
+<!--        $('#u118').registerPositionScrollEffect([{"speed":[0,1],"in":[-Infinity,723]},{"speed":[0,0],"in":[723,Infinity]}]);/* scroll effect */-->
+<!--        $('#buttonu121').registerPositionScrollEffect([{"speed":[0,1],"in":[-Infinity,723]},{"speed":[0,0],"in":[723,Infinity]}]);/* scroll effect */-->
+<!--        $('#u119').registerPositionScrollEffect([{"speed":[0,1],"in":[-Infinity,723]},{"speed":[0,0],"in":[723,Infinity]}]);/* scroll effect */-->
+<!--        Muse.Utils.initWidget('#slideshowu3276', function(elem) { $(elem).data('widget', new WebPro.Widget.ContentSlideShow(elem, {autoPlay:false,displayInterval:3000,slideLinkStopsSlideShow:false,transitionStyle:'fading',lightboxEnabled_runtime:true,shuffle:false,transitionDuration:500,enableSwipe:true,elastic:'off',resumeAutoplay:true,resumeAutoplayInterval:3000,playOnce:false,autoActivate_runtime:false})); });/* #slideshowu3276 */-->
+<!--        Muse.Utils.initWidget('#tab-panelu3260', function(elem) { return new WebPro.Widget.TabbedPanels(elem, {event:'click',defaultIndex:0}); });/* #tab-panelu3260 */-->
+<!--        Muse.Utils.fullPage('#page');/* 100% height page */-->
+<!--        Muse.Utils.showWidgetsWhenReady();/* body */-->
+<!--        Muse.Utils.transformMarkupToFixBrowserProblems();/* body */-->
+<!--    } catch(e) { if (e && 'function' == typeof e.notify) e.notify(); else Muse.Assert.fail('Error calling selector function:' + e); }});-->
+<!--</script>-->
+</body>
+
+</html>
