@@ -27,4 +27,6 @@
 //=require jquery.musemenu.js
 //=require jquery.scrolleffects.js
 //=require musewpdisclosure.js
+//=require jquery-1.11.3.min.js
+//=require bootstrap.js
 //= require_tree .
