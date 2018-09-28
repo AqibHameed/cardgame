@@ -132,7 +132,7 @@
                   <h3>For as little as 2c a minute with the total game cost about 20c, players can be assured of getting value for money.</h3>
                 </div>
                 <div class="link clearfix colelem" id="u806-5"><!-- content -->
-                  <p><a href="Games Master.html" target="_blank">Enter here</a></p>
+                  <p><%=link_to "ENTER HERE", games_master_index_path, target: :_blank %></p>
                 </div>
               </div>
             </div>
@@ -207,19 +207,34 @@
     $( document ).ready(function() {
         $("#overview").click(function() {
            // alert("overview");
-           // $("p").hide();
-           // $("p").show();
+            $("#u792").show();
+           $("#u797").removeClass('show', 'active');
+           $("#u802").removeClass('show', 'active');
+           $("#u792").css('display', 'block');
+            $("#u797").css('display', 'none');
+            $("#u802").css('display', 'none');
+
             //Do stuff when clicked
         });
         $("#cost").click(function() {
-            alert("hello");
-            $("u792").hide();
-            $("u797").hide();
+            // alert("hello");
+            $("#u802").show();
+            $("#u792").removeClass('show', 'active');
+            $("#u797").removeClass('show', 'active');
+            $("#u802").css('display', 'block');
+            $("#u797").css('display', 'none');
+            $("#u792").css('display', 'none');
             //Do stuff when clicked
         });
         $("#players").click(function() {
            // alert("players");
             //Do stuff when clicked
+            $("#u797").show();
+            $("#u792").removeClass('show', 'active');
+            $("#u802").removeClass('show', 'active');
+            $("#u797").css('display', 'block');
+            $("#u792").css('display', 'none');
+            $("#u802").css('display', 'none');
         });
     });
 </script>
