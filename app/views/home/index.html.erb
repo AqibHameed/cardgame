@@ -82,9 +82,9 @@
               <a class="nonblock nontext Button clearfix grpelem" id="buttonu349" href="https://www.youtube.com/watch?v=fNYY8PjDllw"><!-- container box --><div class="clearfix grpelem" id="u350-4"><!-- content -->
                 <p style="color: #f8f8f8; font-family: 'CASTTELLAR';">View video here</p>
               </div></a>
-              <a class="nonblock nontext Button clearfix grpelem" id="buttonu783" href="images/Game Rules.pdf"><!-- container box --><div class="clearfix grpelem" id="u784-4"><!-- content -->
+              <a class="nonblock nontext Button clearfix grpelem" id="buttonu783" href="#"><!-- container box --><div class="clearfix grpelem" id="u784-4"><!-- content -->
                 <p style="color: #f8f8f8; font-family: 'CASTTELLAR';">How to play</p></div></a>
-              <a class="nonblock nontext Button clearfix grpelem" id="buttonu785" href="images/Terms.pdf"><!-- container box --><div class="clearfix grpelem" id="u786-4"><!-- content -->
+              <a class="nonblock nontext Button clearfix grpelem" id="buttonu785" href="#"><!-- container box --><div class="clearfix grpelem" id="u786-4"><!-- content -->
                 <p style="color: #f8f8f8;font-family: 'CASTTELLAR';">TERMS</p></div></a>
             </div>
           </div>
@@ -184,7 +184,7 @@
           </div>
         </div>
       </div>
-      <%=link_to  new_user_session_path , class: "nonblock nontext rgba-background clearfix grpelem", id: "u826"  do %>
+      <%=link_to  chats_index_path , class: "nonblock nontext rgba-background clearfix grpelem", id: "u826"  do %>
 <!--      <a class="nonblock nontext rgba-background clearfix grpelem" id="u826" href="chat/login.php"><!-- group -->
         <div class="grpelem" id="u828"><!-- custom html --><i class="icon-thumbs-up-alt icon-block" style="line-height:105px;"></i></div><div class="clearfix grpelem" id="u832-6"><!-- content -->
           <span>Chat</span>
@@ -192,12 +192,13 @@
         </div>
 <!--      </a>-->
       <%end %>
-      <a class="nonblock nontext rgba-background clearfix grpelem" id="u827" href="chat-non-english/login.php"><!-- group -->
+      <%=link_to  chats_index_path , class: "nonblock nontext rgba-background clearfix grpelem", id: "u827"  do %><!-- group -->
         <div class="grpelem" id="u830"><!-- custom html --><i class="icon-flag icon-block" style="line-height:105px;"></i></div><div class="clearfix grpelem" id="u833-6"><!-- content -->
           <span>Chat</span>
           <span>Room 2</span>
         </div>
-      </a>
+      </a>?
+      <%end %>
     </div>
     <div class="verticalspacer"></div>
     <%= render 'shared/footer' %>
