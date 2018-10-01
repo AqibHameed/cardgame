@@ -37,26 +37,6 @@
 <!--  <link rel="stylesheet" href="styles/main.css">-->
 </head>
 <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-header">
-
-  <!-- Header section containing logo -->
-<!--  <header class="mdl-layout__header mdl-color-text--white mdl-color--light-blue-700">-->
-<!--    <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-grid">-->
-<!--      <div class="mdl-layout__header-row mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-desktop">-->
-<!--        <h3><i class="material-icons">chat_bubble_outline</i> Friendly Chat</h3>-->
-<!--      </div>-->
-<!--      <div id="user-container">-->
-<!--        <div hidden id="user-pic"></div>-->
-<!--        <div hidden id="user-name"></div>-->
-<!--        <button hidden id="sign-out" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white">-->
-<!--          Sign-out-->
-<!--        </button>-->
-        <%#= link_to('Sign-out', destroy_user_session_path, method: :delete, class: "mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white") %>
-<!--        <button hidden id="sign-in" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white">-->
-<!--          <i class="material-icons">account_circle</i>Sign-in with Google-->
-<!--        </button>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </header>-->
   <header class="mdl-layout__header mdl-color-text--white mdl-color--light-blue-700">
     <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-grid">
       <div class="mdl-layout__header-row mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-desktop">
@@ -66,10 +46,10 @@
         <div hidden id="user-pic"></div>
         <div hidden id="user-name"></div>
         <button hidden id="sign-out" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white">
-          Sign-out
+<!--          Sign-out-->
         </button>
         <button hidden id="sign-in" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white">
-          <i class="material-icons">account_circle</i>Sign-in with Google
+<!--          <i class="material-icons">account_circle</i>Sign-in-->
         </button>
       </div>
     </div>
@@ -112,8 +92,15 @@
 </div>
 
 <!-- Firebase -->
-
-
+<%= javascript_tag do %>
+  <%if current_user.present?%>
+    window.email = "<%=j current_user.email %>"
+    window.password = "<%=j current_user.encrypted_password %>";
+    window.sign_in = "true"
+  <%else %>
+    window.sign_out = "true"
+  <%end %>
+<% end %>
 
 <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
 <script>

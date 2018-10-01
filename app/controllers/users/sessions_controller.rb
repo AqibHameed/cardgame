@@ -11,7 +11,10 @@ class Users::SessionsController < Devise::SessionsController
 
   # POST /resource/sign_in
   def create
-    super
+    super do
+      resource.authentication_token =  Devise.friendly_token
+      resource.save
+    end
   end
 
   # DELETE /resource/sign_out
