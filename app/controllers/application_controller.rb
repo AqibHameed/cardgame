@@ -2,12 +2,13 @@ class ApplicationController < ActionController::Base
  # before_action :set_user
   # protect_from_forgery
   def after_sign_in_path_for(resource)
-    root_path
+    chats_index_path
     # request.env['omniauth.origin'] || stored_location_for(resource) || root_path
   end
 
   def after_sign_out_path_for(resource)
-    chats_index_path
+    #chats_index_path
+    root_path
     # request.env['omniauth.origin'] || stored_location_for(resource) || root_path
   end
   #private

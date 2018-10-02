@@ -97,7 +97,9 @@
     window.email = "<%=j current_user.email %>"
     window.password = "<%=j current_user.encrypted_password %>";
     window.sign_in = "true"
+    window.sign_out = "false"
   <%else %>
+    window.sign_in = "false"
     window.sign_out = "true"
   <%end %>
 <% end %>
