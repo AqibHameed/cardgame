@@ -568,7 +568,7 @@
 	height: 259px;
 	position: relative;
 	margin-right: -10000px;
-	background: transparent url("../images/home_img_01.jpg") no-repeat left top; url("<%= asset_path('CANDARAZ.woff')%>");
+	background: transparent url("<%= asset_path('home_img_01.jpg')%>") no-repeat left top;
 }
 
 #u757
@@ -579,7 +579,7 @@
 	position: relative;
 	margin-right: -10000px;
 	left: 400px;
-	background: transparent url("../images/home_img_02.jpg") no-repeat left top;
+	background: transparent url("<%= asset_path('home_img_02.jpg')%>") no-repeat left top;
 }
 
 #u758
@@ -590,7 +590,7 @@
 	position: relative;
 	margin-right: -10000px;
 	left: 800px;
-	background: transparent url("../images/home_img_03.jpg") no-repeat left top;
+	background: transparent url("<%= asset_path('home_img_03.jpg')%>") no-repeat left top;
 }
 
 #pu759-4
@@ -869,6 +869,7 @@
 	z-index: 225;
 	min-height: 651px;
 	background-color: #E67D0A;
+	margin-top: 50px;
 }
 
 #u834-3-bw
@@ -906,7 +907,7 @@
 {
 	z-index: 230;
 	width: 791px;
-	height: 368px;
+	height: auto;
 	border-style: none;
 	border-color: transparent;
 	background-color: #FFFFFF;
@@ -923,7 +924,7 @@
 	margin-right: -10000px;
 	margin-top: 61px;
 	left: 30px;
-	background: transparent url("../images/home_img_01.jpg") no-repeat center center;
+	background: transparent url("<%= asset_path('home_img_01.jpg')%>") no-repeat center center;
 }
 
 #pu795-4
@@ -983,7 +984,7 @@
 {
 	z-index: 245;
 	width: 791px;
-	height: 368px;
+	height: 600px;
 	border-style: none;
 	border-color: transparent;
 	background-color: #FFFFFF;
@@ -1000,7 +1001,7 @@
 	margin-right: -10000px;
 	margin-top: 60px;
 	left: 30px;
-	background: transparent url("../images/home_img_01.jpg") no-repeat center center;
+	background: transparent url("<%= asset_path('home_img_01.jpg')%>") no-repeat center center;
 }
 
 #u805-4
@@ -1054,7 +1055,7 @@
 {
 	z-index: 260;
 	width: 791px;
-	height: 368px;
+	height: 600px;
 	border-style: none;
 	border-color: transparent;
 	background-color: #FFFFFF;
@@ -1071,8 +1072,10 @@
 	margin-right: -10000px;
 	margin-top: 60px;
 	left: 30px;
-	background: transparent url("../images/home_img_01.jpg") no-repeat center center;
+	background: transparent url("<%= asset_path('home_img_01.jpg')%>") no-repeat center center;
 }
+
+
 
 #pu805-4,#pu800-4
 {
@@ -1145,6 +1148,19 @@
 	background-color: #CACACA;
 	padding-bottom: 12px;
 	top: -20px;
+}
+
+#u810:active
+{
+	background-color: white;
+}
+#u812:active
+{
+	background-color: white;
+}
+#u814:active
+{
+	background-color: white;
 }
 
 #u810:hover
@@ -1604,7 +1620,7 @@
 	z-index: 307;
 	min-height: 308px;
 	padding-bottom: 122px;
-	background: transparent url("../images/home_bg_01.jpg") no-repeat center top;
+	background: transparent url("<%= asset_path('home_bg_01.jpg')%>") no-repeat center top;
 }
 
 #u836-4
@@ -2104,7 +2120,7 @@
 	z-index: 381;
 	min-height: 439px;
 	padding-bottom: 109px;
-	background: transparent url("../images/pattern_dark_bg.jpg") repeat left top;
+	background: transparent url("<%= asset_path('pattern_dark_bg.jpg')%>") repeat left top;
 }
 
 #u883
@@ -2230,7 +2246,7 @@
 	z-index: 396;
 	min-height: 293px;
 	padding-bottom: 132px;
-	background: transparent url("../images/home_bg_02.jpg") no-repeat center top;
+	background: transparent url("<%= asset_path('home_bg_02.jpg')%>") no-repeat center top;
 }
 
 #u835_align_to_page,#u878_align_to_page,#u885_align_to_page
@@ -2644,7 +2660,7 @@
 {
 	z-index: 467;
 	min-height: 1076px;
-	background: transparent url("../images/home_bg_03.jpg") no-repeat center top;
+	background: transparent url("<%= asset_path('home_bg_03.jpg')%>") no-repeat center top;
 }
 
 #u739_align_to_page,#u843_align_to_page,#u917_align_to_page
@@ -3971,5 +3987,9 @@ body
 #page .verticalspacer
 {
 	clear: both;
+}
+.position
+{
+	margin-top: -140%;
 }
 
