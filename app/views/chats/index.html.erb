@@ -94,24 +94,29 @@
   <%end %>
 <% end %>
 
-<script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
-<!--<script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-app.js"></script>-->
-<!--<script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-auth.js"></script>-->
-<!--<script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-database.js"></script>-->
-<script>
-    // Initialize Firebase
-    var config = {
-        apiKey: "AIzaSyDhJ5rtwj0O6EnbvAOLFiHVlfz8MpISyyA",
-        authDomain: "chat-room-64cce.firebaseapp.com",
-        databaseURL: "https://chat-room-64cce.firebaseio.com",
-        projectId: "chat-room-64cce",
-        storageBucket: "chat-room-64cce.appspot.com",
-        messagingSenderId: "126833296189"
-    };
-    if (!firebase.apps.length) {
-        firebase.initializeApp(config);
-    }
-</script>
+$( document ).ready(function() {
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-messaging.js"></script>
+
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDhJ5rtwj0O6EnbvAOLFiHVlfz8MpISyyA",
+            authDomain: "chat-room-64cce.firebaseapp.com",
+            databaseURL: "https://chat-room-64cce.firebaseio.com",
+            projectId: "chat-room-64cce",
+            storageBucket: "chat-room-64cce.appspot.com",
+            messagingSenderId: "126833296189"
+        };
+        if (!firebase.apps.length) {
+            firebase.initializeApp(config);
+        }
+    </script>
+});
+
 
 
 
