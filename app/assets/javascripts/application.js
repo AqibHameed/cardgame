@@ -29,5 +29,4 @@
 //=require musewpdisclosure.js
 //=require jquery-1.11.3.min.js
 //=require bootstrap.js
-//=require main.js
 //= require_tree .
