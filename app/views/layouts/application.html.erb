@@ -82,11 +82,11 @@
 	<div class="container">
     <%# if request.env['PATH_INFO'] == chats_index_path %>
     <%#else %>
-        <% if user_signed_in? %>
-          <li>
-            <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
-          </li>
-        <%end %>
+        <%# if user_signed_in? %>
+<!--          <li>-->
+            <%#= link_to('Logout', destroy_user_session_path, method: :delete) %>
+<!--          </li>-->
+        <%#end %>
     <%# end %>
 		<% if notice %>
 		  <p class="alert alert-success"><%= notice %></p>

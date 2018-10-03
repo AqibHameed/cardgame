@@ -1,3 +1,19 @@
 // Place all the styles related to the chats controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.my-navbar{
+  -webkit-box-shadow: 0px 5px 12px -3px rgba(135,133,135,0.5);
+  -moz-box-shadow: 0px 5px 12px -3px rgba(135,133,135,0.5);
+  box-shadow: 0px 5px 12px -3px rgba(135,133,135,0.5);
+}
+.mdl-layout__container {
+  position: relative !important;
+  //width: 0 !important;
+  //height: 0 !important;
+}
+.my--ul
+{
+  height: 67px;
+  align-items: center;
+  display: flex;
+}
