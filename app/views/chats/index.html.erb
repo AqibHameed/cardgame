@@ -13,28 +13,28 @@
 
 <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-header">
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light my-navbar">
+  <div class="navbar navbar-expand-lg navbar-light bg-light my-navbar">
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <div class="row">
-        <h5 class="col-md-3"><i class="material-icons">chat_bubble_outline</i> Friendly Chat</h5>
+        <h5 class="col-md-3"><i class="material-icons">chat_bubble_outline</i> Chat</h5>
         <ul class="navbar-nav ml-auto my--ul" style="float: right;">
-          <li class="nav-item active">
-            <%= link_to('Home', root_path, class: "nav-link", style: 'color:black;') %>
-            &nbsp;
-          </li>
-          <% if user_signed_in? %>
-            <li class="nav-item">
-              <%= link_to('Logout', destroy_user_session_path, class: "nav-link",style: 'color:black;', method: :delete) %>
-            </li>
-          <%else %>
-            <li class="nav-item">
-              <%= link_to('SignIn', new_user_session_path, class: "nav-link", style: 'color:black;') %>
-            </li>
-          <%end %>
+<!--          <li class="nav-item active">-->
+            <%#= link_to('Home', root_path, class: "nav-link", style: 'color:black;') %>
+<!--            &nbsp;-->
+<!--          </li>-->
+          <%# if user_signed_in? %>
+<!--            <li class="nav-item">-->
+              <%#= link_to('Logout', destroy_user_session_path, class: "nav-link",style: 'color:black;', method: :delete) %>
+<!--            </li>-->
+          <%#else %>
+<!--            <li class="nav-item">-->
+              <%#= link_to('SignIn', new_user_session_path, class: "nav-link", style: 'color:black;') %>
+<!--            </li>-->
+          <%#end %>
         </ul>
       </div>
     </div>
-  </nav>
+  </div>
 
 
   <main class="mdl-layout__content mdl-color--grey-100">
