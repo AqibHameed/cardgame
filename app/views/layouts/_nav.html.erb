@@ -11,6 +11,18 @@
    		</div>
    		<div id="navbar" class="collapse navbar-collapse">
    			<ul class="nav navbar-nav navbar-right">
+          <li>
+            <%= link_to "Home", root_path, class: "text-color" %>
+          </li>
+          <li>
+            <%= link_to "Contact", contacts_index_path, class: "text-color" %>
+          </li>
+          <li>
+            <%= link_to "GAME ENTRY", entries_index_path, class: "text-color" %>
+          </li>
+          <li>
+            <%= link_to "GAMES MASTER", games_master_index_path, class: "text-color" %>
+          </li>
    				<% if user_signed_in? %>
             <li>
               <%= link_to "Game", game_index_path, class: "text-color" %>
