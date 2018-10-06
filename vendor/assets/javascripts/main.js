@@ -18,7 +18,6 @@
 // Initializes FriendlyChat.
 function FriendlyChat() {
   this.checkSetup();
-
   // Shortcuts to DOM Elements.initializeApp
   this.messageList = document.getElementById('messages');
   this.messageForm = document.getElementById('message-form');
@@ -61,11 +60,48 @@ FriendlyChat.prototype.initFirebase = function() {
   this.database = firebase.database();
   this.storage = firebase.storage();
   // Initiates Firebase auth and listen to auth state changes.
-  this.auth.onAuthStateChanged(this.onAuthStateChanged.bind(this));
+    this.onAuthStateChanged();
+    this.loadMessages();
+    if(sign_in == "true") {
+       this.sign_in();
+    }
+
+    if(sign_out == "true"){
+        this.sign_out();
+    }
+ // this.auth.onAuthStateChanged(this.onAuthStateChanged.bind(this));
 };
 
 // Loads chat messages history and listens for upcoming ones.
+FriendlyChat.prototype.sign_in = function() {
+    firebase.auth().createUserWithEmailAndPassword(email, password).then(function() {
+        // Sign-out successful.
+    }).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        firebase.auth().signInWithEmailAndPassword(email, password).then(function() {
+            // Sign-out successful.
+        }).catch(function(error) {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            // ...
+        });
+
+
+    });
+}
+
+FriendlyChat.prototype.sign_out = function() {
+    firebase.auth().signOut().then(function() {
+        // Sign-out successful.
+    }).catch(function(error) {
+        // An error happened.
+    });
+}
 FriendlyChat.prototype.loadMessages = function() {
+
   // Reference to the /messages/ database path.
   this.messagesRef = this.database.ref('messages');
   // Make sure we remove all previous listeners.
@@ -196,87 +232,68 @@ FriendlyChat.prototype.saveImageMessage = function(event) {
 //      alert(error.message);
 //  });;
 //};
+FriendlyChat.prototype.onAuthStateChanged = function() {
+    var current_object = this;
+    var name = this.userName;
+    this.auth.onAuthStateChanged(function(user) {
+        if (user) {
+
+            var userName = user.email;
+            // this.userName.value = userName;
+            name.innerHTML=userName;
+            name.removeAttribute('hidden');
+
+            // We load currently existing chant messages.
+            current_object.loadMessages();
+        } else {
+            name.setAttribute('hidden', 'true');
+            // No user is signed in.
+        }
+    });
+}
 
 // Triggers when the auth state change for instance when the user signs-in or signs-out.
-FriendlyChat.prototype.onAuthStateChanged = function(user) {
-  if (user) { // User is signed in!
-      if(sign_out == "true"){
-          this.auth.signOut().then(function() {
-              // Sign-out successful.
-          }).catch(function(error) {
-              // An error happened.
-          });
-      }
-//      var userEmail = user.email
-//      var myConnectionsRef = firebase.database().ref('users');
-//      var userRef = myConnectionsRef.push();
-//      var presenceRef = firebase.database().ref('.info/connected');
-//      presenceRef.on("value", function(snap) {
-//          if (snap.val()) {
-//              // Remove ourselves when we disconnect.
-//              userRef.onDisconnect().remove();
-
-//              myConnectionsRef.push({
-//                  name: user.email,
-//                  status: true
-//                  // photoUrl: currentUser.photoURL || url("<%##= asset_path('profile_placeholder.png')%>")
-//              })
-
-//          }
-//      });
-//      myConnectionsRef.on("value", function(snap) {
-//          console.log("Total number Login user *****")
-//          console.log( snap.value);
-//      });
-    // Get profile pic and user's name from the Firebase user object.
-    //var profilePicUrl = user.photoURL;
-    var userName = user.email;
-
-    // Set the user's profile pic and name.
-    //this.userPic.style.backgroundImage = 'url(' + profilePicUrl + ')';
-    this.userName.textContent = userName;
-
-    // Show user's profile and sign-out button.
-    this.userName.removeAttribute('hidden');
-    //this.userPic.removeAttribute('hidden');
-    //this.signOutButton.removeAttribute('hidden');
-
-    // Hide sign-in button.
-    //this.signInButton.setAttribute('hidden', 'true');
-
-    // We load currently existing chant messages.
-    this.loadMessages();
-  } else { // User is signed out!
-      if(sign_in == "true") {
-
-          this.auth.createUserWithEmailAndPassword(email, password).then(function() {
-              // Sign-out successful.
-          }).catch(function(error) {
-              // Handle Errors here.
-              var errorCode = error.code;
-              var errorMessage = error.message;
-              firebase.auth().signInWithEmailAndPassword(email, password).then(function() {
-                  // Sign-out successful.
-              }).catch(function(error) {
-                  // Handle Errors here.
-                  var errorCode = error.code;
-                  var errorMessage = error.message;
-                  // ...
-              });
-              // ...
-          });
-          this.loadMessages();
-
-      }
-    // Hide user's profile and sign-out button.
-    this.userName.setAttribute('hidden', 'true');
-    //this.userPic.setAttribute('hidden', 'true');
-    //this.signOutButton.setAttribute('hidden', 'true');
-
-    // Show sign-in button.
-    //this.signInButton.removeAttribute('hidden');
-  }
-};
+// FriendlyChat.prototype.onAuthStateChanged = function(user) {
+//   if (user) { // User is signed in!
+//       if(sign_out == "true"){
+//          console.log("****");
+//          console.log(user.email);
+//           this.auth.signOut().then(function() {
+//               // Sign-out successful.
+//           }).catch(function(error) {
+//               // An error happened.
+//           });
+//       }
+//     var userName = user.email;
+//
+//     // We load currently existing chant messages.
+//     this.loadMessages();
+//   } else { // User is signed out!
+//     console.log("Signin ********")
+//       if(sign_in == "true") {
+//           console.log("****");
+//           console.log(email);
+//           this.auth.createUserWithEmailAndPassword(email, password).then(function() {
+//               // Sign-out successful.
+//           }).catch(function(error) {
+//               // Handle Errors here.
+//               var errorCode = error.code;
+//               var errorMessage = error.message;
+//               firebase.auth().signInWithEmailAndPassword(email, password).then(function() {
+//                   // Sign-out successful.
+//               }).catch(function(error) {
+//                   // Handle Errors here.
+//                   var errorCode = error.code;
+//                   var errorMessage = error.message;
+//                   // ...
+//               });
+//               // ...
+//           });
+//           this.loadMessages();
+//
+//       }
+//   }
+// };
 
 // Returns true if user is signed-in. Otherwise false and displays a message.
 FriendlyChat.prototype.checkSignedInWithMessage = function() {
@@ -374,5 +391,6 @@ FriendlyChat.prototype.checkSetup = function() {
 
 window.onload = function() {
   window.friendlyChat = new FriendlyChat();
+
  // alert(sign_in);
 };
