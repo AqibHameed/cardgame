@@ -16,7 +16,8 @@
   <div class="navbar navbar-expand-lg navbar-light bg-light my-navbar">
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <div class="row">
-        <h5 class="col-md-3"><i class="material-icons">chat_bubble_outline</i> Chat</h5>
+        <%= image_tag 'logo.png',  class: "col-md-3 image-positions"%>
+        <h5 class="col-md-3 chat-position"><i class="material-icons">chat_bubble_outline</i> Chat</h5>
         <ul class="navbar-nav ml-auto my--ul" style="float: right;">
 <!--          <li class="nav-item active">-->
             <%#= link_to('Home', root_path, class: "nav-link", style: 'color:black;') %>
@@ -41,8 +42,8 @@
     <div id="messages-card-container" class="mdl-cell mdl-cell--12-col mdl-grid">
 
       <!-- Messages container -->
-      <div id="messages-card" class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-cell--6-col-tablet mdl-cell--6-col-desktop">
-        <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+      <div id="messages-card" class="mdl-card messages-width mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-cell--6-col-tablet mdl-cell--6-col-desktop">
+        <div class="mdl-card__supporting-text overflow-position mdl-color-text--grey-600">
           <div id="messages">
             <span id="message-filler"></span>
           </div>
@@ -64,8 +65,8 @@
         </div>
       </div>
 
-      <div id="messages-card" class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-cell--6-col-tablet mdl-cell--6-col-desktop">
-        <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+      <div id="messages-card" class="user-name-position users-width mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-cell--6-col-tablet mdl-cell--6-col-desktop">
+        <div class="mdl-card__supporting-text  mdl-color-text--grey-600">
           <ul>
             <li>
               <a hidden id="user-name" style="color: black; cursor:default;"></a>
