@@ -22,13 +22,39 @@
 .font-length{
   font-size: 18px;
 }
-.mdl-card__supporting-text{
+.overflow-position{
   max-height: 500px !important;
   overflow-y: scroll !important;
 }
 .padding{
   padding: 42px;
 }
-//.browser_width > * {
-//  right: -260px;
-//}
+.user-name-position{
+  width: 301px;
+  float: right;
+  overflow: auto;
+  height: 280px;
+  list-style: none;
+  border: 1px solid #E2E2E2;
+  padding: 10px;
+  font-size: 13px;
+  color: #808080;
+  background: #ffffff;
+}
+.messages-width{
+  width: 770px !important;
+}
+.users-width{
+  width: 205px !important;
+}
+.image-positions{
+  width: 110px;
+  margin-top: 25px;
+}
+@media only screen and (max-width: 576px){
+	.chat-position
+	{
+      margin-left: 115px !important;
+      margin-top: -41px !important;
+	}
+}
