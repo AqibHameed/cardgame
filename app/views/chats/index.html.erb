@@ -105,12 +105,12 @@
     <script>
         // Initialize Firebase
         var config = {
-            apiKey: "AIzaSyDhJ5rtwj0O6EnbvAOLFiHVlfz8MpISyyA",
-            authDomain: "chat-room-64cce.firebaseapp.com",
-            databaseURL: "https://chat-room-64cce.firebaseio.com",
-            projectId: "chat-room-64cce",
-            storageBucket: "chat-room-64cce.appspot.com",
-            messagingSenderId: "126833296189"
+            apiKey: "<%= ENV['FIREBASE_API_KEY'] %>",
+            authDomain: "<%= ENV['FIRBASE_AUTH_DOMAIN'] %>",
+            databaseURL: "<%= ENV['FIREBASE_DATABASE_URL'] %>",
+            projectId: "<%= ENV['FIREBASE_PROJECT_ID'] %>",
+            storageBucket: "<%= ENV['FIREBASE_STORAGE_BUCKET'] %>",
+            messagingSenderId: "<%= ENV['FIREBASE_MESSAGING_SENDER_ID'] %>"
         };
         if (!firebase.apps.length) {
             firebase.initializeApp(config);
