@@ -1,0 +1,437 @@
+.nav-item{
+  color: white;
+}
+@media only screen and (min-width: 320px) {
+  .colcont{
+    line-height: 1;
+    position: absolute;
+    width: 38% !important;
+    margin-left: 192px !important;
+    margin-top: -16px !important;
+  }
+  .ntb {
+    width: 100% !important;}
+}
+@media only screen and (min-width: 1500px){
+  .icondiv{
+    top: -427px !important;
+    transform: translateX(298%) !important;
+    width: 321px !important;
+    height: 172px !important;
+  }
+  .icondiv2{
+    transform: translateX(177%) !important;
+    height: 164px !important;
+    width: 334px !important;
+    top: -196px !important;
+  }
+  .footer--container{
+    position: relative !important;
+    top: -30px !important;
+  }
+}
+@media only screen and (max-width: 992px){
+  .item {
+    margin-left: 20% !important;
+  }
+  .image{
+    height: 40% !important;
+  }
+  .body{
+    overflow: hidden;
+  }
+  .mydiv{
+    position:absolute !important;
+    width: 70% !important;
+    height: 30px !important;
+    bottom: 43% !important;
+    left: 5% !important;
+  }
+  .mydiv-text{
+    position:absolute !important;
+    font-size: 18px !important;
+    top: 47% !important;
+    left: 6% !important;
+  }
+  .mydiv1{
+    position:absolute !important;
+    width: 70% !important;
+    height: 30px !important;
+    bottom: 31% !important;
+    left: 5% !important;
+  }
+  .mydiv-text1{
+    position:absolute !important;
+    font-size: 18px !important;
+    top: 60% !important;
+    left: 6% !important;
+  }
+  .bdtext{
+    margin-top: -395px !important;
+  }
+  .text1{
+    font-size: 22px !important;
+  }
+  .text2{
+    font-size: 19px !important;
+  }
+  .botmdiv{
+    width: 100% !important;
+    left: -2% !important;
+    margin-left: -35px !important;
+  }
+  .nav-tabs{
+    width: 74% !important;
+    font-size: 10px !important;
+  }
+  .hd{
+    font-size: 12px !important;
+    margin-left: 5px !important;
+    margin-top: 25% !important;
+  }
+  .img{
+    height: 160 !important;
+  }
+  .boby{
+    line-height: 0% !important;
+    max-width: 100% !important;
+  }
+  .btom{
+    width: 100% !important;
+    height: 490px !important;
+  }
+  .colcont{
+    font-size: 9px;
+    line-height: 1;
+    position: absolute;
+    width: 57% !important;
+    margin-left: 107px !important;
+    margin-top: -16px !important;
+  }
+  .bg-dark{
+    background-color: #343a40!important;
+  }
+  .tbc{
+    width: 105% !important;
+    margin-left: 30px !important;
+    height: 275px !important;
+  }
+  .prgraph{
+    margin-left: 0px !important;
+    font-size: 9px !important;
+  }
+  .img1{
+    width: 100px !important;
+    height: 175px !important;
+    margin-bottom: 90px !important;
+    margin-top: 39px !important;
+  }
+  .icondiv{
+    width: AUTO !important;
+    height: AUTO !important;
+    padding: 0 10px !important;
+    top: 0 !important;
+  }
+  .rchat{
+    margin-top: 12px !important;
+    text-align: center !important;
+    margin-left: 43px !important;
+    color: white !important;
+  }
+  .throm{
+    font-size: 42px !important;
+    color: white !important;
+    text-shadow: 2px 2px 4p #F07C00 !important;
+    position: absolute !important;
+    left: 2px !important;
+    top: 7px !important;
+  }
+  .icondiv2{
+    width: AUTO !important;
+    height: AUTO !important;
+    padding: 0 10px !important;
+    top: 0 !important;
+  }
+  .rchat2{
+    margin-top: 15px !important;
+    text-align: center !important;
+    margin-left: 60px !important;
+    color: #F07C00 !important;
+  }
+  .flgrom{
+    font-size: 38px !important;
+    color: #F07C00 !important;
+    text-shadow: 2px 2px 4p #F07C00 !important;
+    position: absolute !important;
+    left: 6px !important;
+    top: 9px !important;
+  }
+  .footer{
+    width: 100% !important;
+    height: 100px !important;
+  }
+  .boby{
+    max-width: 100% !important;
+  }
+  .ntb{
+    width: 99% !important;
+    margin-left: 30px !important;
+    font-size: 9px !important;
+  }
+  .rch{
+    font-size: 14px !important;
+  }
+  .footerdiv{
+    position: absolute !important;
+    top: 40px !important;
+    left: 78px !important;
+  }
+  .md{
+    margin-top: 66px !important;
+  }
+}
+.item{
+  margin-left: 50%;
+  color:white;
+}
+.logo{
+  color: white;
+  font-size: 20px;
+  margin-left: 70px;
+  font-family: sans-serif;
+  padding-top: 5px;
+}
+.nav-link{
+  color:black !important;
+}
+.mydiv{
+  background-color: #0e0e0e;
+  opacity: 0.23;
+  width: 70%;
+  height: 70px;
+  position: absolute;
+  /* left: 0%; */
+  bottom: 45%;
+}
+.mydiv-text{
+  position: absolute;
+  color: #B100c7;
+  font-size: 45px;
+  top: 45%;
+  /*left: 14%;*/
+  font-weight: bold;
+}
+.image{
+  background: image-url("slide_01.jpg");
+  width: 78%;
+  height: 90%;
+  position: relative;
+  right: -17%;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.cont{
+  position: relative;
+  width: 100%;
+  height: 700px;
+  margin: 0%;
+  padding: 0%;
+}
+.mydiv1{
+  background-color: #0e0e0e;
+  opacity: 0.23;
+  width: 70%;
+  height: 70px;
+  position: absolute;
+  /* left: 0%; */
+  bottom: 33%;
+}
+.mydiv-text1{
+  position: absolute;
+  color: #B100c7;
+  font-size: 45px;
+  top: 58%;
+  /*left: 14%;*/
+  font-weight: bold;
+}
+.bdtext{
+  text-align: center;
+  margin-left: 70px;
+}
+.text1{
+  font-weight: bold;
+  font-size: 48px;
+  font-family: 'myfont';
+  font-style: italic;
+}
+.text2{
+  font-weight: bold;
+  font-size: 48px;
+  color: red;
+  font-family: 'myfont';
+  font-style: italic;
+}
+.card-text{
+  font-family: 'Eras Demi ITC';
+  font-size: 16px;
+}
+.btn-primary{
+  color: white;
+  background-color: #F07C00;
+  border-color: #F07C00;
+  border-radius: 0%;
+}
+.btom{
+  position: relative;
+  background-color: #F07C00;
+  width: 100%;
+  height: 600px;
+}
+.card{
+  border: 0px;
+  width: 103%;
+}
+.botmdiv{
+  height: auto;
+  padding-top: 60px;
+}
+.contant{
+  /* position: absolute;
+   bottom: 19%;
+   /* left: 128px; */
+  /*width: 100%;
+  margin: 0%;
+  padding: 0%;  */
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: black !important;
+  background-color: white;
+}
+a.active{
+  color: black;
+  background-color: white !important;
+}
+.icondiv{
+  border: 3px solid white;
+  background-color: #F07C00;
+  color: white;
+  text-align: right;
+  right: 9%;
+  top: 18%;
+  position: relative;
+  top: 0;
+  left: 30px;
+  display: inline-block;
+  margin-right: 40px;
+}
+.footer--container{
+  position: relative;
+  top: 29px;
+}
+.tbc{
+  background-color: white;
+  width: 74%;
+  height: 428px;
+  margin-left: -70px;
+}
+.colcont{
+  margin-left: 7px;
+  margin-top: -57px;
+}
+.hd{
+  font-family: 'myfont' !important;
+  font-weight: bold !important;
+  margin-top: 15%;
+  font-size: 20px;
+  font-style: 'myfont';
+  font-style: oblique;
+}
+.navlink{
+  border: 1px solid transparent !important;
+  border-radius: 0% !important;
+  background-color: gainsboro !important;
+}
+.rchat{
+  margin-top: 40px;
+  text-align:left;
+  margin-left: 148px;
+  color: white;
+  font-size: 28px;
+}
+.rchat2{
+  margin-top: 40px;
+  text-align: left;
+  margin-left: 148px;
+  font-size: 28px;
+  color: #F07C00;
+}
+.icondiv2{
+
+  border: 1px solid white;
+  background-color: white;
+  color: #F07C00;
+  text-align: right;
+  position: relative;
+  top: 0;
+  left: 30px;
+  display: inline-block;
+  /* right: 4%; */
+  /* top: 253%; */
+}
+.footer{
+  position: relative;
+  width: 100%;
+  height: 100px;
+  background-color: #F07C00;
+  border-top: 1px solid white;
+}
+.footerdiv{
+  position: absolute;
+  top: 55px;
+  left: 120px;
+}
+.ntb{
+  font-size: 20px;
+  width: 80%;
+  margin-left: -70px;
+}
+.throm{
+  font-size: 120px;
+  color: white;
+  text-shadow: 2px 2px 4p #F07C00;
+  position: absolute;
+  left: 25px;
+  top: 12px;
+}
+.flgrom{
+  font-size: 100px;
+  color: #F07C00;
+  text-shadow: 2px 2px 4p #F07C00;
+  position: absolute;
+  left: 25px;
+  top: 25px;
+}
+.img1{
+  width: 170px;
+  height: 265px;
+  margin-bottom: 50px;
+  margin-top: 55px !important;
+}
+
+.card-title {
+  font-size: x-large;
+  font-family: 'myfont';
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+.btn-primary:hover {
+  background-color: #343a40;
+  border-color: #343a40;
+}
+/*.nav-link{
+  background-color: gainsboro !important;
+}*/

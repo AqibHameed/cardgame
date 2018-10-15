@@ -13,6 +13,7 @@
 //= require rails-ujs
 //= require turbolinks
 //= require jquery
+//= require popper
 //= require bootstrap-sprockets
 //= require html5shiv.js
 //= require jquery.mousewheel.min.js

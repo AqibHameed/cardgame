@@ -1,3 +1,158 @@
 // Place all the styles related to the entries controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.img-responsive {
+  width: 100%;
+}
+
+.jumbotron {
+  padding: 5rem 6rem;
+}
+
+.upper-container {
+  width: 80%;
+}
+
+.upper-paragraph {
+  font-size: 22px;
+}
+
+.upper-text {
+  margin-top: 61px;
+  font-family: 'Noto Serif', serif;
+  font-weight: 700;
+
+}
+
+hr{
+  width: 100%
+}
+
+.mid-icons{
+  width: 32px;
+}
+
+.mid-data {
+  margin-top: 26px;
+  margin-bottom: 22px;
+}
+
+
+.card-header {
+  text-align: center;
+}
+
+.green-card {
+  border: 1px solid #d6e9c6;
+}
+
+
+.green-panel {
+  background-color: #dff0d8;
+}
+
+.list-group-flush .list-group-item {
+  border-right: 0;
+  border-left: 0;
+  border-radius: 0;
+  text-align: center;
+}
+
+.card {
+  margin-bottom: 25px;
+}
+
+.card-header {
+  font-family: 'Acme', sans-serif;
+  font-size: 30px;
+}
+
+
+
+.un-panel {
+  background-color: rgb(252, 248, 227);
+}
+
+
+.un-card {
+  border-color: rgb(250, 235, 204);
+}
+
+
+
+.blue-panel {
+  background-color: rgb(217, 237, 247);
+}
+
+
+.blue-card {
+  border-color: rgb(188, 232, 241);
+}
+
+
+.dark-panel {
+  background-color: rgb(242, 222, 222);
+}
+
+
+.dark-card {
+  border-color: rgb(235, 204, 209);
+}
+
+.contact {
+  font-family: 'Acme', sans-serif;
+  margin-bottom: -10px;
+  font-size: 40px;
+}
+
+.mail {
+  color: rgb(47, 150, 247);
+  font-size: 21px;
+}
+
+.footer-data {
+  text-align: center;
+  padding: 10px 3px 3px 10px;
+}
+
+.text-center {
+  text-align: center!important;
+  margin-bottom: 29px;
+  color: #4a4949;
+}
+
+.tp--mid {
+
+}
+
+
+.line--style {
+  margin-top: 3px;
+  margin-bottom: 10px;
+}
+
+
+
+@media (min-width: 768px) {
+  .jumbotron {
+    padding: 3rem 4rem;
+  }
+}
+
+
+@media (min-width: 320px) {
+  .jumbotron {
+    padding: 4rem 2.5rem;
+  }
+}
+
