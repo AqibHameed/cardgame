@@ -1,44 +1,97 @@
-   <nav class="navbar navbar-inverse navbar-fixed-top">
-   	<div class="container">
-   		<div class="navbar-header">
-   			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-   				<span class="sr-only">Toggle navigation</span>
-   				<span class="icon-bar"></span>
-   				<span class="icon-bar"></span>
-   				<span class="icon-bar"></span>
-   			</button>
-   			<a class="navbar-brand text-color" href="<%= root_path %>">Strip Me Naked</a>
-   		</div>
-   		<div id="navbar" class="collapse navbar-collapse">
-   			<ul class="nav navbar-nav navbar-right">
-          <li>
-            <%= link_to "Home", root_path, class: "text-color" %>
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <!-- Brand/logo -->
+<!--  <h3 class="logo">Strip Me Naked</h3>-->
+  <a class="logo" href="<%= root_path %>">Strip Me Naked</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <!-- Links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <div class="item">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+<!--          <a class="nav-link" href="#" style="color:white !important;">Home</a>-->
+          <%= link_to "Home", root_path, class: "nav-link", style:"color:white !important;" %>
+        </li>
+        <li class="nav-item">
+<!--          <a class="nav-link meun" href="#" style="color:white !important;">Contact</a>-->
+          <%= link_to "Contact", contacts_index_path, class: "nav-link meun", style:"color:white !important;" %>
+        </li>
+        <li class="nav-item">
+<!--          <a class="nav-link meun" href="#" style="color:white !important;">GAME ENTRY</a>-->
+          <%= link_to "GAME ENTRY", entries_index_path, class: "nav-link meun", style:"color:white !important;" %>
+        </li>
+        <li class="nav-item">
+<!--          <a class="nav-link meun" href="#" style="color:white !important;">GAME MASTER</a>-->
+          <%= link_to "GAMES MASTER", games_master_index_path, class: "nav-link meun", style:"color:white !important;" %>
+        </li>
+
+
+        <% if user_signed_in? %>
+          <li class="nav-item">
+            <%= link_to "Game", game_index_path, class: "nav-link meun", style:"color:white !important;" %>
           </li>
-          <li>
-            <%= link_to "Contact", contacts_index_path, class: "text-color" %>
+          <li class="nav-item">
+            <%= link_to "Logout", destroy_user_session_path, class: "nav-link meun", style:"color:white !important;", method: :delete %>
           </li>
-          <li>
-            <%= link_to "GAME ENTRY", entries_index_path, class: "text-color" %>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to "Login", new_user_session_path, class: "nav-link meun", style:"color:white !important;" %>
           </li>
-          <li>
-            <%= link_to "GAMES MASTER", games_master_index_path, class: "text-color" %>
-          </li>
-   				<% if user_signed_in? %>
-            <li>
-              <%= link_to "Game", game_index_path, class: "text-color" %>
-            </li>
-   				<li>
-   					<%= link_to "Logout", destroy_user_session_path, class: "text-color", method: :delete %>
-   				</li>
-   				<% else %>
-   				<li>
-   					<%= link_to "Login", new_user_session_path, class: "text-color" %>
-   				</li>
+        <% end %>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+<!--<nav class="navbar navbar-inverse navbar-fixed-top">-->
+<!--   	<div class="container">-->
+<!--   		<div class="navbar-header">-->
+<!--   			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">-->
+<!--   				<span class="sr-only">Toggle navigation</span>-->
+<!--   				<span class="icon-bar"></span>-->
+<!--   				<span class="icon-bar"></span>-->
+<!--   				<span class="icon-bar"></span>-->
+<!--   			</button>-->
+<!--   			<a class="navbar-brand text-color" href="<%#= root_path %>">Strip Me Naked</a>-->
+<!--   		</div>-->
+<!--   		<div id="navbar" class="collapse navbar-collapse">-->
+<!--   			<ul class="nav navbar-nav navbar-right">-->
+<!--          <li>-->
+            <%#= link_to "Home", root_path, class: "text-color" %>
+<!--          </li>-->
+<!--          <li>-->
+            <%#= link_to "Contact", contacts_index_path, class: "text-color" %>
+<!--          </li>-->
+<!--          <li>-->
+            <%#= link_to "GAME ENTRY", entries_index_path, class: "text-color" %>
+<!--          </li>-->
+<!--          <li>-->
+            <%#= link_to "GAMES MASTER", games_master_index_path, class: "text-color" %>
+<!--          </li>-->
+   				<%# if user_signed_in? %>
+<!--            <li>-->
+              <%#= link_to "Game", game_index_path, class: "text-color" %>
+<!--            </li>-->
 <!--   				<li>-->
-   					<%#= link_to "Register", new_user_registration_path %>
+   					<%#= link_to "Logout", destroy_user_session_path, class: "text-color", method: :delete %>
 <!--   				</li>-->
-   				<% end %>
-   			</ul>
-   		</div><!--/.nav-collapse -->
-   	</div>
-   </nav>
+   				<%# else %>
+<!--   				<li>-->
+   					<%#= link_to "Login", new_user_session_path, class: "text-color" %>
+<!--   				</li>-->
+   				<%# end %>
+<!--   			</ul>-->
+<!--   		</div><!--/.nav-collapse -->
+<!--   	</div>-->
+<!--   </nav>-->
