@@ -18,7 +18,8 @@ html, body {
   font-family: 'Roboto', 'Helvetica', sans-serif;
 }
 main, #messages-card {
-  height: 100%;
+  /*height: 100%;*/
+  height: auto;
   padding-bottom: 0;
 }
 #messages-card-container {
@@ -54,7 +55,7 @@ main, #messages-card {
 #messages {
   overflow-y: auto;
   margin-bottom: 10px;
-  height: calc(100% - 80px);
+  /*height: calc(100% - 80px);*/
 }
 #message-filler {
   flex-grow: 1;
@@ -196,4 +197,20 @@ main, #messages-card {
 .mdl-button .material-icons {
   top: -1px;
   margin-right: 5px;
+}
+.mdl-right{
+  padding: 0;
+}
+.mdl-right ul{
+  padding: 0;
+}
+.message--btn{
+  position: relative;
+  transform: translate(20px,10px);
+}
+.message-container .spacing{
+  display: none;
+}
+.message-container .name{
+  padding-left: 0;
 }
