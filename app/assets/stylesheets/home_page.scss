@@ -12,7 +12,7 @@
   .ntb {
     width: 100% !important;}
 }
-@media only screen and (min-width: 1500px){
+@media only screen and (min-width: 992px) and (max-width: 1400px){
   .icondiv{
     top: -427px !important;
     transform: translateX(298%) !important;
@@ -435,3 +435,51 @@ a.active{
 /*.nav-link{
   background-color: gainsboro !important;
 }*/
+
+.bottom-section{
+  width: 100%;
+  height: 490px;
+  background-color: #F07C00;
+}
+.position-row{
+  margin-top: 55px;
+  width: 100%;
+}
+.row-height{
+  height: 407px;
+}
+@media only screen and (min-width: 320px) and (max-width: 992px){
+  .padding-container{
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media only screen and (min-width: 992px){
+  .padding-container{
+    padding-left: 157px;
+    padding-right: 158px;
+  }
+}
+.tabs-bg-color{
+  background-color: white;
+
+}
+.tabs-main-div{
+  width: 100%;
+}
+
+.tabs-inner-div
+{
+  background-color: white;
+  padding-top: 30px;
+  height: 365px;
+}
+
+.footer-tab-div{
+  background-color: yellow;
+  padding:0;
+}
+.footer-image
+{
+  width: 100%;
+}

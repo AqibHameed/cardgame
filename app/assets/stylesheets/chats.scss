@@ -9,6 +9,7 @@
 }
 .mdl-layout__container {
   position: relative !important;
+  height: auto !important;
   //width: 0 !important;
   //height: 0 !important;
 }
@@ -17,4 +18,17 @@
   height: 67px;
   align-items: center;
   display: flex;
+}
+.chat--heading{
+  position: relative; transform: translateX(26px);
+}
+.chat--head--icon{
+  position: relative;
+  top: 5px;
+}
+.icon--chat{
+  display: inline-block;
+}
+.icon--chat + h4{
+  display: inline-block;
 }

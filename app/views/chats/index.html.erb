@@ -15,9 +15,15 @@
 
   <div class="navbar navbar-expand-lg navbar-light bg-light my-navbar">
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <div class="row">
-        <%= image_tag 'logo.png',  class: "col-md-3 image-positions"%>
-        <h5 class="col-md-3 chat-position"><i class="material-icons">chat_bubble_outline</i> Chat</h5>
+      <div class="row chat--heading">
+        <%= image_tag 'logo.png',  class: "image-positions"%>
+        <div class="chat--head--icon">
+          <div class="icon--chat">
+            <i class="material-icons">chat_bubble_outline</i>
+          </div>
+          <h4>Chat</h4>
+        </div>
+<!--        <h5 class="col-md-3 chat-position"><i class="material-icons">chat_bubble_outline</i> Chat</h5>-->
         <ul class="navbar-nav ml-auto my--ul" style="float: right;">
         </ul>
       </div>
@@ -34,15 +40,7 @@
           <div id="messages">
             <span id="message-filler"></span>
           </div>
-          <form id="message-form" action="#">
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-              <input class="mdl-textfield__input" type="text" id="message">
-              <label class="mdl-textfield__label" for="message">Message...</label>
-            </div>
-            <button id="submit" disabled type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
-              Send
-            </button>
-          </form>
+
           <form id="image-form" action="#">
             <input id="mediaCapture" type="file" accept="">
             <button style="color: white" id="submitImage" title="Add an image" class="">
@@ -50,10 +48,19 @@
             </button>
           </form>
         </div>
+        <form id="message-form" class="message--btn" action="#">
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="message">
+            <label class="mdl-textfield__label" for="message">Message...</label>
+          </div>
+          <button id="submit" disabled type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+            Send
+          </button>
+        </form>
       </div>
 
       <div id="messages-card" class="user-name-position users-width mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-cell--6-col-tablet mdl-cell--6-col-desktop">
-        <div class="mdl-card__supporting-text  mdl-color-text--grey-600">
+        <div class="mdl-card__supporting-text mdl-right mdl-color-text--grey-600">
           <ul>
             <li>
               <a hidden id="user-name" style="color: black; cursor:default;"></a>

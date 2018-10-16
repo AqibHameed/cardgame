@@ -15,7 +15,6 @@
   <div class="row" style="margin-top:90px;">
     <div class="col-lg-4 col-sm-12">
       <div class="card">
-<!--        <img class="card-img-top" src="home_img_01.jpg" alt="Card image">-->
         <%= image_tag 'home_img_01.jpg', class: "card-img-top"%>
         <div class="card-body">
           <em><p class="card-title" style="font-style: oblique;font-size: x-large;
@@ -31,23 +30,23 @@
     </div>
     <div class="col-lg-4  col-sm-12">
       <div class="card">
-<!--        <img class="card-img-top" src="home_img_02.jpg" alt="Card image">-->
+        <!--        <img class="card-img-top" src="home_img_02.jpg" alt="Card image">-->
         <%= image_tag 'home_img_02.jpg', class: "card-img-top"%>
         <div class="card-body">
           <em><p class="card-title"  style="font-style: oblique;font-size: x-large;
               font-family: 'myfont';font-weight: 600;">APP INSTRUCTIONS</p></em>
           <p class="card-text">Learn how to play the game here.
             It require no skill and you only need luck and the fall of the cards to win</p>
-            <%=link_to  image_url('GameRules.pdf') , class:"btn btn-primary", style: "height:55px;margin-top: 22px;width: 145px;" do %>
-              <div style="padding-top:10px;">HOW TO PLAY</div>
-           <%end %>
+          <%=link_to  image_url('GameRules.pdf') , class:"btn btn-primary", style: "height:55px;margin-top: 22px;width: 145px;" do %>
+            <div style="padding-top:10px;">HOW TO PLAY</div>
+          <%end %>
           </a>
         </div>
       </div>
     </div>
     <div class="col-lg-4 col-sm-12">
       <div class="card">
-<!--        <img class="card-img-top" src="home_img_03.jpg" alt="Card image">-->
+        <!--        <img class="card-img-top" src="home_img_03.jpg" alt="Card image">-->
         <%= image_tag 'home_img_03.jpg', class: "card-img-top"%>
         <div class="card-body">
           <em> <p class="card-title" style="font-style: oblique;font-size:23px;
@@ -62,109 +61,209 @@
       </div>
     </div>
   </div>
-</div>  <br> <br>
-<div class="container-fluid btom">
-  <div class="row">
-    <div class="col-md-12 col-sm-12">
-      <div class="container botmdiv">
-        <div id="extab1" class=" contant">
-          <ul class="nav nav-pills ntb">
-            <li class="nav-itemn active">
-              <a class="nav-link  navlink active" data-toggle="tab" href="#home" style="background-color:white; font-family:-webkit-body;">SITE OVERVIEW</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link clink navlink" data-toggle="tab" href="#menu1"style="margin-left:1px; font-family:-webkit-body;">COST</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link  clink navlink" data-toggle="tab" href="#menu2" style="margin-left:1px; font-family:-webkit-body;">FINDING PLAYERS</a>
-            </li>
-          </ul>
+</div>
+<div class="container-fluid bottom-section">
 
+  <div class="container-fluid padding-container">
+    <div class="row">
+      <div class="position-row">
+        <div class="row row-height">
+          <div class="col-md-8 col-12 footer-tab-div">
+            <div class="container">
+              <div class="row">
+                <div class="tabs-main-div">
+                  <ul class="nav nav-pills">
+                    <li class="nav-itemn active">
+                      <a class="nav-link  navlink active" data-toggle="tab" href="#home" style="background-color:white; font-family:-webkit-body;">SITE OVERVIEW</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link clink navlink" data-toggle="tab" href="#menu1"style="margin-left:1px; font-family:-webkit-body;">COST</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link  clink navlink" data-toggle="tab" href="#menu2" style="margin-left:1px; font-family:-webkit-body;">FINDING PLAYERS</a>
+                    </li>
+                  </ul>
+                  <div class="tab-content tabs-inner-div">
+                    <div id="home" class="container tab-pane active">
+                      <div class="row">
+                        <div class="col-md-3 col-4">
+<!--                          <img class="img1" src="croped.png" style="width: 170px;height: 265px;margin-bottom: 50px;margin-top: 20px;">-->
+                          <%= image_tag 'croped.png', class: 'footer-image'%>
+                        </div>
 
-          <!-- Tab panes -->
-          <div class="tab-content tbc">
-            <div id="home" class="container tab-pane active"><br>
-              <div class="row">
-                <div class="col-md-3 col-sm-4">
-<!--                  <img class="img1" src="croped.png" style="width: 170px;height: 265px;margin-bottom: 50px;margin-top: 20px;">-->
-                  <%= image_tag 'croped.png', class: "img1", style:"width: 170px;height: 265px;margin-bottom: 50px;margin-top: 20px;"%>
-                </div>
+                        <div class="col-md-9 col-8">
+                          <h3 class="">ADULT ONLY ENTERTAINMENT</h3>
+                          <p style="font-family: 'Eras Demi ITC'; color: gray;">This site is for adult entertainment and persons under the age of 18 must not enter.
+                            The game does involve nudity which may also be unsuitable to same adults.
+                            If nudity offends please advice your playing partners and arrange another mode of betting..</p>
+                          <p style="font-family: 'Eras Demi ITC';  color: gray;">One suggestion the Games Master has is to play for commodities, this is how it was played some 200 years ago.
+                            If you wish to learn of other modes to play please contact us.</p>
+                          <a href="#" target="_blank" style="color:#F07C00;">GAMES MASTER:</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="menu1" class="container tab-pane">
+                      <div class="row">
+                        <div class="col-md-3 col-sm-3">
+<!--                          <img class="img1" src="croped.png" style="width: 170px;height: 265px;margin-bottom: 50px;margin-top: 20px;">-->
+                          <%= image_tag 'croped.png'%>
+                        </div>
+                        <div class="col-md-7 col-6">
+                          <h3 class="">USER PAY SITE</h3>
+                          <p style="font-family: 'Eras Demi ITC'; color: gray;">To be fair to all players this is a user pay site - that is the more you use the site the less it will cost you.
+                            While every endeavour is made to accommodate players of all interests it is reccommended that players stay within their budget and do not over spend. </p>
+                          <p  style=" color: gray;">For as little as 2c a minute with the total game cost about 20c, players can be assured of getting value for money.</p>
+                          <a href="#" target="_blank" style="color:#F07C00;">ENTER HERE</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="menu2" class="container tab-pane fade">
+                      <div class="row">
+                        <div class="col-md-3 col-sm-4">
+<!--                          <img class="img1" src="croped.png">-->
+                          <%= image_tag 'croped.png'%>
+                        </div>
+                        <div class="col-md-7 col-sm-6">
+                          <P style="font-family: 'Eras Demi ITC'; color: gray;">To accommodate different cultures and languages two chat rooms have been created -</P>
+                          <P><span style="color: #F01215">Chat Room 1 is for English speaking Players.</span></P>
+                          <P><span style="color: #2440C0">Chat Room 2 is for Non English Speaking Players</span>. </P>
+                          <P style="font-family: 'Eras Demi ITC'; color: gray;">Once registered players can search for other players online to play with,
+                            personal respect is monitored during this section to ensure players have fun with their search.</P>
+                          <p><strong>CHAT ROOMS >>></strong></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
-                <div class="col-md-7 col-sm-6 colcont">
-                  <h3 class="hd">ADULT ONLY ENTERTAINMENT</h3><br>
-                  <p class="prgraph" style="font-family: 'Eras Demi ITC'; color: gray;">This site is for adult entertainment and persons under the age of 18 must not enter.
-                    The game does involve nudity which may also be unsuitable to same adults.
-                    If nudity offends please advice your playing partners and arrange another mode of betting..</p>
-                  <p class="prgraph" style="font-family: 'Eras Demi ITC';  color: gray; padding-top: 40px;">One suggestion the Games Master has is to play for commodities, this is how it was played some 200 years ago.
-                    If you wish to learn of other modes to play please contact us.</p>
-                  <a href="#" target="_blank" style="color:#F07C00;">GAMES MASTER:</a>
-                </div>
-              </div>
-            </div>
-            <div id="menu1" class="container tab-pane"><br>
-              <div class="row">
-                <div class="col-md-3 col-sm-3">
-<!--                  <img class="img1" src="croped.png" style="width: 170px;height: 265px;margin-bottom: 50px;margin-top: 20px;">-->
-                  <%= image_tag 'croped.png', class: "img1", style:"width: 170px;height: 265px;margin-bottom: 50px;margin-top: 20px;"%>
-                </div>
-                <div class="col-md-7 col-sm-6 colcont">
-                  <h3 class="hd">USER PAY SITE</h3><br>
-                  <p class="prgraph" style="font-family: 'Eras Demi ITC'; color: gray;">To be fair to all players this is a user pay site - that is the more you use the site the less it will cost you.
-                    While every endeavour is made to accommodate players of all interests it is reccommended that players stay within their budget and do not over spend. </p><br>
-                  <p class="prgraph" style=" color: gray; padding-top: 40px;">For as little as 2c a minute with the total game cost about 20c, players can be assured of getting value for money.</p>
-                  <a class="prgraph" href="#" target="_blank" style="color:#F07C00;">ENTER HERE</a>
-                </div>
-              </div>
-            </div>
-            <div id="menu2" class="container tab-pane fade"><br>
-              <div class="row">
-                <div class="col-md-3 col-sm-4">
-<!--                  <img class="img1" src="croped.png">-->
-                  <%= image_tag 'croped.png', class: "img1"%>
-                </div>
-                <div class="col-md-7 col-sm-6 colcont">
-                  <P class="md" style="font-family: 'Eras Demi ITC'; margin-top: 80px; color: gray;">To accommodate different cultures and languages two chat rooms have been created -</P><br>
-                  <P><span style="color: #F01215">Chat Room 1 is for English speaking Players.</span></P><br>
-                  <P><span style="color: #2440C0">Chat Room 2 is for Non English Speaking Players</span>. </P><br>
-                  <P class="prgraph" style="font-family: 'Eras Demi ITC'; color: gray;">Once registered players can search for other players online to play with,
-                    personal respect is monitored during this section to ensure players have fun with their search.</P><br><br>
-                  <p><strong>CHAT ROOMS >>></strong></p>
                 </div>
               </div>
             </div>
           </div>
-
+          <div class="col-md-4 col-12" style="background-color: white">
+            <h1> Button div</h1>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="footer--container">
-    <div class="icondiv">
-      <%=link_to  chats_index_path , target: :_blank, style: "color:#F07C00" do %>
-        <i class="fa fa-thumbs-o-up throm"></i>
-        <div class="rchat">
-          <p class="rch" style="font-weight: bold;">Chat</p>
-          <p class="rch" style="margin-top:-22px; font-weight: bold;">Room 1</p>
-        </div>
-        </a>
-      <%end %>
-    </div>
-    <div class="icondiv2">
-      <%=link_to  chats_index_path , target: :_blank, style: "color:#F07C00" do %>
-        <i class="fa fa-flag flgrom"></i>
-        <div class="rchat2">
-          <p class="rch" style="font-weight: bold;font-size: 38px;">Chat</p>
-          <p class="rch" style="margin-top: -22px;font-weight: bold;font-size: 39px;">Room 2</p>
-        </div>
-        </a>
-      <%end %>
-    </div>
-  </div>
+
+
+
 </div>
-<div class="footer">
-  <div class="footerdiv">
-    <p style="font-family: 'Magra'; color: white;"><span>Strip Pals � 2016 </span><a class="nonblock" href="privacy-policy.html" style="color:white;">Privacy policy</a></p>
-  </div>
-</div>
+
+
+
+<!--<div class="container-fluid btom">-->
+<!--  <div class="row">-->
+<!--    <div class="col-md-12 col-sm-12">-->
+<!--      <div class="container botmdiv">-->
+<!--        <div id="extab1" class=" contant">-->
+<!--         <ul class="nav nav-pills ntb">-->
+<!--            <li class="nav-itemn active">-->
+<!--              <a class="nav-link  navlink active" data-toggle="tab" href="#home" style="background-color:white; font-family:-webkit-body;">SITE OVERVIEW</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--              <a class="nav-link clink navlink" data-toggle="tab" href="#menu1"style="margin-left:1px; font-family:-webkit-body;">COST</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--              <a class="nav-link  clink navlink" data-toggle="tab" href="#menu2" style="margin-left:1px; font-family:-webkit-body;">FINDING PLAYERS</a>-->
+<!--            </li>-->
+<!--          </ul>-->
+
+
+<!--           Tab panes -->
+<!--          <div class="tab-content tbc">-->
+<!--            <div id="home" class="container tab-pane active"><br>-->
+<!--              <div class="row">-->
+<!--                <div class="col-md-3 col-sm-4">-->
+<!--                  <img class="img1" src="croped.png" style="width: 170px;height: 265px;margin-bottom: 50px;margin-top: 20px;">-->
+<%#= image_tag 'croped.png', class: "img1", style:"width: 170px;height: 265px;margin-bottom: 50px;margin-top: 20px;"%>
+<!--                </div>-->
+
+<!--                <div class="col-md-7 col-sm-6 colcont">-->
+<!--                  <h3 class="hd">ADULT ONLY ENTERTAINMENT</h3><br>-->
+<!--                  <p class="prgraph" style="font-family: 'Eras Demi ITC'; color: gray;">This site is for adult entertainment and persons under the age of 18 must not enter.-->
+<!--                    The game does involve nudity which may also be unsuitable to same adults.-->
+<!--                    If nudity offends please advice your playing partners and arrange another mode of betting..</p>-->
+<!--                  <p class="prgraph" style="font-family: 'Eras Demi ITC';  color: gray; padding-top: 40px;">One suggestion the Games Master has is to play for commodities, this is how it was played some 200 years ago.-->
+<!--                    If you wish to learn of other modes to play please contact us.</p>-->
+<!--                  <a href="#" target="_blank" style="color:#F07C00;">GAMES MASTER:</a>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div id="menu1" class="container tab-pane"><br>-->
+<!--              <div class="row">-->
+<!--                <div class="col-md-3 col-sm-3">-->
+<!--                  <img class="img1" src="croped.png" style="width: 170px;height: 265px;margin-bottom: 50px;margin-top: 20px;">-->
+<%#= image_tag 'croped.png', class: "img1", style:"width: 170px;height: 265px;margin-bottom: 50px;margin-top: 20px;"%>
+<!--                </div>-->
+<!--                <div class="col-md-7 col-sm-6 colcont">-->
+<!--                  <h3 class="hd">USER PAY SITE</h3><br>-->
+<!--                  <p class="prgraph" style="font-family: 'Eras Demi ITC'; color: gray;">To be fair to all players this is a user pay site - that is the more you use the site the less it will cost you.-->
+<!--                    While every endeavour is made to accommodate players of all interests it is reccommended that players stay within their budget and do not over spend. </p><br>-->
+<!--                  <p class="prgraph" style=" color: gray; padding-top: 40px;">For as little as 2c a minute with the total game cost about 20c, players can be assured of getting value for money.</p>-->
+<!--                  <a class="prgraph" href="#" target="_blank" style="color:#F07C00;">ENTER HERE</a>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div id="menu2" class="container tab-pane fade"><br>-->
+<!--              <div class="row">-->
+<!--                <div class="col-md-3 col-sm-4">-->
+<!--                  <img class="img1" src="croped.png">-->
+<%#= image_tag 'croped.png', class: "img1"%>
+<!--                </div>-->
+<!--                <div class="col-md-7 col-sm-6 colcont">-->
+<!--                  <P class="md" style="font-family: 'Eras Demi ITC'; margin-top: 80px; color: gray;">To accommodate different cultures and languages two chat rooms have been created -</P><br>-->
+<!--                  <P><span style="color: #F01215">Chat Room 1 is for English speaking Players.</span></P><br>-->
+<!--                  <P><span style="color: #2440C0">Chat Room 2 is for Non English Speaking Players</span>. </P><br>-->
+<!--                  <P class="prgraph" style="font-family: 'Eras Demi ITC'; color: gray;">Once registered players can search for other players online to play with,-->
+<!--                    personal respect is monitored during this section to ensure players have fun with their search.</P><br><br>-->
+<!--                  <p><strong>CHAT ROOMS >>></strong></p>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="footer--container">-->
+<!--      <div class="icondiv">-->
+<%#=link_to  chats_index_path , target: :_blank, style: "color:#F07C00" do %>
+<!--          <i class="fa fa-thumbs-o-up throm"></i>-->
+<!--          <div class="rchat">-->
+<!--            <p class="rch" style="font-weight: bold;">Chat</p>-->
+<!--            <p class="rch" style="margin-top:-22px; font-weight: bold;">Room 1</p>-->
+<!--          </div>-->
+<!--          </a>-->
+<%#end %>
+<!--      </div>-->
+<!--      <div class="icondiv2">-->
+<%#=link_to  chats_index_path , target: :_blank, style: "color:#F07C00" do %>
+<!--          <i class="fa fa-flag flgrom"></i>-->
+<!--          <div class="rchat2">-->
+<!--            <p class="rch" style="font-weight: bold;font-size: 38px;">Chat</p>-->
+<!--            <p class="rch" style="margin-top: -22px;font-weight: bold;font-size: 39px;">Room 2</p>-->
+<!--          </div>-->
+<!--          </a>-->
+<%#end %>
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+
+
+
+
+<!--<div class="footer">-->
+<!--  <div class="footerdiv">-->
+<!--    <p style="font-family: 'Magra'; color: white;"><span>Strip Pals � 2016 </span><a class="nonblock" href="privacy-policy.html" style="color:white;">Privacy policy</a></p>-->
+<!--  </div>-->
+<!--</div>-->
+
+
+
+
 </body>
 </html>
