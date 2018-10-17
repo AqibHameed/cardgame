@@ -539,7 +539,7 @@ a.active{
 }
 @media (max-width: 768px) {
   .footer-button-two{
-    margin-top: 0;
+    margin-top: 5px;
   }
   .footer-font-weight {
     font-size: 25px;
@@ -558,6 +558,10 @@ a.active{
   .footer-icon-thumb
   {
     font-size: 3.5em;
+  }
+  .footer-anchor-width
+  {
+    max-width: 92%;
   }
 }
 
@@ -580,6 +584,18 @@ a.active{
 
     height: 30vh !important;
   }
+  .footer-icon-thumb
+  {
+    font-size: 3em;
+  }
+  .footer-font-weight
+  {
+    font-size: 14px;
+  }
+  .footer-anchor-width
+  {
+    max-width: 92%;
+  }
 }
 @media (max-width: 576px){
   .bottom-section{
@@ -598,4 +614,10 @@ a.active{
     height: auto;
   }
 
+}
+
+@media (max-width: 400px) {
+  .footer-button-two{
+    margin-top: 12px;
+  }
 }
