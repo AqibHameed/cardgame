@@ -45,7 +45,7 @@
           <p class="card-text">Learn how to play the game here.
             It require no skill and you only need luck and the fall of the cards to win</p>
           <%= link_to image_url('GameRules.pdf'), class: "btn btn-primary", style: "height:55px;margin-top: 22px;width: 145px;" do %>
-              <div style="padding-top:10px;">HOW TO PLAY</div>
+            <div style="padding-top:10px;">HOW TO PLAY</div>
           <% end %>
           </a>
         </div>
@@ -63,7 +63,7 @@
           <p class="card-text">Every player enters this sit MUST read and ACKNOWLEDGE the terms and conditions.
             Any breach of these conditions will result in disiplinary action.</p>
           <%= link_to image_url('Terms.pdf'), class: "btn btn-primary", style: "height:55px;width: 145px;" do %>
-              <div style="padding-top:10px;">TERMS</div>
+            <div style="padding-top:10px;">TERMS</div>
           <% end %>
           </a>
         </div>
@@ -110,7 +110,7 @@
                       <p style="font-family: 'Eras Demi ITC';  color: gray;">One suggestion the Games Master has is to
                         play for commodities, this is how it was played some 200 years ago.
                         If you wish to learn of other modes to play please contact us.</p>
-                      <a href="/games_master/index" target="_blank" style="color:#F07C00;">GAMES MASTER:</a>
+                      <a href="#" target="_blank" style="color:#F07C00;">GAMES MASTER:</a>
                     </div>
                   </div>
                 </div>
@@ -128,7 +128,7 @@
                         players stay within their budget and do not over spend. </p>
                       <p style=" color: gray;">For as little as 2c a minute with the total game cost about 20c, players
                         can be assured of getting value for money.</p>
-                      <a href="/entries/index" target="_blank" style="color:#F07C00;">ENTER HERE</a>
+                      <a href="#" target="_blank" style="color:#F07C00;">ENTER HERE</a>
                     </div>
                   </div>
                 </div>
@@ -160,32 +160,38 @@
       <div class="col-md-4 col-12 footer--col-change">
         <div class="row">
           <div class="row footer--button--side">
-           <%=link_to  chats_index_path , target: :_blank, style: "color:#F07C00" do %>
-              <div class="col-md-12 col-sm-5 col-5 footer-button-one">
-                <div class="row footer--button-row">
-                  <div class="col-4 footer--col-icon">
-                    <i class="fa fa-thumbs-o-up fa-5x footer-icon-thumb"></i>
+            <div>
+<!--              <a href="#">-->
+                <%=link_to  chats_index_path , target: :_blank, style: "color:#F07C00" do %>
+                <div class="col-md-12 col-sm-5 col-5 footer-button-one footer-anchor-width">
+                  <div class="row footer--button-row">
+                    <div class="col-4 footer--col-icon">
+                      <i class="fa fa-thumbs-o-up fa-5x footer-icon-thumb"></i>
+                    </div>
+                    <div class="col-8">
+                      <h1 class="footer-font-weight">Chat room 1</h1>
+                    </div>
                   </div>
-                  <div class="col-8">
-                    <h1 class="footer-font-weight">Chat room 1</h1>
-                  </div>
-                </div>
 
-              </div>
-            <%end%> 
-            <%=link_to  chats_index_path , target: :_blank, style: "color:#F07C00" do %>
-              <div class="col-md-12 col-sm-5 col-5 footer-button-two" style="">
-                <div class="row">
-                  <div class="col-4 footer--col-icon">
-                    <i class="fa fa-flag fa-5x footer-icon-thumb"></i>
-                  </div>
-                  <div class="col-8">
-                    <h1 class="footer-font-weight">Chat room 2</h1>
-                  </div>
                 </div>
-
+                <%end %>
+<!--              </a>-->
+            </div>
+<!--            <a href="#">-->
+              <%=link_to  chats_index_path , target: :_blank, style: "color:#F07C00" do %>
+              <div class="col-md-12 col-sm-5 col-5 footer-button-two footer-anchor-width">
+              <div class="row">
+                <div class="col-4 footer--col-icon">
+                  <i class="fa fa-flag fa-5x footer-icon-thumb"></i>
+                </div>
+                <div class="col-8">
+                  <h1 class="footer-font-weight">Chat room 2</h1>
+                </div>
               </div>
-            <%end%>  
+
+            </div>
+            <%end %>
+<!--              </a>-->
           </div>
         </div>
 
