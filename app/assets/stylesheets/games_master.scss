@@ -100,20 +100,21 @@ hr{
   margin-top: 15px;
 }
 
-
-
-
-
-
 @media (min-width: 768px) {
   .jumbotron {
     padding: 3rem 4rem;
   }
 }
 
+@media (max-width: 576px){
+  .upper-container {
+    width: 90%;
+}
+}
 
 @media (min-width: 320px) {
   .jumbotron {
     padding: 4rem 3.5rem;
   }
 }
+

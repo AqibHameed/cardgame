@@ -45,6 +45,7 @@ hr{
 .mid-data {
   margin-top: 26px;
   margin-bottom: 22px;
+  text-align: center;
 }
 
 
@@ -139,6 +140,7 @@ hr{
 .line--style {
   margin-top: 3px;
   margin-bottom: 10px;
+  text-align: center
 }
 
 
@@ -147,12 +149,48 @@ hr{
   .jumbotron {
     padding: 3rem 4rem;
   }
+  .upper-h1 h1{
+    font-size: 28px !important;
+  }
+  .upper-paragraph {
+    font-size: 18px;
+    font-weight: 500;
+  }
 }
 
+@media (max-width: 576px){
+  .upper-container .jumbotron{
+    padding: 20px 15px;
+  }
+  .upper-text{
+    margin-top: 20px;
+  }
+  .upper-paragraph{
+    padding: 0px 15px;
+  }
+  .upper-container {
+    width: 90%;
+}
+.card{
+  width: 100%;
+}
+body {
+  height: auto;
+  overflow-x: hidden;
+}
+}
 
 @media (min-width: 320px) {
   .jumbotron {
     padding: 4rem 2.5rem;
   }
+  .upper-h1 h1{
+    font-size: 27px !important;
+  }
+  .upper-paragraph {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
 }
 
