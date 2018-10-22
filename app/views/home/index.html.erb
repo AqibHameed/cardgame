@@ -51,9 +51,12 @@
           app catering for all plateforms.
         </p>
       </div>
-      <div class="button--for-card">
-        <a href="https://www.youtube.com/watch?v=fNYY8PjDllw">VIEW VIDEO HERE</a>
-      </div>
+      
+        <a href="https://www.youtube.com/watch?v=fNYY8PjDllw" style="color: white">
+          <div class="button--for-card">
+            VIEW VIDEO HERE
+          </div>
+        </a>
     </div>
     <div class="col-md-4 col-12 fullcard">
       <div class="image--for-card">
@@ -66,10 +69,12 @@
         <p>Learn how to play the game here. It require no skill and you only need luck and the fall of the cards to win
         </p>
       </div>
-      <div class="button--for-card" style="transition: all 0.5s">
-      <%= link_to "HOW TO PLAY", image_url('GameRules.pdf') %>
-      </div>
-    </div>
+        <%= link_to image_url('GameRules.pdf'), style: 'color: white' do %>
+          <div class="button--for-card" style="transition: all 0.5s">
+            HOW TO PLAY
+          </div>
+        <% end %>
+   </div>
     <div class="col-md-4 col-12 fullcard">
       <div class="image--for-card">
         <%= image_tag 'home_img_03.jpg', width: '300', height: '250' %>
@@ -82,9 +87,11 @@
           conditions will result in disiplinary action.
         </p>
       </div>
-      <div class="button--for-card" style="transition: all 0.5s">
-        <%= link_to "TERMS", image_url('Terms.pdf') %>
-      </div>
+      <%= link_to image_url('Terms.pdf'), style: 'color: white' do %>
+        <div class="button--for-card" style="transition: all 0.5s">
+          TERMS
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
