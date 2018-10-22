@@ -564,7 +564,10 @@ a.active{
     position: relative;
     .image--for-card
     {
-
+      overflow: hidden;
+    }
+    .image--for-card img {
+      max-width: 100%;
     }
     .title--for-card
     {
@@ -615,10 +618,12 @@ a.active{
   .container--for-card {
     max-width: 1000px;
     margin-bottom: 100px;
-    .row--for-card {
-      margin-bottom: 40px;
+    .row {
       margin-left: 0;
       margin-right: 0;
+    }
+    .row--for-card {
+      margin-bottom: 40px;
       .fullcard {
         .image--for-card {
           img {
