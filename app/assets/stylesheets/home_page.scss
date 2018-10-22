@@ -1,5 +1,20 @@
+.link-button-div
+{
+  padding-right: 0;
+  margin-bottom: 10px;
+}
+
+
 .nav-item{
   color: white;
+}
+.image
+{
+  overflow-x: hidden;
+}
+body
+{
+  overflow-x: hidden;
 }
 @media only screen and (min-width: 320px) {
   .colcont{
@@ -15,11 +30,15 @@
 @media only screen and (min-width: 992px) and (max-width: 1400px){
   .icondiv{
     top: -427px !important;
+    -webkit-transform: translateX(298%) !important;
+    -ms-transform: translateX(298%) !important;
     transform: translateX(298%) !important;
     width: 321px !important;
     height: 172px !important;
   }
   .icondiv2{
+    -webkit-transform: translateX(177%) !important;
+    -ms-transform: translateX(177%) !important;
     transform: translateX(177%) !important;
     height: 164px !important;
     width: 334px !important;
@@ -29,13 +48,21 @@
     position: relative !important;
     top: -30px !important;
   }
+  .row--for-card
+  {
+    margin-bottom: 90px !important;
+    .button--for-card
+    {
+      bottom: -45px !important;
+    }
+  }
 }
 @media only screen and (max-width: 992px){
   .item {
     margin-left: 20% !important;
   }
   .image{
-    height: 40% !important;
+
   }
   .body{
     overflow: hidden;
@@ -47,24 +74,18 @@
     bottom: 43% !important;
     left: 5% !important;
   }
-  .mydiv-text{
-    position:absolute !important;
-    font-size: 18px !important;
-    top: 47% !important;
-    left: 6% !important;
-  }
   .mydiv1{
-    position:absolute !important;
-    width: 70% !important;
-    height: 30px !important;
-    bottom: 31% !important;
-    left: 5% !important;
+    background-color: rgba(0,0,0,0.2);
+    opacity: 0.5;
+    width: 100%;
+    height: 70px;
+    z-index: -2;
   }
   .mydiv-text1{
-    position:absolute !important;
-    font-size: 18px !important;
-    top: 60% !important;
-    left: 6% !important;
+    color: #B100c7;
+    font-size: 45px;
+    top: 45%;
+    font-weight: bold;
   }
   .bdtext{
     margin-top: -395px !important;
@@ -214,25 +235,26 @@
   bottom: 45%;
 }
 .mydiv-text{
-  position: absolute;
   color: #B100c7;
   font-size: 45px;
-  top: 45%;
-  /*left: 14%;*/
+  /* top: 45%; */
+  /* left: 14%; */
   font-weight: bold;
 }
 .image{
   background: image-url("slide_01.jpg");
-  width: 78%;
+  width: 100%;
   height: 90%;
   position: relative;
-  right: -17%;
   background-position: center;
   background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .cont{
   position: relative;
@@ -242,20 +264,18 @@
   padding: 0%;
 }
 .mydiv1{
-  background-color: #0e0e0e;
-  opacity: 0.23;
-  width: 70%;
+  background-color: rgba(0,0,0,0.2);
+  opacity: 0.5;
+  width: 100%;
   height: 70px;
-  position: absolute;
-  /* left: 0%; */
-  bottom: 33%;
+  z-index: -2;
 }
 .mydiv-text1{
   position: absolute;
   color: #B100c7;
   font-size: 45px;
-  top: 58%;
-  /*left: 14%;*/
+  top: 51%;
+  /* left: 14%; */
   font-weight: bold;
 }
 .bdtext{
@@ -268,6 +288,7 @@
   font-family: 'myfont';
   font-style: italic;
 }
+
 .text2{
   font-weight: bold;
   font-size: 48px;
@@ -448,6 +469,10 @@ a.active{
   padding-top: 55px;
   width: 100%;
 }
+.container--tab .row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
 .row-height{
   height: 407px;
 }
@@ -455,6 +480,11 @@ a.active{
   .padding-container{
     padding-left: 40px;
     padding-right: 40px;
+  }
+  .card--container
+  {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 @media only screen and (min-width: 992px){
@@ -508,7 +538,6 @@ a.active{
 {
   margin-top: 42px;
   position: relative;
-  left: 30px;
 }
 
 .footer-button-two
@@ -526,15 +555,93 @@ a.active{
 }
 
 
-@media (max-width: 992px) and (min-width: 768px){
+.row--for-card
+{
+  position: relative;
+  margin-bottom: 30px;
+  .fullcard
+  {
+    position: relative;
+    .image--for-card
+    {
+
+    }
+    .title--for-card
+    {
+      font-style: oblique;
+      font-size: 21px;
+      margin-top: 20px;
+      font-family: 'PT Serif', serif;
+      font-weight: 600;
+    }
+    .description--for-card
+    {
+      padding-right: 15px;
+      height: 100%;
+      max-height: 144px;
+      p{
+        padding-bottom: 29px;
+      }
+    }
+    .button--for-card
+    {
+      position: absolute;
+      bottom: -10px;
+      background-color: #F07C00;
+      padding: 13px 11px;
+      width: 180px;
+      text-align: center;
+      a{
+
+        color: white;
+        text-decoration: none;
+      }
+    }
+    .button--for-card:hover{
+      background-color: #343a40;
+    }
+  }
+}
+
+
+@media (max-width: 992px) and (min-width: 768px) {
   .container.container--tab {
     max-width: 960px;
   }
-  .position-row{
+  .position-row {
     margin-right: initial;
     margin-left: initial;
   }
-
+  .container--for-card {
+    max-width: 1000px;
+    margin-bottom: 100px;
+    .row--for-card {
+      margin-bottom: 40px;
+      margin-left: 0;
+      margin-left: 0;
+      .fullcard {
+        .image--for-card {
+          img {
+            width: 100% !important;
+          }
+        }
+        .title--for-card {
+          font-size: 15px;
+        }
+        .description--for-card {
+          font-size: 15px;
+        }
+        .button--for-card
+        {
+          bottom: -45px;
+        }
+      }
+    }
+  }
+  .footer-icon-thumb
+  {
+    font-size: 3em;
+  }
 
 }
 @media (max-width: 768px) {
@@ -547,6 +654,9 @@ a.active{
   .footer-button-one
   {
     margin-right: 15px;
+  }
+  .cont {
+    height: 66%;
   }
   .footer--col-change
   {
@@ -561,7 +671,19 @@ a.active{
   }
   .footer-anchor-width
   {
-    max-width: 92%;
+    max-width: 100%;
+  }
+  .fullcard
+  {
+    margin-bottom: 25px;
+    text-align: center;
+    .button--for-card
+    {
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
+    }
   }
 }
 
@@ -582,7 +704,25 @@ a.active{
   }
   .image {
 
-    height: 30vh !important;
+    height: 34vh !important;
+  }
+  .image--text{
+    position: relative;
+    left: 10px;
+  }
+  .mydiv-text {
+    font-size: 20px;
+  }
+  .mydiv-text {
+    font-size: 20px;
+  }
+  .mydiv1 {
+    width: 100%;
+    height: 40px;
+  }
+  .mydiv-text1 {
+    font-size: 18px;
+    top: 57%;
   }
   .footer-icon-thumb
   {
@@ -594,7 +734,13 @@ a.active{
   }
   .footer-anchor-width
   {
-    max-width: 92%;
+    max-width: 100%;
+  }
+  .button--for-card
+  {
+    position: initial;
+    display: inline;
+    bottom: initial;
   }
 }
 @media (max-width: 576px){
@@ -608,10 +754,13 @@ a.active{
   }
   .nav--mob{
     padding: 5px 3px;
-    font-size: 14px;
+    font-size: 10px;
   }
   .bottom-section{
     height: auto;
+  }
+  .row--for-card .fullcard .button--for-card a {
+    padding: 6px;
   }
 
 }

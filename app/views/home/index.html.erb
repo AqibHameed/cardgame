@@ -1,9 +1,13 @@
 <!--landing image-->
 <div class="container-fluid cont">
+  <%#= image_tag('slide_01.jpg', style: 'width:100%') %>
   <div class="image animated fadeInRight">
-    <h3 class="mydiv-text">It is a game of luck!!!</h3>
-    <div class="mydiv1"></div>
-    <h3 class="mydiv-text1">NO SKILL REQUIRED</h3>
+    <div class="offset-md-2 image--text">
+      <h3 class="mydiv-text">It is a game of luck!!!</h3>
+      <div class="mydiv1"></div>
+      <h3 class="mydiv-text1">NO SKILL REQUIRED</h3>
+    </div>
+
   </div>
 </div>
 <!--landing image end-->
@@ -14,59 +18,72 @@
 </div>
 <!--center div end-->
 <!--card layout-->
-<div class="container">
-  <div class="row" style="margin-top:90px;">
-    <div class="col-md-4 col-12" style="padding-left:0; ">
-      <div class="card">
-        <div class="col-12">
-          <%= image_tag 'home_img_01.jpg', class: "card-img-top", style: 'width: 96%' %>
-        </div>
-        <div class="card-body">
-          <em><p class="card-title" style="font-style: oblique;font-size: x-large;
-              font-family: 'myfont';font-weight: 600;">STRIP ME NAKED APP</p></em>
-          <p class="card-text">Watch how to play the app video here.
-            The video tells of the origin of this 200 year old game.
-            It is s free app catering for all plateforms.</p>
-          <a href="https://www.youtube.com/watch?v=fNYY8PjDllw" class="btn btn-primary" style="height:55px;margin-top: 22px;width: 180px;">
-            <div style="padding-top:10px; padding-right:8px;">VIEW VIDEO HERE</div>
-          </a>
-        </div>
+<div class="container container--for-card">
+  <!--  <div class="row" style="margin-top:90px;">-->
+  <!--    <div class="col-md-4 col-lg-4 col-sm-12 col-12" style="padding-left:0; ">-->
+  <!--      <div class="card">-->
+  <!--        <div class="col-12">-->
+  <%#= image_tag 'home_img_01.jpg', width: '300', height: '250' %>
+  <!--        </div>-->
+  <!--        <div class="card-body col-12">-->
+  <!--          <em><p class="card-title" style="font-style: oblique;font-size: x-large;-->
+  <!--              font-family: 'myfont';font-weight: 600;">STRIP ME NAKED APP</p></em>-->
+  <!--          <p class="card-text">Watch how to play the app video here.-->
+  <!--            The video tells of the origin of this 200 year old game.-->
+  <!--            It is s free app catering for all plateforms.</p>-->
+  <!--          <a href="https://www.youtube.com/watch?v=fNYY8PjDllw" class="btn btn-primary" style="height:55px;margin-top: 22px;width: 180px;">-->
+  <!--            <div style="padding-top:10px; padding-right:8px;">VIEW VIDEO HERE</div>-->
+  <!--          </a>-->
+  <!--        </div>-->
+  <!--      </div>-->
+  <!--    </div>-->
+  <!--  </div>-->
+  <div class="row row--for-card">
+    <div class="col-md-4 col-12 fullcard">
+      <div class="image--for-card">
+        <%= image_tag 'home_img_01.jpg', width: '300', height: '250' %>
+      </div>
+      <div class="title--for-card">
+        <p>STRIP ME NAKED APP</p>
+      </div>
+      <div class="description--for-card">
+        <p>Watch how to play the app video here. The video tells of the origin of this 200 year old game. It is s free
+          app catering for all plateforms.
+        </p>
+      </div>
+      <div class="button--for-card">
+        <a href="btn btn-info">VIEW VIDEO HERE</a>
       </div>
     </div>
-    <div class="col-md-4  col-12">
-      <div class="card">
-        <!--        <img class="card-img-top" src="home_img_02.jpg" alt="Card image">-->
-        <div class="col-12">
-          <%= image_tag 'home_img_02.jpg', class: "card-img-top" %>
-        </div>
-        <div class="card-body">
-          <em><p class="card-title" style="font-style: oblique;font-size: x-large;
-              font-family: 'myfont';font-weight: 600;">APP INSTRUCTIONS</p></em>
-          <p class="card-text">Learn how to play the game here.
-            It require no skill and you only need luck and the fall of the cards to win</p>
-          <%= link_to image_url('GameRules.pdf'), class: "btn btn-primary", style: "height:55px;margin-top: 22px;width: 145px;" do %>
-            <div style="padding-top:10px;">HOW TO PLAY</div>
-          <% end %>
-          </a>
-        </div>
+    <div class="col-md-4 col-12 fullcard">
+      <div class="image--for-card">
+        <%= image_tag 'home_img_02.jpg', width: '300', height: '250' %>
+      </div>
+      <div class="title--for-card">
+        <p>APP INSTRUCTIONS</p>
+      </div>
+      <div class="description--for-card">
+        <p>Learn how to play the game here. It require no skill and you only need luck and the fall of the cards to win
+        </p>
+      </div>
+      <div class="button--for-card">
+        <a href="btn btn-info">HOW TO PLAY</a>
       </div>
     </div>
-    <div class="col-md-4 col-12">
-      <div class="card">
-        <!--        <img class="card-img-top" src="home_img_03.jpg" alt="Card image">-->
-        <div class="col-12">
-          <%= image_tag 'home_img_03.jpg', class: "card-img-top"%>
-        </div>
-        <div class="card-body">
-          <em><p class="card-title" style="font-style: oblique;font-size:23px;
-              font-family: 'myfont';font-weight: 600;">SITE TERMS & CONDITIONS</p></em>
-          <p class="card-text">Every player enters this sit MUST read and ACKNOWLEDGE the terms and conditions.
-            Any breach of these conditions will result in disiplinary action.</p>
-          <%= link_to image_url('Terms.pdf'), class: "btn btn-primary", style: "height:55px;width: 145px;" do %>
-            <div style="padding-top:10px;">TERMS</div>
-          <% end %>
-          </a>
-        </div>
+    <div class="col-md-4 col-12 fullcard">
+      <div class="image--for-card">
+        <%= image_tag 'home_img_03.jpg', width: '300', height: '250' %>
+      </div>
+      <div class="title--for-card">
+        <p>SITE TERMS & CONDITIONS</p>
+      </div>
+      <div class="description--for-card">
+        <p>Every player enters this sit MUST read and ACKNOWLEDGE the terms and conditions. Any breach of these
+          conditions will result in disiplinary action.
+        </p>
+      </div>
+      <div class="button--for-card">
+        <a href="btn btn-info">TERMS</a>
       </div>
     </div>
   </div>
@@ -160,13 +177,12 @@
       <div class="col-md-4 col-12 footer--col-change">
         <div class="row">
           <div class="row footer--button--side">
-            <div>
-<!--              <a href="#">-->
-                <%=link_to  chats_index_path , target: :_blank, style: "color:#F07C00" do %>
-                <div class="col-md-12 col-sm-5 col-5 footer-button-one footer-anchor-width">
+            <div class="col-12 link-button-div">
+              <%= link_to chats_index_path, target: :_blank, style: "color:#F07C00" do %>
+                <div class="col-md-12 col-sm-12 col-12 footer-button-one footer-anchor-width">
                   <div class="row footer--button-row">
                     <div class="col-4 footer--col-icon">
-                      <i class="fa fa-thumbs-o-up fa-5x footer-icon-thumb"></i>
+                      <i class="fa fa-thumbs-o-up fa-4x footer-icon-thumb"></i>
                     </div>
                     <div class="col-8">
                       <h1 class="footer-font-weight">Chat room 1</h1>
@@ -174,24 +190,24 @@
                   </div>
 
                 </div>
-                <%end %>
-<!--              </a>-->
+              <% end %>
             </div>
-<!--            <a href="#">-->
-              <%=link_to  chats_index_path , target: :_blank, style: "color:#F07C00" do %>
-              <div class="col-md-12 col-sm-5 col-5 footer-button-two footer-anchor-width">
-              <div class="row">
-                <div class="col-4 footer--col-icon">
-                  <i class="fa fa-flag fa-5x footer-icon-thumb"></i>
-                </div>
-                <div class="col-8">
-                  <h1 class="footer-font-weight">Chat room 2</h1>
-                </div>
-              </div>
+            <div class="col-12 link-button-div">
+              <%= link_to chats_index_path, target: :_blank, style: "color:#F07C00" do %>
+                <div class="col-md-12 col-sm-12 col-12 footer-button-two footer-anchor-width">
+                  <div class="row">
+                    <div class="col-4 footer--col-icon">
+                      <i class="fa fa-flag fa-4x footer-icon-thumb"></i>
+                    </div>
+                    <div class="col-8">
+                      <h1 class="footer-font-weight">Chat room 2</h1>
+                    </div>
+                  </div>
 
+                </div>
+              <% end %>
             </div>
-            <%end %>
-<!--              </a>-->
+
           </div>
         </div>
 
