@@ -10,12 +10,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # POST /resource
-  def create
-    super do
-      resource.authentication_token =  Devise.friendly_token
-      resource.save
-    end
-  end
 
   # GET /resource/edit
   # def edit

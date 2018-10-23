@@ -18,6 +18,7 @@ class UserDashboard < Administrate::BaseDashboard
     updated_at: Field::DateTime,
     games: Field::Number,
     authentication_token: Field::String,
+    password: Field::String
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -52,12 +53,7 @@ class UserDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
     :email,
-    :encrypted_password,
-    :reset_password_token,
-    :reset_password_sent_at,
-    :remember_created_at,
-    :games,
-    :authentication_token,
+    :password
   ].freeze
 
   # Overwrite this method to customize how users are displayed

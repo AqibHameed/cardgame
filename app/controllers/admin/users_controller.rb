@@ -16,6 +16,7 @@ module Admin
     # end
 
     # See https://administrate-prototype.herokuapp.com/customizing_controller_actions
-    # for more information
+    # for more informationparams.require(:user).permit(:email, :password, :password_confirmation)
+
   end
 end

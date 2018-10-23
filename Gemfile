@@ -39,7 +39,7 @@ gem 'bootstrap', '~> 4.1.3'
 gem 'gon'
 gem 'rabl-rails'
 #gem 'mini_racer'
-
+gem 'rolify'
 gem 'jwt'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
