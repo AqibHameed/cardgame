@@ -33,3 +33,20 @@ saleman2.add_role :saleman
 
 user1.add_role :user
 user2.add_role :user
+
+Game.create!(gamename: 'Ace Of Spades')
+Game.create!(gamename: 'King Of Spades')
+Game.create!(gamename: 'Queen Of Spades')
+Game.create!(gamename: 'Jack Of Spades')
+PackagePlan.create!(numberofgames: 5,
+                    amount: 0.5,
+                    game_id: 1)
+PackagePlan.create!(numberofgames: 3,
+                    amount: 0.5,
+                    game_id: 2)
+PackagePlan.create!(numberofgames: 2,
+                    amount: 0.5,
+                    game_id: 3)
+PackagePlan.create!(numberofgames: 1,
+                    amount: 0.5,
+                    game_id: 4)
