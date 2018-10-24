@@ -1,0 +1,2 @@
+class PackagePlansController < ApplicationController
+end

@@ -23,7 +23,7 @@ Rails.application.routes.draw do
   get 'contacts/index'
   get 'errors/not_found'
   get 'errors/internal_server_error'
-  get 'game/index'
+  get 'games/index'
   root 'home#index'
 
 end
