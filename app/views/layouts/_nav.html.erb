@@ -29,7 +29,7 @@
 
         <% if user_signed_in? %>
           <li class="nav-item">
-            <%= link_to "Game", game_index_path, class: "nav-link meun", style:"color:white !important;" %>
+            <%= link_to "Game", games_index_path, class: "nav-link meun", style:"color:white !important;" %>
           </li>
           <li class="nav-item">
             <%= link_to "Logout", destroy_user_session_path, class: "nav-link meun", style:"color:white !important;", method: :delete %>
