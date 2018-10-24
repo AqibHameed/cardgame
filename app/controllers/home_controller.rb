@@ -1,4 +1,6 @@
 class HomeController < ApplicationController
-  def index
+  def index; end
+  def entries
+    @packages = PackagePlan.all
   end
 end

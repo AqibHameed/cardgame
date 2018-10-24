@@ -19,11 +19,12 @@ Rails.application.routes.draw do
     get 'users/password/new_password', to: 'users/passwords#new_password'
   end
  # get 'users/update_password', to: 'users/passwords#update_password'
-  get 'entries/index'
   get 'contacts/index'
   get 'errors/not_found'
   get 'errors/internal_server_error'
   get 'games/index'
+  get '/entries', to: 'home#entries'
   root 'home#index'
+  resources :package_plans
 
 end
