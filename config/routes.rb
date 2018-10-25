@@ -26,5 +26,9 @@ Rails.application.routes.draw do
   get '/entries', to: 'home#entries'
   root 'home#index'
   resources :package_plans
+  resources :subcriptions
+  post '/subcription/:id' => 'subcriptions#show'
+  post '/hook' => 'subcriptions#hook'
+
 
 end

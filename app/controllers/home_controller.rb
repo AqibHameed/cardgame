@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index; end
   def entries
-    @packages = PackagePlan.all
+    @packages = PackagePlan.where(:active => true)
   end
 end

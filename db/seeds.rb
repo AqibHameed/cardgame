@@ -40,7 +40,8 @@ Game.create!(gamename: 'Queen Of Spades')
 Game.create!(gamename: 'Jack Of Spades')
 PackagePlan.create!(numberofgames: 5,
                     amount: 0.5,
-                    game_id: 1)
+                    game_id: 1,
+                    active: true)
 PackagePlan.create!(numberofgames: 3,
                     amount: 0.5,
                     game_id: 2)

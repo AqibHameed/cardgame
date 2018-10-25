@@ -1,2 +1,3 @@
 class PackagePlansController < ApplicationController
+
 end

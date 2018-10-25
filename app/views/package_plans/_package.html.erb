@@ -25,9 +25,7 @@
           <strong>US$<%= pack.amount %></strong>
         </li>
         <li class="list-group-item">
-          <a href="https://www.paypal.com/cgi-bin/webscr" target="_blank">
-            <%= image_tag 'btn_buynowCC_LG.gif'%>
-          </a>
+          <%= link_to  image_tag('btn_buynowCC_LG.gif'), {:controller => 'subcriptions', :action => 'new', :package_plan_id => pack.id}, :method => :get %>
         </li>
       </ul>
     </div>
