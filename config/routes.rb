@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    resources :users
+    root to: "users#index"
+  end
 
   get 'chats/index'
 
@@ -15,11 +19,16 @@ Rails.application.routes.draw do
     get 'users/password/new_password', to: 'users/passwords#new_password'
   end
  # get 'users/update_password', to: 'users/passwords#update_password'
-  get 'entries/index'
   get 'contacts/index'
   get 'errors/not_found'
   get 'errors/internal_server_error'
-  get 'game/index'
+  get 'games/index'
+  get '/entries', to: 'home#entries'
   root 'home#index'
+  resources :package_plans
+  resources :subcriptions
+  post '/subcription/:id' => 'subcriptions#show'
+  post '/hook' => 'subcriptions#hook'
+
 
 end

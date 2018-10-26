@@ -631,7 +631,7 @@ var GameObject = new Class({
      *
      * Also removes itself from the Input Manager and Physics Manager if previously enabled.
      *
-     * Use this to remove a Game Object from your game if you don't ever plan to use it again.
+     * Use this to remove a Game Object from your games if you don't ever plan to use it again.
      * As long as no reference to it exists within your own code it should become free for
      * garbage collection by the browser.
      *
@@ -5609,7 +5609,7 @@ var SpriteRender = __webpack_require__(870);
  * @classdesc
  * A Sprite Game Object.
  *
- * A Sprite Game Object is used for the display of both static and animated images in your game.
+ * A Sprite Game Object is used for the display of both static and animated images in your games.
  * Sprites can have input events and physics bodies. They can also be tweened, tinted, scrolled
  * and animated.
  *
@@ -12326,7 +12326,7 @@ var ImageRender = __webpack_require__(757);
  * @classdesc
  * An Image Game Object.
  *
- * An Image is a light-weight Game Object useful for the display of static images in your game,
+ * An Image is a light-weight Game Object useful for the display of static images in your games,
  * such as logos, backgrounds, scenery or other non-animated elements. Images can have input
  * events and physics bodies, or be tweened, tinted or scrolled. The main difference between an
  * Image and a Sprite is that you cannot animate an Image as they do not have the Animation component.
@@ -13472,9 +13472,9 @@ module.exports = {
 
 /**
  * Determines the operating system of the device running this Phaser Game instance.
- * These values are read-only and populated during the boot sequence of the game.
- * They are then referenced by internal game systems and are available for you to access
- * via `this.sys.game.device.os` from within any Scene.
+ * These values are read-only and populated during the boot sequence of the games.
+ * They are then referenced by internal games systems and are available for you to access
+ * via `this.sys.games.device.os` from within any Scene.
  * 
  * @name Phaser.Device.OS
  * @since 3.0.0
@@ -13482,21 +13482,21 @@ module.exports = {
  * @type {object}
  * @property {boolean} android - Is running on android?
  * @property {boolean} chromeOS - Is running on chromeOS?
- * @property {boolean} cocoonJS - Is the game running under CocoonJS?
- * @property {boolean} cocoonJSApp - Is this game running with CocoonJS.App?
- * @property {boolean} cordova - Is the game running under Apache Cordova?
- * @property {boolean} crosswalk - Is the game running under the Intel Crosswalk XDK?
+ * @property {boolean} cocoonJS - Is the games running under CocoonJS?
+ * @property {boolean} cocoonJSApp - Is this games running with CocoonJS.App?
+ * @property {boolean} cordova - Is the games running under Apache Cordova?
+ * @property {boolean} crosswalk - Is the games running under the Intel Crosswalk XDK?
  * @property {boolean} desktop - Is running on a desktop?
- * @property {boolean} ejecta - Is the game running under Ejecta?
- * @property {boolean} electron - Is the game running under GitHub Electron?
+ * @property {boolean} ejecta - Is the games running under Ejecta?
+ * @property {boolean} electron - Is the games running under GitHub Electron?
  * @property {boolean} iOS - Is running on iOS?
  * @property {boolean} iPad - Is running on iPad?
  * @property {boolean} iPhone - Is running on iPhone?
  * @property {boolean} kindle - Is running on an Amazon Kindle?
  * @property {boolean} linux - Is running on linux?
  * @property {boolean} macOS - Is running on macOS?
- * @property {boolean} node - Is the game running under Node.js?
- * @property {boolean} nodeWebkit - Is the game running under Node-Webkit?
+ * @property {boolean} node - Is the games running under Node.js?
+ * @property {boolean} nodeWebkit - Is the games running under Node-Webkit?
  * @property {boolean} webApp - Set to true if running as a WebApp, i.e. within a WebView
  * @property {boolean} windows - Is running on windows?
  * @property {boolean} windowsPhone - Is running on a Windows Phone?
@@ -16161,7 +16161,7 @@ var Sprite = __webpack_require__(40);
  * @classdesc
  * An Arcade Physics Sprite Game Object.
  *
- * A Sprite Game Object is used for the display of both static and animated images in your game.
+ * A Sprite Game Object is used for the display of both static and animated images in your games.
  * Sprites can have input events and physics bodies. They can also be tweened, tinted, scrolled
  * and animated.
  *
@@ -17979,7 +17979,7 @@ var BaseSound = new Class({
     },
 
     /**
-     * Update method called automatically by sound manager on every game step.
+     * Update method called automatically by sound manager on every games step.
      *
      * @method Phaser.Sound.BaseSound#update
      * @override
@@ -18192,7 +18192,7 @@ var NOOP = __webpack_require__(3);
  * @constructor
  * @since 3.0.0
  *
- * @param {Phaser.Game} game - Reference to the current game instance.
+ * @param {Phaser.Game} games - Reference to the current games instance.
  */
 var BaseSoundManager = new Class({
 
@@ -18205,7 +18205,7 @@ var BaseSoundManager = new Class({
         EventEmitter.call(this);
 
         /**
-         * Local reference to game.
+         * Local reference to games.
          *
          * @name Phaser.Sound.BaseSoundManager#game
          * @type {Phaser.Game}
@@ -18246,7 +18246,7 @@ var BaseSoundManager = new Class({
         this.volume = 1;
 
         /**
-         * Flag indicating if sounds should be paused when game looses focus,
+         * Flag indicating if sounds should be paused when games looses focus,
          * for instance when user switches to another tab/program/app.
          *
          * @name Phaser.Sound.BaseSoundManager#pauseOnBlur
@@ -18501,7 +18501,7 @@ var BaseSoundManager = new Class({
      */
 
     /**
-     * Pauses all the sounds in the game.
+     * Pauses all the sounds in the games.
      *
      * @method Phaser.Sound.BaseSoundManager#pauseAll
      * @fires Phaser.Sound.BaseSoundManager#pauseall
@@ -18523,7 +18523,7 @@ var BaseSoundManager = new Class({
      */
 
     /**
-     * Resumes all the sounds in the game.
+     * Resumes all the sounds in the games.
      *
      * @method Phaser.Sound.BaseSoundManager#resumeAll
      * @fires Phaser.Sound.BaseSoundManager#resumeall
@@ -18545,7 +18545,7 @@ var BaseSoundManager = new Class({
      */
 
     /**
-     * Stops all the sounds in the game.
+     * Stops all the sounds in the games.
      *
      * @method Phaser.Sound.BaseSoundManager#stopAll
      * @fires Phaser.Sound.BaseSoundManager#stopall
@@ -18597,8 +18597,8 @@ var BaseSoundManager = new Class({
     onFocus: NOOP,
 
     /**
-     * Update method called on every game step.
-     * Removes destroyed sounds and updates every active sound in the game.
+     * Update method called on every games step.
+     * Removes destroyed sounds and updates every active sound in the games.
      *
      * @method Phaser.Sound.BaseSoundManager#update
      * @protected
@@ -18636,7 +18636,7 @@ var BaseSoundManager = new Class({
     },
 
     /**
-     * Destroys all the sounds in the game and all associated events.
+     * Destroys all the sounds in the games and all associated events.
      *
      * @method Phaser.Sound.BaseSoundManager#destroy
      * @since 3.0.0
@@ -18811,9 +18811,9 @@ var OS = __webpack_require__(76);
 
 /**
  * Determines the browser type and version running this Phaser Game instance.
- * These values are read-only and populated during the boot sequence of the game.
- * They are then referenced by internal game systems and are available for you to access
- * via `this.sys.game.device.browser` from within any Scene.
+ * These values are read-only and populated during the boot sequence of the games.
+ * They are then referenced by internal games systems and are available for you to access
+ * via `this.sys.games.device.browser` from within any Scene.
  * 
  * @name Phaser.Device.Browser
  * @since 3.0.0
@@ -19230,7 +19230,7 @@ var Class = __webpack_require__(0);
  * @param {*} parent - [description]
  * @param {string} key - [description]
  * @param {*} value - [description]
- * @param {...*} [arguments] - Additional arguments that will be passed to the callback, after the game object, key, and data.
+ * @param {...*} [arguments] - Additional arguments that will be passed to the callback, after the games object, key, and data.
  */
 
 /**
@@ -19428,7 +19428,7 @@ var DataManager = new Class({
      *
      * @param {DataEachCallback} callback - The function to call.
      * @param {object} [scope] - Value to use as `this` when executing callback.
-     * @param {...*} [arguments] - Additional arguments that will be passed to the callback, after the game object, key, and data.
+     * @param {...*} [arguments] - Additional arguments that will be passed to the callback, after the games object, key, and data.
      *
      * @return {Phaser.Data.DataManager} This DataManager object.
      */
@@ -30547,13 +30547,13 @@ var Systems = new Class({
 
     /**
      * Called automatically by the SceneManager if the Game resizes.
-     * Dispatches an event you can respond to in your game code.
+     * Dispatches an event you can respond to in your games code.
      *
      * @method Phaser.Scenes.Systems#resize
      * @since 3.2.0
      *
-     * @param {number} width - The new width of the game.
-     * @param {number} height - The new height of the game.
+     * @param {number} width - The new width of the games.
+     * @param {number} height - The new height of the games.
      */
     resize: function (width, height)
     {
@@ -31257,9 +31257,9 @@ var CanvasPool = __webpack_require__(23);
 
 /**
  * Determines the features of the browser running this Phaser Game instance.
- * These values are read-only and populated during the boot sequence of the game.
- * They are then referenced by internal game systems and are available for you to access
- * via `this.sys.game.device.features` from within any Scene.
+ * These values are read-only and populated during the boot sequence of the games.
+ * They are then referenced by internal games systems and are available for you to access
+ * via `this.sys.games.device.features` from within any Scene.
  * 
  * @name Phaser.Device.Features
  * @since 3.0.0
@@ -31700,7 +31700,7 @@ var Smoothing = function ()
     /**
      * Sets the Image Smoothing property on the given context. Set to false to disable image smoothing.
      * By default browsers have image smoothing enabled, which isn't always what you visually want, especially
-     * when using pixel art in a game. Note that this sets the property on the context itself, so that any image
+     * when using pixel art in a games. Note that this sets the property on the context itself, so that any image
      * drawn to the context will be affected. This sets the property across all current browsers but support is
      * patchy on earlier browsers, especially on mobile.
      *
@@ -31729,7 +31729,7 @@ var Smoothing = function ()
     /**
      * Sets the Image Smoothing property on the given context. Set to false to disable image smoothing.
      * By default browsers have image smoothing enabled, which isn't always what you visually want, especially
-     * when using pixel art in a game. Note that this sets the property on the context itself, so that any image
+     * when using pixel art in a games. Note that this sets the property on the context itself, so that any image
      * drawn to the context will be affected. This sets the property across all current browsers but support is
      * patchy on earlier browsers, especially on mobile.
      *
@@ -33836,7 +33836,7 @@ var Camera = new Class({
         //  The mapping from 3D size units to pixels.
         //  In the default case 1 3D unit = 128 pixels. So a sprite that is
         //  256 x 128 px in size will be 2 x 1 units.
-        //  Change to whatever best fits your game assets.
+        //  Change to whatever best fits your games assets.
 
         /**
          * [description]
@@ -34923,8 +34923,8 @@ var Vector2 = __webpack_require__(6);
  * @constructor
  * @since 3.0.0
  *
- * @param {number} x - The x position of the Camera, relative to the top-left of the game canvas.
- * @param {number} y - The y position of the Camera, relative to the top-left of the game canvas.
+ * @param {number} x - The x position of the Camera, relative to the top-left of the games canvas.
+ * @param {number} y - The y position of the Camera, relative to the top-left of the games canvas.
  * @param {number} width - The width of the Camera, in pixels.
  * @param {number} height - The height of the Camera, in pixels.
  */
@@ -34954,7 +34954,7 @@ var Camera = new Class({
         this.name = '';
 
         /**
-         * The x position of the Camera, relative to the top-left of the game canvas.
+         * The x position of the Camera, relative to the top-left of the games canvas.
          *
          * @name Phaser.Cameras.Scene2D.Camera#x
          * @type {number}
@@ -34963,7 +34963,7 @@ var Camera = new Class({
         this.x = x;
 
         /**
-         * The y position of the Camera, relative to the top-left of the game canvas.
+         * The y position of the Camera, relative to the top-left of the games canvas.
          *
          * @name Phaser.Cameras.Scene2D.Camera#y
          * @type {number}
@@ -41356,7 +41356,7 @@ var NumberTweenBuilder = function (parent, config, defaults)
     //      ... (normal tween properties)
     //  })
     //
-    //  Then use it in your game via:
+    //  Then use it in your games via:
     //
     //  tween.getValue()
 
@@ -41880,7 +41880,7 @@ var Utils = __webpack_require__(44);
 
 /**
  * @classdesc
- * A StaticTilemapLayer is a game object that renders LayerData from a Tilemap. A
+ * A StaticTilemapLayer is a games object that renders LayerData from a Tilemap. A
  * StaticTilemapLayer can only render tiles from a single tileset.
  *
  * A StaticTilemapLayer is optimized for speed over flexibility. You cannot apply per-tile
@@ -42907,7 +42907,7 @@ var TilemapComponents = __webpack_require__(88);
 
 /**
  * @classdesc
- * A DynamicTilemapLayer is a game object that renders LayerData from a Tilemap. A
+ * A DynamicTilemapLayer is a games object that renders LayerData from a Tilemap. A
  * DynamicTilemapLayer can only render tiles from a single tileset.
  *
  * A DynamicTilemapLayer trades some speed for being able to apply powerful effects. Unlike a
@@ -47800,7 +47800,7 @@ var StaticBody = new Class({
     {
         if (gameObject && gameObject !== this.gameObject)
         {
-            //  Remove this body from the old game object
+            //  Remove this body from the old games object
             this.gameObject.body = null;
 
             gameObject.body = this;
@@ -53779,7 +53779,7 @@ var Image = __webpack_require__(72);
  * @classdesc
  * An Arcade Physics Image Game Object.
  *
- * An Image is a light-weight Game Object useful for the display of static images in your game,
+ * An Image is a light-weight Game Object useful for the display of static images in your games,
  * such as logos, backgrounds, scenery or other non-animated elements. Images can have input
  * events and physics bodies, or be tweened, tinted or scrolled. The main difference between an
  * Image and a Sprite is that you cannot animate an Image as they do not have the Animation component.
@@ -60263,7 +60263,7 @@ var WebAudioSound = new Class({
     },
 
     /**
-     * Update method called automatically by sound manager on every game step.
+     * Update method called automatically by sound manager on every games step.
      *
      * @method Phaser.Sound.WebAudioSound#update
      * @protected
@@ -60538,7 +60538,7 @@ var WebAudioSound = __webpack_require__(277);
  * @constructor
  * @since 3.0.0
  *
- * @param {Phaser.Game} game - Reference to the current game instance.
+ * @param {Phaser.Game} games - Reference to the current games instance.
  */
 var WebAudioSoundManager = new Class({
 
@@ -60599,16 +60599,16 @@ var WebAudioSoundManager = new Class({
 
     /**
      * Method responsible for instantiating and returning AudioContext instance.
-     * If an instance of an AudioContext class was provided trough the game config,
+     * If an instance of an AudioContext class was provided trough the games config,
      * that instance will be returned instead. This can come in handy if you are reloading
-     * a Phaser game on a page that never properly refreshes (such as in an SPA project)
+     * a Phaser games on a page that never properly refreshes (such as in an SPA project)
      * and you want to reuse already instantiated AudioContext.
      *
      * @method Phaser.Sound.WebAudioSoundManager#createAudioContext
      * @private
      * @since 3.0.0
      *
-     * @param {Phaser.Game} game - Reference to the current game instance.
+     * @param {Phaser.Game} game - Reference to the current games instance.
      *
      * @return {AudioContext} The AudioContext instance to be used for playback.
      */
@@ -60841,7 +60841,7 @@ var Extend = __webpack_require__(18);
 /**
  * @classdesc
  * No audio implementation of the sound. It is used if audio has been
- * disabled in the game config or the device doesn't support any audio.
+ * disabled in the games config or the device doesn't support any audio.
  *
  * It represents a graceful degradation of sound logic that provides
  * minimal functionality and prevents Phaser projects that use audio from
@@ -60952,7 +60952,7 @@ var NOOP = __webpack_require__(3);
 /**
  * @classdesc
  * No audio implementation of the sound manager. It is used if audio has been
- * disabled in the game config or the device doesn't support any audio.
+ * disabled in the games config or the device doesn't support any audio.
  *
  * It represents a graceful degradation of sound manager logic that provides
  * minimal functionality and prevents Phaser projects that use audio from
@@ -60964,7 +60964,7 @@ var NOOP = __webpack_require__(3);
  * @constructor
  * @since 3.0.0
  *
- * @param {Phaser.Game} game - Reference to the current game instance.
+ * @param {Phaser.Game} games - Reference to the current games instance.
  */
 var NoAudioSoundManager = new Class({
 
@@ -61467,7 +61467,7 @@ var HTML5AudioSound = new Class({
     },
 
     /**
-     * Update method called automatically by sound manager on every game step.
+     * Update method called automatically by sound manager on every games step.
      *
      * @method Phaser.Sound.HTML5AudioSound#update
      * @protected
@@ -61775,7 +61775,7 @@ var HTML5AudioSound = __webpack_require__(281);
  * @author Pavle Goloskokovic <pgoloskokovic@gmail.com> (http://prunegames.com)
  * @since 3.0.0
  *
- * @param {Phaser.Game} game - Reference to the current game instance.
+ * @param {Phaser.Game} games - Reference to the current games instance.
  */
 var HTML5AudioSoundManager = new Class({
 
@@ -61830,7 +61830,7 @@ var HTML5AudioSoundManager = new Class({
 
         /**
          * An array for keeping track of all the sounds
-         * that were paused when game lost focus.
+         * that were paused when games lost focus.
          *
          * @name Phaser.Sound.HTML5AudioSoundManager#onBlurPausedSounds
          * @type {Phaser.Sound.HTML5AudioSound[]}
@@ -62201,7 +62201,7 @@ var WebAudioSoundManager = __webpack_require__(278);
  * @author Pavle Goloskokovic <pgoloskokovic@gmail.com> (http://prunegames.com)
  * @since 3.0.0
  *
- * @param {Phaser.Game} game - Reference to the current game instance.
+ * @param {Phaser.Game} games - Reference to the current games instance.
  */
 var SoundManagerCreator = {
 
@@ -62504,7 +62504,7 @@ var SceneManager = new Class({
         this._pending = [];
 
         /**
-         * An array of scenes waiting to be started once the game has booted.
+         * An array of scenes waiting to be started once the games has booted.
          *
          * @name Phaser.Scenes.SceneManager#_start
          * @type {array}
@@ -62919,8 +62919,8 @@ var SceneManager = new Class({
      * @method Phaser.Scenes.SceneManager#resize
      * @since 3.2.0
      *
-     * @param {number} width - The new width of the game.
-     * @param {number} height - The new height of the game.
+     * @param {number} width - The new width of the games.
+     * @param {number} height - The new height of the games.
      */
     resize: function (width, height)
     {
@@ -64918,7 +64918,7 @@ var MouseManager = new Class({
     /**
      * If the browser supports pointer lock, this will request that the pointer lock is released. If
      * the browser successfully enters a locked state, a 'POINTER_LOCK_CHANGE_EVENT' will be
-     * dispatched - from the game's input manager - with an `isPointerLocked` property.
+     * dispatched - from the games's input manager - with an `isPointerLocked` property.
      *
      * @method Phaser.Input.Mouse.MouseManager#releasePointerLock
      * @since 3.0.0
@@ -66716,7 +66716,7 @@ var GamepadManager = new Class({
     },
 
     /**
-     * The total number of connected game pads.
+     * The total number of connected games pads.
      *
      * @name Phaser.Input.Gamepad.GamepadManager#total
      * @type {number}
@@ -68513,9 +68513,9 @@ var CanvasPool = __webpack_require__(23);
 
 /**
  * Determines the canvas features of the browser running this Phaser Game instance.
- * These values are read-only and populated during the boot sequence of the game.
- * They are then referenced by internal game systems and are available for you to access
- * via `this.sys.game.device.canvasFeatures` from within any Scene.
+ * These values are read-only and populated during the boot sequence of the games.
+ * They are then referenced by internal games systems and are available for you to access
+ * via `this.sys.games.device.canvasFeatures` from within any Scene.
  * 
  * @name Phaser.Device.CanvasFeatures
  * @since 3.0.0
@@ -68723,7 +68723,7 @@ var NOOP = __webpack_require__(3);
 
 /**
  * @classdesc
- * Abstracts away the use of RAF or setTimeOut for the core game update loop.
+ * Abstracts away the use of RAF or setTimeOut for the core games update loop.
  * This is invoked automatically by the Phaser.Game instance.
  *
  * @class RequestAnimationFrame
@@ -73581,7 +73581,7 @@ var BaseCache = new Class({
      * Removes and item from this cache based on the given key.
      *
      * If an entry matching the key is found it is removed from the cache and a `remove` event emitted.
-     * No additional checks are done on the item removed. If other systems or parts of your game code
+     * No additional checks are done on the item removed. If other systems or parts of your games code
      * are relying on this item, it is up to you to sever those relationships prior to removing the item.
      *
      * @method Phaser.Cache.BaseCache#remove
@@ -81187,7 +81187,7 @@ var CanvasRenderer = new Class({
     },
 
     /**
-     * Resize the main game canvas.
+     * Resize the main games canvas.
      *
      * @method Phaser.Renderer.Canvas.CanvasRenderer#resize
      * @since 3.0.0
@@ -90987,12 +90987,12 @@ var ArcadePhysics = new Class({
     },
 
     /**
-     * Sets the acceleration.x/y property on the game object so it will move towards the x/y coordinates at the given speed (in pixels per second sq.)
+     * Sets the acceleration.x/y property on the games object so it will move towards the x/y coordinates at the given speed (in pixels per second sq.)
      *
-     * You must give a maximum speed value, beyond which the game object won't go any faster.
+     * You must give a maximum speed value, beyond which the games object won't go any faster.
      *
-     * Note: The game object does not continuously track the target. If the target changes location during transit the game object will not modify its course.
-     * Note: The game object doesn't stop moving once it reaches the destination coordinates.
+     * Note: The games object does not continuously track the target. If the target changes location during transit the games object will not modify its course.
+     * Note: The games object doesn't stop moving once it reaches the destination coordinates.
      *
      * @method Phaser.Physics.Arcade.ArcadePhysics#accelerateTo
      * @since 3.0.0
@@ -91001,8 +91001,8 @@ var ArcadePhysics = new Class({
      * @param {number} x - The x coordinate to accelerate towards.
      * @param {number} y - The y coordinate to accelerate towards.
      * @param {number} [speed=60] - The speed it will accelerate in pixels per second.
-     * @param {number} [xSpeedMax=500] - The maximum x velocity the game object can reach.
-     * @param {number} [ySpeedMax=500] - The maximum y velocity the game object can reach.
+     * @param {number} [xSpeedMax=500] - The maximum x velocity the games object can reach.
+     * @param {number} [ySpeedMax=500] - The maximum y velocity the games object can reach.
      *
      * @return {number} The angle (in radians) that the object should be visually set to in order to match its new velocity.
      */
@@ -91023,12 +91023,12 @@ var ArcadePhysics = new Class({
     },
 
     /**
-     * Sets the acceleration.x/y property on the game object so it will move towards the x/y coordinates at the given speed (in pixels per second sq.)
+     * Sets the acceleration.x/y property on the games object so it will move towards the x/y coordinates at the given speed (in pixels per second sq.)
      *
-     * You must give a maximum speed value, beyond which the game object won't go any faster.
+     * You must give a maximum speed value, beyond which the games object won't go any faster.
      *
-     * Note: The game object does not continuously track the target. If the target changes location during transit the game object will not modify its course.
-     * Note: The game object doesn't stop moving once it reaches the destination coordinates.
+     * Note: The games object does not continuously track the target. If the target changes location during transit the games object will not modify its course.
+     * Note: The games object doesn't stop moving once it reaches the destination coordinates.
      *
      * @method Phaser.Physics.Arcade.ArcadePhysics#accelerateToObject
      * @since 3.0.0
@@ -91036,8 +91036,8 @@ var ArcadePhysics = new Class({
      * @param {Phaser.GameObjects.GameObject} gameObject - Any Game Object with an Arcade Physics body.
      * @param {Phaser.GameObjects.GameObject} destination - The Game Object to move towards. Can be any object but must have visible x/y properties.
      * @param {number} [speed=60] - The speed it will accelerate in pixels per second.
-     * @param {number} [xSpeedMax=500] - The maximum x velocity the game object can reach.
-     * @param {number} [ySpeedMax=500] - The maximum y velocity the game object can reach.
+     * @param {number} [xSpeedMax=500] - The maximum x velocity the games object can reach.
+     * @param {number} [ySpeedMax=500] - The maximum y velocity the games object can reach.
      *
      * @return {number} The angle (in radians) that the object should be visually set to in order to match its new velocity.
      */
@@ -95621,7 +95621,7 @@ module.exports = DownDuration;
  * The justUp value allows you to test if this Key has just been released or not.
  * When you check this value it will return `true` if the Key is up, otherwise `false`.
  * You can only call justUp once per key release. It will only return `true` once, until the Key is pressed down and released again.
- * This allows you to use it in situations where you want to check if this key is up without using a Signal, such as in a core game loop.
+ * This allows you to use it in situations where you want to check if this key is up without using a Signal, such as in a core games loop.
  *
  * @function Phaser.Input.Keyboard.JustUp
  * @since 3.0.0
@@ -95660,7 +95660,7 @@ module.exports = JustUp;
  * The justDown value allows you to test if this Key has just been pressed down or not.
  * When you check this value it will return `true` if the Key is down, otherwise `false`.
  * You can only call justDown once per key press. It will only return `true` once, until the Key is released and pressed down again.
- * This allows you to use it in situations where you want to check if this key is down without using a Signal, such as in a core game loop.
+ * This allows you to use it in situations where you want to check if this key is down without using a Signal, such as in a core games loop.
  *
  * @function Phaser.Input.Keyboard.JustDown
  * @since 3.0.0
@@ -97318,7 +97318,7 @@ var InputPlugin = new Class({
 
     /**
      * The x coordinates of the ActivePointer based on the first camera in the camera list.
-     * This is only safe to use if your game has just 1 non-transformed camera and doesn't use multi-touch.
+     * This is only safe to use if your games has just 1 non-transformed camera and doesn't use multi-touch.
      *
      * @name Phaser.Input.InputPlugin#x
      * @type {number}
@@ -97336,7 +97336,7 @@ var InputPlugin = new Class({
 
     /**
      * The y coordinates of the ActivePointer based on the first camera in the camera list.
-     * This is only safe to use if your game has just 1 non-transformed camera and doesn't use multi-touch.
+     * This is only safe to use if your games has just 1 non-transformed camera and doesn't use multi-touch.
      *
      * @name Phaser.Input.InputPlugin#y
      * @type {number}
@@ -110806,7 +110806,7 @@ var Class = __webpack_require__(0);
  * Bob positions are relative to the Blitter parent. So if you move the Blitter parent, all Bob children will
  * have their positions impacted by this change as well.
  *
- * You can manipulate Bob objects directly from your game code, but the creation and destruction of them should be
+ * You can manipulate Bob objects directly from your games code, but the creation and destruction of them should be
  * handled via the Blitter parent.
  *
  * @class Bob
@@ -111552,7 +111552,7 @@ var GetValue = __webpack_require__(5);
 // * @param {number} [ySpacing=0] - If the characters in the font set have vertical spacing between them set the required amount here.
 // * @param {number} [xOffset=0] - If the font set doesn't start at the top left of the given image, specify the X coordinate offset here.
 // * @param {number} [yOffset=0] - If the font set doesn't start at the top left of the given image, specify the Y coordinate offset here.
-// Phaser.GameObject.RetroFont = function (game, key, characterWidth, characterHeight, chars, charsPerRow, xSpacing, ySpacing, xOffset, yOffset)
+// Phaser.GameObject.RetroFont = function (games, key, characterWidth, characterHeight, chars, charsPerRow, xSpacing, ySpacing, xOffset, yOffset)
 
 // {
 //      image: key,
@@ -112485,7 +112485,7 @@ var TimeStep = new Class({
         /**
          * A reference to the Phaser.Game instance.
          *
-         * @property {Phaser.Game} game
+         * @property {Phaser.Game} games
          * @readOnly
          * @since 3.0.0
          */
@@ -112764,7 +112764,7 @@ var TimeStep = new Class({
     },
 
     /**
-     * Called when the visibility API says the game is 'hidden' (tab switch out of view, etc)
+     * Called when the visibility API says the games is 'hidden' (tab switch out of view, etc)
      *
      * @method Phaser.Boot.TimeStep#pause
      * @since 3.0.0
@@ -112775,7 +112775,7 @@ var TimeStep = new Class({
     },
 
     /**
-     * Called when the visibility API says the game is 'visible' again (tab switch back into view, etc)
+     * Called when the visibility API says the games is 'visible' again (tab switch back into view, etc)
      *
      * @method Phaser.Boot.TimeStep#resume
      * @since 3.0.0
@@ -112937,14 +112937,14 @@ var TimeStep = new Class({
         // another app which has spawned a window over the top of the browser), then it
         // will start to throttle the raf callback time. It waits for a while, and then
         // starts to drop the frame rate at 1 frame per second until it's down to just over 1fps.
-        // So if the game was running at 60fps, and the player opens a new window, then
+        // So if the games was running at 60fps, and the player opens a new window, then
         // after 60 seconds (+ the 'buffer time') it'll be down to 1fps, so rafin'g at 1Hz.
         //
-        // When they make the game visible again, the frame rate is increased at a rate of
+        // When they make the games visible again, the frame rate is increased at a rate of
         // approx. 8fps, back up to 60fps (or the max it can obtain)
         //
         // There is no easy way to determine if this drop in frame rate is because the
-        // browser is throttling raf, or because the game is struggling with performance
+        // browser is throttling raf, or because the games is struggling with performance
         // because you're asking it to do too much on the device.
 
         if (time > this.nextFpsUpdate)
@@ -114410,9 +114410,9 @@ module.exports = ProcessKeyCombo;
 
 /**
  * Determines the full screen support of the browser running this Phaser Game instance.
- * These values are read-only and populated during the boot sequence of the game.
- * They are then referenced by internal game systems and are available for you to access
- * via `this.sys.game.device.fullscreen` from within any Scene.
+ * These values are read-only and populated during the boot sequence of the games.
+ * They are then referenced by internal games systems and are available for you to access
+ * via `this.sys.games.device.fullscreen` from within any Scene.
  * 
  * @name Phaser.Device.Fullscreen
  * @since 3.0.0
@@ -114509,9 +114509,9 @@ module.exports = init();
 
 /**
  * Determines the video support of the browser running this Phaser Game instance.
- * These values are read-only and populated during the boot sequence of the game.
- * They are then referenced by internal game systems and are available for you to access
- * via `this.sys.game.device.video` from within any Scene.
+ * These values are read-only and populated during the boot sequence of the games.
+ * They are then referenced by internal games systems and are available for you to access
+ * via `this.sys.games.device.video` from within any Scene.
  * 
  * @name Phaser.Device.Video
  * @since 3.0.0
@@ -114597,9 +114597,9 @@ var Browser = __webpack_require__(100);
 
 /**
  * Determines the audio playback capabilities of the device running this Phaser Game instance.
- * These values are read-only and populated during the boot sequence of the game.
- * They are then referenced by internal game systems and are available for you to access
- * via `this.sys.game.device.audio` from within any Scene.
+ * These values are read-only and populated during the boot sequence of the games.
+ * They are then referenced by internal games systems and are available for you to access
+ * via `this.sys.games.device.audio` from within any Scene.
  * 
  * @name Phaser.Device.Audio
  * @since 3.0.0
@@ -114724,9 +114724,9 @@ var Browser = __webpack_require__(100);
 
 /**
  * Determines the input support of the browser running this Phaser Game instance.
- * These values are read-only and populated during the boot sequence of the game.
- * They are then referenced by internal game systems and are available for you to access
- * via `this.sys.game.device.input` from within any Scene.
+ * These values are read-only and populated during the boot sequence of the games.
+ * They are then referenced by internal games systems and are available for you to access
+ * via `this.sys.games.device.input` from within any Scene.
  * 
  * @name Phaser.Device.Input
  * @since 3.0.0
@@ -115065,7 +115065,7 @@ var CreateRenderer = function (game)
         CanvasPool.disableSmoothing();
     }
 
-    //  Does the game config provide its own canvas element to use?
+    //  Does the games config provide its own canvas element to use?
     if (config.canvas)
     {
         game.canvas = config.canvas;
@@ -115075,7 +115075,7 @@ var CreateRenderer = function (game)
         game.canvas = CanvasPool.create(game, config.width, config.height, config.renderType);
     }
 
-    //  Does the game config provide some canvas css styles to use?
+    //  Does the games config provide some canvas css styles to use?
     if (config.canvasStyle)
     {
         game.canvas.style = config.canvasStyle;
@@ -115433,10 +115433,10 @@ var VisibilityHandler = __webpack_require__(784);
 
 /**
  * @classdesc
- * The Phaser.Game instance is the main controller for the entire Phaser game. It is responsible
+ * The Phaser.Game instance is the main controller for the entire Phaser games. It is responsible
  * for handling the boot process, parsing the configuration values, creating the renderer,
  * and setting-up all of the global Phaser systems, such as sound and input.
- * Once that is complete it will start the Scene Manager and then begin the main game loop.
+ * Once that is complete it will start the Scene Manager and then begin the main games loop.
  *
  * You should generally avoid accessing any of the systems created by Game, and instead use those
  * made available to you via the Phaser.Scene Systems class instead.
@@ -115485,7 +115485,7 @@ var Game = new Class({
         this.canvas = null;
 
         /**
-         * A reference to the Canvas Rendering Context belonging to the Canvas Element this game is rendering to.
+         * A reference to the Canvas Rendering Context belonging to the Canvas Element this games is rendering to.
          *
          * @name Phaser.Game#context
          * @type {CanvasRenderingContext2D}
@@ -115504,7 +115504,7 @@ var Game = new Class({
         this.isBooted = false;
 
         /**
-         * A flag indicating if this Game is currently running its game step or not.
+         * A flag indicating if this Game is currently running its games step or not.
          *
          * @name Phaser.Game#isRunning
          * @type {boolean}
@@ -115514,7 +115514,7 @@ var Game = new Class({
         this.isRunning = false;
 
         /**
-         * An Event Emitter which is used to broadcast game-level events from the global systems.
+         * An Event Emitter which is used to broadcast games-level events from the global systems.
          *
          * @name Phaser.Game#events
          * @type {EventEmitter}
@@ -115525,7 +115525,7 @@ var Game = new Class({
         /**
          * An instance of the Animation Manager.
          *
-         * The Animation Manager is a global system responsible for managing all animations used within your game.
+         * The Animation Manager is a global system responsible for managing all animations used within your games.
          *
          * @name Phaser.Game#anims
          * @type {Phaser.Animations.AnimationManager}
@@ -115536,7 +115536,7 @@ var Game = new Class({
         /**
          * An instance of the Texture Manager.
          *
-         * The Texture Manager is a global system responsible for managing all textures being used by your game.
+         * The Texture Manager is a global system responsible for managing all textures being used by your games.
          *
          * @name Phaser.Game#textures
          * @type {Phaser.Textures.TextureManager}
@@ -115547,7 +115547,7 @@ var Game = new Class({
         /**
          * An instance of the Cache Manager.
          *
-         * The Cache Manager is a global system responsible for caching, accessing and releasing external game assets.
+         * The Cache Manager is a global system responsible for caching, accessing and releasing external games assets.
          *
          * @name Phaser.Game#cache
          * @type {Phaser.Cache.CacheManager}
@@ -115578,7 +115578,7 @@ var Game = new Class({
         /**
          * An instance of the Scene Manager.
          *
-         * The Scene Manager is a global system responsible for creating, modifying and updating the Scenes in your game.
+         * The Scene Manager is a global system responsible for creating, modifying and updating the Scenes in your games.
          *
          * @name Phaser.Game#scene
          * @type {Phaser.Scenes.SceneManager}
@@ -115589,7 +115589,7 @@ var Game = new Class({
         /**
          * A reference to the Device inspector.
          *
-         * Contains information about the device running this game, such as OS, browser vendor and feature support.
+         * Contains information about the device running this games, such as OS, browser vendor and feature support.
          * Used by various systems to determine capabilities and code paths.
          *
          * @name Phaser.Game#device
@@ -115601,7 +115601,7 @@ var Game = new Class({
         /**
          * An instance of the base Sound Manager.
          *
-         * The Sound Manager is a global system responsible for the playback and updating of all audio in your game.
+         * The Sound Manager is a global system responsible for the playback and updating of all audio in your games.
          *
          * @name Phaser.Game#sound
          * @type {Phaser.BaseSoundManager}
@@ -115613,7 +115613,7 @@ var Game = new Class({
          * An instance of the Time Step.
          *
          * The Time Step is a global system responsible for setting-up and responding to the browser frame events, processing
-         * them and calculating delta values. It then automatically calls the game step.
+         * them and calculating delta values. It then automatically calls the games step.
          *
          * @name Phaser.Game#loop
          * @type {Phaser.Boot.TimeStep}
@@ -115651,7 +115651,7 @@ var Game = new Class({
     /**
      * Game boot event.
      *
-     * This is an internal event dispatched when the game has finished booting, but before it is ready to start running.
+     * This is an internal event dispatched when the games has finished booting, but before it is ready to start running.
      * The global systems use this event to know when to set themselves up, dispatching their own `ready` events as required.
      *
      * @event Phaser.Game#boot
@@ -115659,7 +115659,7 @@ var Game = new Class({
 
     /**
      * This method is called automatically when the DOM is ready. It is responsible for creating the renderer,
-     * displaying the Debug Header, adding the game canvas to the DOM and emitting the 'boot' event.
+     * displaying the Debug Header, adding the games canvas to the DOM and emitting the 'boot' event.
      * It listens for a 'ready' event from the base systems and once received it will call `Game.start`.
      *
      * @method Phaser.Game#boot
@@ -115825,7 +115825,7 @@ var Game = new Class({
     /**
      * Game Pause event.
      *
-     * This event is dispatched when the game loop enters a paused state, usually as a result of the Visibility Handler.
+     * This event is dispatched when the games loop enters a paused state, usually as a result of the Visibility Handler.
      *
      * @event Phaser.Game#pauseEvent
      */
@@ -115849,7 +115849,7 @@ var Game = new Class({
     /**
      * Game Resume event.
      *
-     * This event is dispatched when the game loop leaves a paused state and resumes running.
+     * This event is dispatched when the games loop leaves a paused state and resumes running.
      *
      * @event Phaser.Game#resumeEvent
      */
@@ -115911,8 +115911,8 @@ var Game = new Class({
      * @method Phaser.Game#resize
      * @since 3.2.0
      *
-     * @param {number} width - The new width of the game.
-     * @param {number} height - The new height of the game.
+     * @param {number} width - The new width of the games.
+     * @param {number} height - The new height of the games.
      */
     resize: function (width, height)
     {
@@ -125249,7 +125249,7 @@ var Alpha = {
      * Set the Alpha level of this Game Object. The alpha controls the opacity of the Game Object as it renders.
      * Alpha values are provided as a float between 0, fully transparent, and 1, fully opaque.
      *
-     * If your game is running under WebGL you can optionally specify four different alpha values, each of which
+     * If your games is running under WebGL you can optionally specify four different alpha values, each of which
      * correspond to the four corners of the Game Object. Under Canvas only the `topLeft` value given is used.
      *
      * @method Phaser.GameObjects.Components.Alpha#setAlpha
@@ -125869,10 +125869,10 @@ var RandomDataGenerator = new Class({
 
     /**
      * Gets or Sets the state of the generator. This allows you to retain the values
-     * that the generator is using between games, i.e. in a game save file.
+     * that the generator is using between games, i.e. in a games save file.
      *
      * To seed this generator with a previously saved state you can pass it as the
-     * `seed` value in your game config, or call this method directly after Phaser has booted.
+     * `seed` value in your games config, or call this method directly after Phaser has booted.
      *
      * Call this method with no parameters to return the current state.
      *
@@ -127439,7 +127439,7 @@ module.exports = World;
 /**
 * The `Matter.Engine` module contains methods for creating and manipulating engines.
 * An engine is a controller that manages updating the simulation of the world.
-* See `Matter.Runner` for an optional game loop utility.
+* See `Matter.Runner` for an optional games loop utility.
 *
 * See the included usage [examples](https://github.com/liabru/matter-js/tree/master/examples).
 *
@@ -128912,7 +128912,7 @@ var Vector2 = __webpack_require__(6);
  * @classdesc
  * A Matter Physics Sprite Game Object.
  *
- * A Sprite Game Object is used for the display of both static and animated images in your game.
+ * A Sprite Game Object is used for the display of both static and animated images in your games.
  * Sprites can have input events and physics bodies. They can also be tweened, tinted, scrolled
  * and animated.
  *
@@ -129063,7 +129063,7 @@ var Vector2 = __webpack_require__(6);
  * @classdesc
  * A Matter Physics Image Game Object.
  * 
- * An Image is a light-weight Game Object useful for the display of static images in your game,
+ * An Image is a light-weight Game Object useful for the display of static images in your games,
  * such as logos, backgrounds, scenery or other non-animated elements. Images can have input
  * events and physics bodies, or be tweened, tinted or scrolled. The main difference between an
  * Image and a Sprite is that you cannot animate an Image as they do not have the Animation component.
@@ -131804,7 +131804,7 @@ var Sprite = __webpack_require__(40);
  * @classdesc
  * An Impact Physics Sprite Game Object.
  *
- * A Sprite Game Object is used for the display of both static and animated images in your game.
+ * A Sprite Game Object is used for the display of both static and animated images in your games.
  * Sprites can have input events and physics bodies. They can also be tweened, tinted, scrolled
  * and animated.
  *
@@ -131967,7 +131967,7 @@ var Image = __webpack_require__(72);
  * @classdesc
  * An Impact Physics Image Game Object.
  * 
- * An Image is a light-weight Game Object useful for the display of static images in your game,
+ * An Image is a light-weight Game Object useful for the display of static images in your games,
  * such as logos, backgrounds, scenery or other non-animated elements. Images can have input
  * events and physics bodies, or be tweened, tinted or scrolled. The main difference between an
  * Image and a Sprite is that you cannot animate an Image as they do not have the Animation component.

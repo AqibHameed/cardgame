@@ -16,7 +16,7 @@ var config = {
 	},
 
 	scene: [Example1],
-	parent	: 'strip-game',
+	parent	: 'strip-games',
 	title: 'Strip Pals'
 
 };
