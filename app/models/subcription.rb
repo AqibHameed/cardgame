@@ -2,12 +2,11 @@ class Subcription < ApplicationRecord
   acts_as_paranoid
   serialize :notification_params, Hash
   def paypal_url(return_url)
-
     values = {
         business: 'galdway@gmail.com',
         cmd: '_xclick',
         upload: 1,
-        return: "#http://54bc4511.ngrok.io#{return_url}",
+        return: "#{ENV['app_host']}#{return_url}",
         invoice: id,
         amount: self.amount,
         item_name: self.package_name,
