@@ -41,3 +41,4 @@
 # Ignore local development configuration
 .env.development
 .env
+.idea

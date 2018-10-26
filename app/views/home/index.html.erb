@@ -1,6 +1,5 @@
 <!--landing image-->
 <div class="container-fluid cont">
-  <%#= image_tag('slide_01.jpg', style: 'width:100%') %>
   <div class="image animated fadeInRight">
     <div class="offset-md-2 image--text">
       <h3 class="mydiv-text">It is a game of luck!!!</h3>
@@ -41,7 +40,7 @@
   <div class="row row--for-card">
     <div class="col-md-4 col-12 fullcard">
       <div class="image--for-card">
-        <%= image_tag 'home_img_01.jpg', width: '300', height: '250' %>
+        <%= image_tag 'home_img_01.jpg', height: '250'%>
       </div>
       <div class="title--for-card">
         <p>STRIP ME NAKED APP</p>
@@ -51,28 +50,33 @@
           app catering for all plateforms.
         </p>
       </div>
-      <div class="button--for-card">
-        <a href="btn btn-info">VIEW VIDEO HERE</a>
-      </div>
+
+        <a href="https://www.youtube.com/watch?v=fNYY8PjDllw" style="color: white">
+          <div class="button--for-card">
+            VIEW VIDEO HERE
+          </div>
+        </a>
     </div>
     <div class="col-md-4 col-12 fullcard">
       <div class="image--for-card">
-        <%= image_tag 'home_img_02.jpg', width: '300', height: '250' %>
+        <%= image_tag 'home_img_02.jpg', height: '250' %>
       </div>
-      <div class="title--for-card">
+      <div class="title--for-card" style="transition: all 0.5s">
         <p>APP INSTRUCTIONS</p>
       </div>
       <div class="description--for-card">
         <p>Learn how to play the game here. It require no skill and you only need luck and the fall of the cards to win
         </p>
       </div>
-      <div class="button--for-card">
-        <a href="btn btn-info">HOW TO PLAY</a>
-      </div>
-    </div>
+        <%= link_to image_url('GameRules.pdf'), style: 'color: white' do %>
+          <div class="button--for-card" style="transition: all 0.5s">
+            HOW TO PLAY
+          </div>
+        <% end %>
+   </div>
     <div class="col-md-4 col-12 fullcard">
       <div class="image--for-card">
-        <%= image_tag 'home_img_03.jpg', width: '300', height: '250' %>
+        <%= image_tag 'home_img_03.jpg', height: '250' %>
       </div>
       <div class="title--for-card">
         <p>SITE TERMS & CONDITIONS</p>
@@ -82,9 +86,11 @@
           conditions will result in disiplinary action.
         </p>
       </div>
-      <div class="button--for-card">
-        <a href="btn btn-info">TERMS</a>
-      </div>
+      <%= link_to image_url('Terms.pdf'), style: 'color: white' do %>
+        <div class="button--for-card" style="transition: all 0.5s">
+          TERMS
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
@@ -119,7 +125,7 @@
                     </div>
 
                     <div class="col-md-9 col-sm-8 col-12">
-                      <h3 class="">ADULT ONLY ENTERTAINMENT</h3>
+                      <h3 class="first-tab-header">ADULT ONLY ENTERTAINMENT</h3>
                       <p style="font-family: 'Eras Demi ITC'; color: gray;">This site is for adult entertainment and
                         persons under the age of 18 must not enter.
                         The game does involve nudity which may also be unsuitable to same adults.
@@ -127,7 +133,8 @@
                       <p style="font-family: 'Eras Demi ITC';  color: gray;">One suggestion the Games Master has is to
                         play for commodities, this is how it was played some 200 years ago.
                         If you wish to learn of other modes to play please contact us.</p>
-                      <a href="#" target="_blank" style="color:#F07C00;">GAMES MASTER:</a>
+<!--                      <a href="#" target="_blank" style="color:#F07C00;">GAMES MASTER:</a>-->
+                        <%= link_to "Games Master:", games_master_index_path, style: 'color:#F07C00' %>
                     </div>
                   </div>
                 </div>
@@ -138,14 +145,15 @@
                       <%= image_tag 'croped.png', class: 'img-fluid' %>
                     </div>
                     <div class="col-md-9 col-sm-8 col-12">
-                      <h3 class="">USER PAY SITE</h3>
+                      <h3 class="first-tab-header">USER PAY SITE</h3>
                       <p style="font-family: 'Eras Demi ITC'; color: gray;">To be fair to all players this is a user pay
                         site - that is the more you use the site the less it will cost you.
                         While every endeavour is made to accommodate players of all interests it is reccommended that
                         players stay within their budget and do not over spend. </p>
                       <p style=" color: gray;">For as little as 2c a minute with the total game cost about 20c, players
                         can be assured of getting value for money.</p>
-                      <a href="#" target="_blank" style="color:#F07C00;">ENTER HERE</a>
+<!--                      <a href="#" target="_blank" style="color:#F07C00;">ENTER HERE</a>-->
+                          <%=link_to "ENTER HERE", games_master_index_path, style: "color:#F07C00;", target: :_blank %>
                     </div>
                   </div>
                 </div>
