@@ -32,23 +32,31 @@ class SubcriptionsController < ApplicationController
                              status: status,
                              transaction_id: params[:txn_id],
                              purchased_at: Time.now
+      create_user(params[:payer_id])
     end
     render nothing: true
   end
 
-  # def send_email(user)
-  #   UserMailer.mail_account(user).deliver
-  # end
-  # def create_user(email)
-  #   user=User.new
-  #   user.email = email
-  #   user.password = rand(1..10000000)
-  #   User.create!(user)
-  #   send_email(user)
-  # end
+  def send_email(user)
+
+  end
+
+  def create_user(email)
+    user=User.new
+    user.email = 'rizu3661@gmail.com'
+    user.password = rand(1..10000000)
+    if user.save
+      debugger
+      UserMailer.mail_account(user).deliver
+      UserMailer.payment_mail(user).deliver
+    else
+      UserMailer.payment_mail(user).deliver
+    end
+  end
   private
 
   def sub_params
-    params.require(:subcription).permit(:package_plan_id, :amount, :package_name, :id)
+    params.require(:subcription).permit(:package_plan_id, :amount,
+                                        :package_name, :id)
   end
 end
