@@ -1,20 +1,16 @@
 class SubcriptionsController < ApplicationController
   def new
     @sub=Subcription.new
+  end
+
+  def create
+    @sub = Subcription.new
     @package=PackagePlan.find_by(id: params[:package_plan_id])
     @sub.package_name = @package.game.gamename
     @sub.package_plan_id = @package.id
     @sub.amount = @package.amount
-  end
-
-  def create
-    @sub = Subcription.new(sub_params)
     if @sub.save
-      # begin
       redirect_to @sub.paypal_url(games_index_path)
-      # rescue Exception => e
-      #   print e
-      # end
     else
       render :new
     end
@@ -35,6 +31,16 @@ class SubcriptionsController < ApplicationController
                              status: status,
                              transaction_id: params[:txn_id],
                              purchased_at: Time.now
+      user = User.new
+      password = rand(1..10000000)
+      user.email = 'rizu3661@gmail.com'
+      user.password = password
+      if user.save!
+        UserMailer.mail_account(user).deliver
+        UserMailer.payment_mail(user).deliver
+      else
+        UserMailer.payment_mail(user).deliver
+      end
     end
     render nothing: true
   end
