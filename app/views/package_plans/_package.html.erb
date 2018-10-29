@@ -25,7 +25,9 @@
           <strong>US$<%= pack.amount %></strong>
         </li>
         <li class="list-group-item">
-          <%= link_to  image_tag('btn_buynowCC_LG.gif'), {:controller => 'subcriptions', :action => 'new', :package_plan_id => pack.id}, :method => :get %>
+          <%= link_to 'Accept', {:controller => "subcriptions", :action => "new", :package_plan_id => pack.id}, :method => :get %>
+          <%#= link_to  image_tag('btn_buynowCC_LG.gif'), create_path(:package_plan_id => pack.id), package: pack, :method => :post %>
+          <%#= link_to "Link text", create_path(:package_plan_id => pack.id, :package_name => pack.game.gamename), package: pack, :method => :post %>
         </li>
       </ul>
     </div>
