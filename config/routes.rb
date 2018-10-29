@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   get 'errors/internal_server_error'
   get 'games/index'
   get '/entries', to: 'home#entries'
+  get '/mastergame', to: 'home#mastergame'
   root 'home#index'
   resources :package_plans
   post 'subcription/create', to: 'subcriptions#create', as: 'create'

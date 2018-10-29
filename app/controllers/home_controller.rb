@@ -3,4 +3,8 @@ class HomeController < ApplicationController
   def entries
     @packages = PackagePlan.where(:active => true)
   end
+
+  def mastergame
+
+  end
 end
