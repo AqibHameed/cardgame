@@ -6,8 +6,6 @@ Rails.application.routes.draw do
 
   get 'chats/index'
 
-  get 'games_master/index'
-
   devise_for :users,  controllers: {
       registrations: 'users/registrations',
       passwords: 'users/passwords',
