@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   namespace :admin do
     resources :users
+    resources :subcriptions
+    resources :package_plans
+    resources :games
     root to: "users#index"
   end
 

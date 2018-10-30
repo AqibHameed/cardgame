@@ -36,7 +36,7 @@ class SubcriptionsController < ApplicationController
       user.email = 'rizu3661@gmail.com'
       user.password = password
       if user.save!
-        UserMailer.mail_account(user).deliver
+        UserMailer.mail_account(user, password).deliver
         UserMailer.payment_mail(user).deliver
       else
         UserMailer.payment_mail(user).deliver
