@@ -44,7 +44,6 @@ class User < ApplicationRecord
       user = User.new(email: email, password: password)
       if user.save && create_userpackage(user.id, package_plan_id,
                                          total_games)
-        assign_default_role
         UserMailer.mail_account(user, password).deliver
         UserMailer.payment_mail(user).deliver
       end

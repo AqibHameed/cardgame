@@ -42,3 +42,4 @@
 .env.development
 .env
 .idea
+.history
