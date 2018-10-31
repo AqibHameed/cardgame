@@ -88,10 +88,11 @@
     window.password = "<%=j current_user.encrypted_password %>";
     window.sign_in = "true"
     window.sign_out = "false"
-  <%else %>
+  <% else %>
+    window.email = "NULLL"
     window.sign_in = "false"
     window.sign_out = "true"
-  <%end %>
+  <% end %>
 <% end %>
 
 
