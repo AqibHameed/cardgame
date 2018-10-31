@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181025122708) do
+ActiveRecord::Schema.define(version: 20181030160949) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 20181025122708) do
     t.integer "user_id"
     t.float "amount"
     t.string "package_name"
+    t.integer "totalgames"
     t.index ["deleted_at"], name: "index_subcriptions_on_deleted_at"
   end
 

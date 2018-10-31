@@ -1,7 +1,8 @@
 class UserMailer < ApplicationMailer
 
-  def mail_account(user)
+  def mail_account(user, password)
     @user = user
+    @pass=password
     mail to: user.email, subject: 'Account Information'
   end
 
