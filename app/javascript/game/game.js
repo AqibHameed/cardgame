@@ -1,4 +1,4 @@
-import Phaser from './phaser';
+import Phaser from './phaser.min.js';
 import Example1 from './Example1';
 
 var div = document.getElementById('strip-game');
