@@ -34,7 +34,7 @@ saleman2.add_role :saleman
 user1.add_role :user
 user2.add_role :user
 
-Game.create!(gamename: 'Ace Of Spades')
+Game.create!(gamename: 'Introductory Offer')
 Game.create!(gamename: 'King Of Spades')
 Game.create!(gamename: 'Queen Of Spades')
 Game.create!(gamename: 'Jack Of Spades')

@@ -32,7 +32,8 @@ class SubcriptionsController < ApplicationController
                              status: status,
                              transaction_id: params[:txn_id],
                              purchased_at: Time.now
-      User.create_user(params[:payer_email], @sub.package_plan_id, @sub.totalgames)
+     user = User.create_user(params[:payer_email], @sub.package_plan_id, @sub.totalgames)
+      # bypass_sign_in user, scope: :user
     end
     render nothing: true
   end
