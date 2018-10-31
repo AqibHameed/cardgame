@@ -13,6 +13,11 @@
 <!--          <a class="nav-link" href="#" style="color:white !important;">Home</a>-->
           <%= link_to "Home", root_path, class: "nav-link", style:"color:white !important;" %>
         </li>
+        <% if current_user.has_role? :admin%>
+            <li class="nav-item">
+              <%= link_to "Admin Panel", admin_users_path, class: "nav-link meun", style:"color:white !important;"%>
+            </li>
+          <% end %>
         <li class="nav-item">
 <!--          <a class="nav-link meun" href="#" style="color:white !important;">Contact</a>-->
           <%= link_to "Contact", contacts_index_path, class: "nav-link meun", style:"color:white !important;" %>
@@ -34,11 +39,6 @@
           <li class="nav-item">
             <%= link_to "Logout", destroy_user_session_path, class: "nav-link meun", style:"color:white !important;", method: :delete %>
           </li>
-          <% if current_user.has_role? :admin%>
-            <li class="nav-item">
-              <%= link_to "Admin Panel", admin_users_path, class: "nav-link meun", style:"color:white !important;"%>
-            </li>
-          <% end %>
         <% else %>
           <li class="nav-item">
             <%= link_to "Login", new_user_session_path, class: "nav-link meun", style:"color:white !important;" %>
