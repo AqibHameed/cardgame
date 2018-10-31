@@ -11,7 +11,7 @@
         <li class="nav-item">
           <%= link_to "Home", root_path, class: "nav-link", style:"color:white !important;" %>
         </li>
-        <% if current_user.has_role? :admin%>
+        <% if current_user && current_user.has_role? :admin%>
             <li class="nav-item">
               <%= link_to "Admin Panel", admin_users_path, class: "nav-link meun", style:"color:white !important;"%>
             </li>
