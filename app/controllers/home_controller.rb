@@ -5,6 +5,5 @@ class HomeController < ApplicationController
   end
 
   def mastergame
-
   end
 end
