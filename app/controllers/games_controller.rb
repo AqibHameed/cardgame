@@ -21,8 +21,6 @@ class GamesController < ApplicationController
       @subcription = Subcription.find_by(identify_key: params[:identify_key])
       user = User.find_by(id: @subcription.user_id)
       sign_in user, scope: :use
-
-      debugger
       if user_signed_in?
         render index
       else
