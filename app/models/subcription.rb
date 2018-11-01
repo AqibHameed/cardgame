@@ -33,7 +33,7 @@ class Subcription < ApplicationRecord
         upload: 1,
         return: "#{ENV['app_host']}#{return_path}",
         invoice: "#{id}#{self.set_key}",
-        amount: self.amount/self.totalgames,
+        amount: self.amount / self.totalgames,
         item_name: self.package_name,
         item_number: self.package_plan_id,
         quantity: self.totalgames,

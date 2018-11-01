@@ -5,6 +5,7 @@ class GamesController < ApplicationController
 
   def index;
   end
+
   private
 
   def check_user
@@ -17,8 +18,7 @@ class GamesController < ApplicationController
       else
         can_play(user)
       end
-    elsif
-      @subcription = Subcription.find_by(identify_key: params[:identify_key])
+    elsif @subcription = Subcription.find_by(identify_key: params[:identify_key])
       user = User.find_by(id: @subcription.user_id)
       sign_in user, scope: :use
       if user_signed_in?
