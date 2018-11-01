@@ -1,26 +1,28 @@
 class SubcriptionsController < ApplicationController
   def new
-    @sub=Subcription.new
+    @sub = Subcription.new
   end
 
   def create
     @sub = Subcription.new
-    @package=PackagePlan.find_by(id: params[:package_plan_id])
+    @package = PackagePlan.find_by(id: params[:package_plan_id])
     @sub.package_name = @package.game.gamename
     @sub.package_plan_id = @package.id
     @sub.amount = @package.amount
     @sub.totalgames = @package.numberofgames
+    @sub.identify_key = @sub.generate_identification_key
     if @sub.save
-      redirect_to @sub.paypal_url(games_index_path)
+      redirect_to @sub.paypal_url("#{games_index_path}?identify_key=#{@sub.identify_key}")
     else
       render :new
     end
   end
 
-  def index; end
+  def index;
+  end
 
   def show
-    @sub=Subcription.find_by(:id =>  params[:id])
+    @sub = Subcription.find_by(:id => params[:id])
   end
 
   def hook
@@ -32,8 +34,8 @@ class SubcriptionsController < ApplicationController
                              status: status,
                              transaction_id: params[:txn_id],
                              purchased_at: Time.now
-     user = User.create_user(params[:payer_email], @sub.package_plan_id, @sub.totalgames)
-      # bypass_sign_in user, scope: :user
+      user = User.create_user('a@gmail.com', @sub.package_plan_id, @sub.totalgames)
+      @sub.update_attributes(user_id: user.id)
     end
     render nothing: true
   end

@@ -15,6 +15,10 @@ class Subcription < ApplicationRecord
     end
   end
 
+  def generate_identification_key
+    SecureRandom.urlsafe_base64
+  end
+
   def self.generate_key
     letters = ('A'..'Z').to_a
     numbers = (1..9).to_a

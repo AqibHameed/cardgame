@@ -10,10 +10,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :rememberable,
          :validatable, :recoverable
 
-  def assign_default_role
-    self.add_role(:user) if self.roles.blank?
-  end
-
   def self.generate_password
     rand(1_000_000..10_000_000)
   end
@@ -53,5 +49,11 @@ class User < ApplicationRecord
                                                                   total_games)
     end
     user
+  end
+
+  private
+
+  def assign_default_role
+    self.add_role(:user) if self.roles.blank?
   end
 end

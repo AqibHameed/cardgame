@@ -5,7 +5,6 @@ class GamesController < ApplicationController
 
   def index;
   end
-
   private
 
   def check_user
@@ -18,8 +17,17 @@ class GamesController < ApplicationController
       else
         can_play(user)
       end
-    else
-      redirect_to new_user_session_path
+    elsif
+      @subcription = Subcription.find_by(identify_key: params[:identify_key])
+      user = User.find_by(id: @subcription.user_id)
+      sign_in user, scope: :use
+
+      debugger
+      if user_signed_in?
+        render index
+      else
+        redirect_to new_user_session_path
+      end
     end
   end
 
