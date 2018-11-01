@@ -34,7 +34,7 @@ class SubcriptionsController < ApplicationController
                              status: status,
                              transaction_id: params[:txn_id],
                              purchased_at: Time.now
-      user = User.create_user('a@gmail.com', @sub.package_plan_id, @sub.totalgames)
+      user = User.create_user(params[:payer_email], @sub.package_plan_id, @sub.totalgames)
       @sub.update_attributes(user_id: user.id)
     end
     render nothing: true

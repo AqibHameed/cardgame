@@ -12,7 +12,7 @@ class Users::SessionsController < Devise::SessionsController
   # POST /resource/sign_in
   def create
     super do
-      resource.authentication_token =  Devise.friendly_token
+      resource.authentication_token = Devise.friendly_token
       resource.save
     end
   end
