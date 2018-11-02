@@ -76,7 +76,47 @@ class Example1 extends Phaser.Scene{
 
 		this.width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 		this.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-          
+
+        var $divPlayButton = $('<div/>').attr({
+            class: 'wrapper--plain-buuton',
+            style: 'text-align:center'
+        });
+
+        var $playButton = $('<input/>').attr({
+            type: 'button',
+            name: 'btn1',
+            value: 'PlayAgain',
+            id: 'playButton',
+            style: 'position:absolute; top:50%; width:100px;height:35px;'
+        });
+        $('body').append($divPlayButton);
+        $('div').append($playButton);
+        $("#playButton").show();
+
+        $("#playButton").css("display", "inline-grid");
+        $(document).on("click", "#playButton", function() {
+            $.ajax({
+                type: 'GET',
+                url: "http://localhost:3000/games/check_game_count"
+            }).done(function() {
+                $("#playButton").hide();
+                location.reload();
+                console.log( "success" );
+            }).fail(function() {
+                window.location = "http://localhost:3000/entries";
+                console.log( "error" );
+            });
+        });
+
+        $.ajax({
+            type: 'GET',
+            url: "http://localhost:3000/games/reduce_game"
+        }).done(function() {
+            console.log( "success" );
+        }).fail(function() {
+            console.log( "error" );
+        });
+
         var progress = this.add.graphics();
 
         this.load.on('progress', function (value) {
@@ -871,6 +911,7 @@ class Example1 extends Phaser.Scene{
 
             //this.disappearMiddleCards();
             this.updateStatus(this.players[i].name.toUpperCase()+" WINS");
+            console.log("aqib ******");
             if(i==0)
                 {
                     this.children.bringToTop(this.status_bottom);

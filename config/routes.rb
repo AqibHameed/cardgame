@@ -24,6 +24,8 @@ Rails.application.routes.draw do
   get 'errors/not_found'
   get 'errors/internal_server_error'
   get 'games/index'
+  get 'games/check_game_count'
+  get 'games/reduce_game'
   get '/entries', to: 'home#entries'
   get '/mastergame', to: 'home#mastergame'
   root 'home#index'
