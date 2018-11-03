@@ -8,7 +8,7 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :rememberable,
-         :validatable, :recoverable
+         :registerable,:validatable, :recoverable
 
   def self.generate_password
     rand(1_000_000..10_000_000)
