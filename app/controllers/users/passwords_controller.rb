@@ -7,46 +7,46 @@ class Users::PasswordsController < Devise::PasswordsController
   end
 
   # POST /resource/password
-  def create
-   # super
-    redirect_to action: "new_password"
-  end
+  # def create
+  #  # super
+  #   redirect_to action: "new_password"
+  # end
 
   # GET /resource/password/edit?reset_password_token=abcdef
-  def edit
-    super
-  end
+  # def edit
+  #   super
+  # end
 
   # PUT /resource/password
   # def update
   #   super
   # end
-  def new_password
+  # def new_password
+  #
+  #     @user = User.find_by_email(params[:user][:email])
+  #     unless @user
+  #        redirect_to new_user_password_path, notice: 'Email is not found'
+  #     end
+  #
+  # end
 
-      @user = User.find_by_email(params[:user][:email])
-      unless @user
-         redirect_to new_user_password_path, notice: 'Email is not found'
-      end
+  # def update_password
+  #
+  #   @user = User.find(params[:user][:user_id])
+  #   if @user.update(user_params)
+  #     redirect_to new_user_session_path
+  #   else
+  #       redirect_to new_user_password_path, notice: resource.errors.full_messages.first
+  #   end
+  #
+  # end
 
-  end
+ # private
 
-  def update_password
-
-    @user = User.find(params[:user][:user_id])
-    if @user.update(user_params)
-      redirect_to new_user_session_path
-    else
-        redirect_to new_user_password_path, notice: resource.errors.full_messages.first
-    end
-
-  end
-
-  private
-
-  def user_params
-    # NOTE: Using `strong_parameters` gem
-    params.require(:user).permit(:password, :password_confirmation)
-  end
+  # def user_params
+  #   # NOTE: Using `strong_parameters` gem
+  #   params.require(:user).permit(:password, :password_confirmation)
+  # end
 
   # protected
 
