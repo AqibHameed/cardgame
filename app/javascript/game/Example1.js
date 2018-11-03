@@ -91,31 +91,8 @@ class Example1 extends Phaser.Scene{
         });
         $('body').append($divPlayButton);
         $('div').append($playButton);
-        $("#playButton").show();
+        $("#playButton").hide();
 
-        $("#playButton").css("display", "inline-grid");
-        $(document).on("click", "#playButton", function() {
-            $.ajax({
-                type: 'GET',
-                url: "http://localhost:3000/games/check_game_count"
-            }).done(function() {
-                $("#playButton").hide();
-                location.reload();
-                console.log( "success" );
-            }).fail(function() {
-                window.location = "http://localhost:3000/entries";
-                console.log( "error" );
-            });
-        });
-
-        $.ajax({
-            type: 'GET',
-            url: "http://localhost:3000/games/reduce_game"
-        }).done(function() {
-            console.log( "success" );
-        }).fail(function() {
-            console.log( "error" );
-        });
 
         var progress = this.add.graphics();
 
@@ -911,7 +888,34 @@ class Example1 extends Phaser.Scene{
 
             //this.disappearMiddleCards();
             this.updateStatus(this.players[i].name.toUpperCase()+" WINS");
-            console.log("aqib ******");
+            console.log("winner******");
+            $("#playButton").show();
+            $("#playButton").css("display", "inline-grid");
+            $(document).on("click", "#playButton", function() {
+                $.ajax({
+                    type: 'GET',
+                    url: "http://localhost:3000/games/check_game_count",
+                    data: {plan_id: 1}
+                }).done(function() {
+                    $("#playButton").hide();
+                    location.reload();
+                    console.log( "success" );
+                }).fail(function() {
+                    window.location = "http://localhost:3000/entries";
+                    console.log( "error" );
+                });
+            });
+
+            $.ajax({
+                type: 'GET',
+                url: "http://localhost:3000/games/reduce_game",
+                data: {plan_id: 1}
+            }).done(function() {
+                console.log( "success" );
+            }).fail(function() {
+                console.log( "error" );
+            });
+
             if(i==0)
                 {
                     this.children.bringToTop(this.status_bottom);
