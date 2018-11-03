@@ -894,21 +894,21 @@ class Example1 extends Phaser.Scene{
             $(document).on("click", "#playButton", function() {
                 $.ajax({
                     type: 'GET',
-                    url: "http://localhost:3000/games/check_game_count",
+                    url: "http://www.strip-pals.com/games/check_game_count",
                     data: {plan_id: 1}
                 }).done(function() {
                     $("#playButton").hide();
                     location.reload();
                     console.log( "success" );
                 }).fail(function() {
-                    window.location = "http://localhost:3000/entries";
+                    window.location = "http://www.strip-pals.com/entries";
                     console.log( "error" );
                 });
             });
 
             $.ajax({
                 type: 'GET',
-                url: "http://localhost:3000/games/reduce_game",
+                url: "http://www.strip-pals.com/games/reduce_game",
                 data: {plan_id: 1}
             }).done(function() {
                 console.log( "success" );
