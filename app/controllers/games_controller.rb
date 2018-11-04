@@ -58,7 +58,7 @@ class GamesController < ApplicationController
     else
       @subcription = Subcription.find_by(identify_key: params[:identify_key])
       user = User.find_by(id: @subcription.user_id)
-      sign_in user, scope: :use
+      sign_in user, scope: :user if user.present?
       if user_signed_in?
         render index
       else
