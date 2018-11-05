@@ -9,8 +9,8 @@ class GamesController < ApplicationController
 
   def check_game_count
     if current_user.has_role? :admin && (current_user.has_role? :saleman)
-       render status: :ok, json: {message: "games exist"}
-    elsif  current_user.has_role? :user
+      render status: :ok, json: {message: "games exist"}
+    elsif current_user.has_role? :user
       user_package = current_user.user_packages.find_by_package_plan_id(params[:plan_id])
 
       if user_package.present? && user_package.totalgames > 0
@@ -43,6 +43,7 @@ class GamesController < ApplicationController
 
     end
   end
+
   private
 
   def check_user
