@@ -28,7 +28,7 @@ class Subcription < ApplicationRecord
 
   def paypal_url(return_path)
     values = {
-        business: 'galdway@gmail.com',
+        business: "#{ENV['paypal_business_account']}",
         cmd: '_xclick',
         upload: 1,
         return: "#{ENV['app_host']}#{return_path}",
