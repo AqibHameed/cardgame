@@ -31,7 +31,6 @@ Rails.application.routes.draw do
   root 'home#index'
   resources :package_plans
   post 'subcriptions/create', to: 'subcriptions#create', as: 'create'
-  resources :subcriptions
   #post '/subcription/:id' => 'subcriptions#show'
   post '/hook' => 'subcriptions#hook'
 
