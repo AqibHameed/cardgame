@@ -30,9 +30,9 @@ Rails.application.routes.draw do
   get '/mastergame', to: 'home#mastergame'
   root 'home#index'
   resources :package_plans
-  post 'subcription/create', to: 'subcriptions#create', as: 'create'
+  post 'subcriptions/create', to: 'subcriptions#create', as: 'create'
   resources :subcriptions
-  post '/subcription/:id' => 'subcriptions#show'
+  #post '/subcription/:id' => 'subcriptions#show'
   post '/hook' => 'subcriptions#hook'
 
 

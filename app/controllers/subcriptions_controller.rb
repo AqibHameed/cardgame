@@ -20,11 +20,7 @@ class SubcriptionsController < ApplicationController
 
   def index;
   end
-
-  def show
-    @sub = Subcription.find_by(:id => params[:id])
-  end
-
+  
   def hook
     params.permit! # Permit all Paypal input params
     status = params[:payment_status]
