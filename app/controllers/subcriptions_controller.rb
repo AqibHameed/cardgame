@@ -1,7 +1,5 @@
 class SubcriptionsController < ApplicationController
-  def new
-    @sub = Subcription.new
-  end
+
 
   def create
     @sub = Subcription.new
@@ -17,14 +15,7 @@ class SubcriptionsController < ApplicationController
       render :new
     end
   end
-
-  def index;
-  end
-
-  def show
-      @sub = Subcription.find_by(:id => params[:id])
-  end
-
+  
   def hook
     params.permit! # Permit all Paypal input params
     status = params[:payment_status]
