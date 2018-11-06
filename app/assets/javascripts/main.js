@@ -48,7 +48,6 @@ function FriendlyChat() {
   }.bind(this));
   this.mediaCapture.addEventListener('change', this.saveImageMessage.bind(this));
 
-
   this.initFirebase();
 
 }
@@ -64,6 +63,7 @@ FriendlyChat.prototype.initFirebase = function() {
     this.loadMessages();
     if(sign_in == "true") {
        this.sign_in();
+
     }
 
     if(sign_out == "true"){
@@ -237,11 +237,14 @@ FriendlyChat.prototype.onAuthStateChanged = function() {
     var name = this.userName;
     this.auth.onAuthStateChanged(function(user) {
         if (user) {
-
-            var userName = user.email;
+            if(user.email == email){
+                name.innerHTML=user.email;
+                name.removeAttribute('hidden');
+            }
+           // var userName = user.email;
             // this.userName.value = userName;
-            name.innerHTML=userName;
-            name.removeAttribute('hidden');
+           // name.innerHTML=userName;
+           // name.removeAttribute('hidden');
 
             // We load currently existing chant messages.
             current_object.loadMessages();
@@ -389,7 +392,6 @@ FriendlyChat.prototype.checkSetup = function() {
 };
 
 window.onload = function() {
-  window.friendlyChat = new FriendlyChat();
-
+    window.friendlyChat = new FriendlyChat();
  // alert(sign_in);
 };
