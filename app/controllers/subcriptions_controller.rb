@@ -22,7 +22,7 @@ class SubcriptionsController < ApplicationController
   end
 
   def show
-
+      @sub = Subcription.find_by(:id => params[:id])
   end
 
   def hook
