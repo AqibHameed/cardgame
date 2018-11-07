@@ -1,6 +1,7 @@
 class Subcription < ApplicationRecord
   acts_as_paranoid
   serialize :notification_params, Hash
+  before_create :set_key
 
   def set_key
     self.invoice_key = self.class.generate_unique_key unless invoice_key.present?
@@ -32,7 +33,7 @@ class Subcription < ApplicationRecord
         cmd: '_xclick',
         upload: 1,
         return: "#{ENV['app_host']}#{return_path}",
-        invoice: "#{id}#{self.set_key}",
+        invoice: "#{self.invoice_key}",
         amount: self.amount / self.totalgames,
         item_name: self.package_name,
         item_number: self.package_plan_id,
