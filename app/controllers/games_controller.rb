@@ -48,6 +48,7 @@ class GamesController < ApplicationController
 
   def check_user
     if user_signed_in?
+      logger.info 'already sigin ****'
       user = current_user
       if user.has_role? :admin
         render index
@@ -57,6 +58,7 @@ class GamesController < ApplicationController
         can_play(user)
       end
     else
+      logger.info 'user not signin ****'
       @subcription = Subcription.find_by(identify_key: params[:identify_key])
       user = User.find_by(id: @subcription.user_id)
       sign_in user, scope: :user if user.present?
