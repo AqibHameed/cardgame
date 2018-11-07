@@ -29,7 +29,7 @@
           <%#= link_to  image_tag('btn_buynowCC_LG.gif'), create_path(:package_plan_id => pack.id), package: pack, :method => :post, turbolinks: false %>
           <%#= link_to "Link text", create_path(:package_plan_id => pack.id, :package_name => pack.game.gamename), package: pack, :method => :post %>
           <%#= link_to  image_tag('btn_buynowCC_LG.gif'), create_path(pack.id, :package_plan_id => pack.id), method: :post %>
-<%= button_to  create_path(pack, package_plan_id: pack.id) do%>
+<%= button_to create_path(pack, package_plan_id: pack.id), style: 'background-color: initial; border: none; cursor: pointer' do%>
           <%= image_tag('btn_buynowCC_LG.gif') %>
           <%end %>
         </li>
