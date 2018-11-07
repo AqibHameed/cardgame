@@ -49,29 +49,29 @@ class GamesController < ApplicationController
   def check_user
     if request.url.include?('identify_key')
        sleep 6
+       if user_signed_in?
+         logger.info 'already sigin ****'
+         user = current_user
+         if user.has_role? :admin
+           render index
+         elsif user.has_role? :saleman
+           render index
+         else
+           can_play(user)
+         end
+       else
+         logger.info 'user not signin ****'
+         @subcription = Subcription.find_by(identify_key: params[:identify_key])
+         user = User.find_by(id: @subcription.user_id)
+         sign_in user, scope: :user if user.present?
+         if user_signed_in?
+           render index
+         else
+           redirect_to new_user_session_path
+         end
+       end
     else
       redirect_to root_path
-    end
-    if user_signed_in?
-      logger.info 'already sigin ****'
-      user = current_user
-      if user.has_role? :admin
-        render index
-      elsif user.has_role? :saleman
-        render index
-      else
-        can_play(user)
-      end
-    else
-      logger.info 'user not signin ****'
-      @subcription = Subcription.find_by(identify_key: params[:identify_key])
-      user = User.find_by(id: @subcription.user_id)
-      sign_in user, scope: :user if user.present?
-      if user_signed_in?
-        render index
-      else
-        redirect_to new_user_session_path
-      end
     end
   end
 
