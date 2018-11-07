@@ -20,7 +20,7 @@ class SubcriptionsController < ApplicationController
     params.permit! # Permit all Paypal input params
     status = params[:payment_status]
     if status == 'Completed'
-      @sub = Subcription.find params[:invoice]
+      @sub = Subcription.find_by_invoice_key params[:invoice]
       @sub.update_attributes notification_params: params.to_h,
                              status: status,
                              transaction_id: params[:txn_id],
