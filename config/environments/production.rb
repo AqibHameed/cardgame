@@ -91,6 +91,7 @@ Rails.application.configure do
       :authentication       => "plain",
       :enable_starttls_auto => true
   }
+  config.public_file_server.enabled = true
   # Use a different logger for distributed setups.
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
