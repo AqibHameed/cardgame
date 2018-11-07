@@ -47,6 +47,9 @@ class GamesController < ApplicationController
   private
 
   def check_user
+    if request.url.include?('identify_key')
+       sleep 6
+    end
     if user_signed_in?
       logger.info 'already sigin ****'
       user = current_user
